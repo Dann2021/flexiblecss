@@ -20,13 +20,15 @@ export default function HeroSection({
 }) {
   return (
     <Col className={"ai-mil mh-10"}>
-      <Bloc type={"myn"} nombre={col} className="col ai-mil slidebas gap-3">
+     
+      <Bloc type={"myn"} nombre={col} className="col ai-mil  slidebas gap-3 relative">
         <TexteDegrade
-          className="texte-9  lh-2 ls-2 ta-mil te-noir"
+          className="texte-9  lh-2 ls-2 ta-mil te-noir mh-2"
           couleurs={`${Couleurs.cyan}, ${Couleurs.indigo}`}
         >
           {textePrincipale}
         </TexteDegrade>
+         <span className="absolue haut-0 droite-1 badge bg-bleu-lavande te-noir  ">Bêta</span>
         {/*<p className={"texte-2 texte-couleur-gris mb-3 ta-mil"}>{sousTexte}</p>*/}
         <div className="bloc-12 bloc-myn-9 texte-2 texte-couleur-gris mb-1 ta-mil">
          {children}

@@ -1,4 +1,4 @@
-import { Menu, Sun, User2, UserCircle2Icon } from "lucide-react";
+import { AlertCircle, Menu, Sun, User2, UserCircle2Icon } from "lucide-react";
 import "../../styles/navigateur.css";
 import Lien from "./Lien";
 import TexteDegrade from "./TexteDegrade";
@@ -32,9 +32,10 @@ export default function Navigateur({ logo, texte }) {
                   
                        
                 </div>*/}
-          {/*<div className="bt-user">
-              <Sun size={30} />
-            </div>*/}
+          <div className="bt-user">
+              {/*<Sun size={30} />*/}
+              <AlertCircle size={30} color="#FF8C00" />
+            </div>
 
           <div className="bt-hamburger" onClick={ouverture}>
             <Menu size={30} />
