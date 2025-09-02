@@ -8,7 +8,7 @@ import Navigateur from "./composants/ui/Navigateur";
 function App() {
 
     return (
-        <Router>
+        <Router basename="/flexiblecss">
             <div
                 className={`poppins`}
                 style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
