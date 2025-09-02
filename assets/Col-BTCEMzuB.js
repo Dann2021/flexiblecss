@@ -1,1 +1,0 @@
-import{j as c,a as l}from"./index-BwCw3YhX.js";function x({type:s,nombre:o,children:a,className:r,mobile:t=12,...i}){return c.jsx("div",{className:l(`bloc-${t}`,s&&o&&`bloc-${s}-${o}`,r),...i,children:a})}function u({children:s,className:o,...a}){return c.jsx("div",{className:l("col",o),...a,children:s})}export{x as B,u as C};
