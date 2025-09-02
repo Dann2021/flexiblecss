@@ -1,0 +1,1 @@
+import{j as n,a as o}from"./index-BwCw3YhX.js";function c({source:s,className:a,alt:e,width:m,height:t,masque:g,...i}){return n.jsx("img",{loading:"lazy",src:s,className:o("image",a),alt:e,width:m,height:t,hidden:g,...i})}const x="/assets/image-DOqegGUV.png";export{c as I,x as a};
