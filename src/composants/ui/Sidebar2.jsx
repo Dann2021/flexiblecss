@@ -14,6 +14,7 @@ import Bouton from "./Bouton";
 import Lien from "./Lien";
 export default function Sidebar2({ onToggle, onSelect }) {
   const sidebarRef = useRef(null);
+  // eslint-disable-next-line no-unused-vars
   const [ouvert, setOuvert] = useState(false);
 
   const ouvrir = () => {
@@ -59,7 +60,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
 
   ];
 
-  console.log("state : ", ouvert);
+  //console.log("state : ", ouvert);
   return (
     <div className="conteneur">
       {/* Bouton pour ouvrir la sidebar */}
