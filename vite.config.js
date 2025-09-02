@@ -4,7 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  //base: '/flexiblecss/', // <-- ici, le nom du repo
+  base: '/flexiblecss/', // <-- ici, le nom du repo
 
 });
 
