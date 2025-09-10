@@ -69,7 +69,7 @@ export default function IntroPage() {
         </Bloc>
 
         <Bloc type={"myn"} nombre={11} className={"mh-2 p-myn-2 mb-3"}>
-          <p className="texte-couleur-gris">
+          <p className="texte-couleur-gris texte-2">
             {" "}
             <span className="te-noir texte-couleur-bleu-ciel">
               Flexible Css✨
@@ -90,11 +90,11 @@ export default function IntroPage() {
           <p className="texte-couleur-gris">
             Pour bien commencer, installez tout d'abord les fichiers{" "}
             <span className="texte-couleur-rouge-cerise te-noir">
-              "flexible.css"
+              `flexible.css`
             </span>{" "}
             pour le style de vos interfaces et{" "}
             <span className="texte-couleur-rouge-cerise te-noir">
-              "flexible.js"
+              `flexible.js`
             </span>{" "}
             à la racine de votre projet.
           </p>
@@ -102,7 +102,7 @@ export default function IntroPage() {
             Après avoir installer les fichiers vous n'avez qu'à les inclures
             dans votre fichier html principal{" "}
             <span className="texte-couleur-rouge-cerise te-noir">
-              "main.html"
+              `main.html`
             </span>{" "}
             comme le montre l'exemple ci-dessous.
           </p>

@@ -1,0 +1,55 @@
+tableau dynamique
+const Tab = ({ className = "", data }) => {
+  // ici on extrait le premier element pour recuperer ces cles
+  // qui seront des labels pour notre tableau
+
+  // extraction des cles du premiers elements de notre liste
+    // on extrait les clés du premier élément et on retire "id"
+  const labels = Object.keys(data[0]).filter((key) => key !== "id");
+
+  const couleurs = [
+    "texte-couleur-bleu-lagon",
+    "texte-couleur-bleu-lavande",
+    "texte-couleur-bleu-ciel",
+    "texte-couleur-rouge-cerise",
+    "texte-couleur-vert-sauge",
+  ];
+
+  return (
+    <Bloc
+      type={"myn"}
+      nombre={11}
+      className={`p-2 bg-gris-clair ronde ${className}`}
+    >
+      <div className="aff-flex fd-col gap-2">
+        <div className="aff-flex ai-mil jc-sb gap-2">
+          {labels.map((element, index) => (
+            <p key={index} className="te-noir">{element}</p>
+          ))}
+        </div>
+        <hr style={{ border: "1px solid #f5f5f5" }} />
+
+        {data.map((element, indice) => (
+          <>
+            <div className="aff-flex ai-mil jc-sb gap-2" key={indice}>
+            
+              {labels.map((label) => {
+              const couleur = couleurs[indice % couleurs.length]; // alterne les classes
+              return (
+                <p
+                  key={label}
+                  className={`${couleur} te-noir taille-pt fira`}
+                >
+                  {element[label]}
+                </p>
+              );
+            })}
+            </div>
+            
+            <hr style={{ border: "1px solid #f5f5f5" }} />
+          </>
+        ))}
+      </div>
+    </Bloc>
+  );
+};

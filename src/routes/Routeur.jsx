@@ -12,6 +12,8 @@ const InstallPage = lazy(() => import("../pages/docs/InstallPage"));
 const StructPage = lazy(() => import("../pages/docs/StructPage"));
 const AspectRatioPage = lazy(() => import("../pages/docs/AspectRatioPage"));
 const DisplayPage = lazy(() => import("../pages/docs/DisplayPage"));
+const PageErreur = lazy(() => import("../pages/404/PageErreur"));
+const BlocPage = lazy(() => import("../pages/docs/BlocPage"));
 
 
 
@@ -26,6 +28,7 @@ function Routeur() {
           <Route path="uikit" element={<UiKitPage />} />
           <Route index  element={<IntroPage />} />
           <Route path="intro" element={<IntroPage />} />
+           <Route path="*" element={<PageErreur />} />
           {/*<Route path="intro" element={<IntroPage />} />*/}
           {/* Page par défaut quand on est sur /docs */}
           {/*<Route index element={<InstallPage />} />*/}
@@ -33,6 +36,7 @@ function Routeur() {
           <Route path="structure" element={<StructPage />} />
           <Route path="aspect-ratio" element={<AspectRatioPage />} />
           <Route path="display" element={<DisplayPage />} />
+          <Route path="bloc" element={<BlocPage />} />
         </Route>
       </Routes>
     </Suspense>

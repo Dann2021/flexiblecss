@@ -5,10 +5,11 @@ import Routeur from "./routes/Routeur";
 import Navigateur from "./composants/ui/Navigateur";
 
 
+//  <Router basename="/flexiblecss">
 function App() {
 
     return (
-        <Router basename="/flexiblecss">
+        <Router basename="/flexiblecss" >
             <div
                 className={`poppins`}
                 style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}

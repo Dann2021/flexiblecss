@@ -60,10 +60,10 @@ ${b}   ${b}   ${e} flexible.css
         </Bloc>
 
         <div className="aff-flex ai-mil gap-2">
-          <h2 className="texte-4">
-            {" "}
-            Projet <span className="texte-couleur-bleu-lavande">html</span>
-          </h2>{" "}
+          <h2 className="texte-4 texte-couleur-bleu-lavande tt-maj">
+            
+            html
+          </h2>
           <SiHtml5 size={40} color="#E34F26" />
         </div>
 
@@ -85,9 +85,8 @@ ${b}   ${b}   ${e} flexible.css
         </Codebloc>
 
         <div className="aff-flex ai-mil gap-2 mh-2">
-          <h2 className="texte-4">
-            {" "}
-            Projet <span className="texte-couleur-bleu-lavande">React Js</span>
+          <h2 className="texte-4 texte-couleur-bleu-lavande">
+          React Js
           </h2>{" "}
           <SiReact size={40} color="#61DBFB" />
         </div>

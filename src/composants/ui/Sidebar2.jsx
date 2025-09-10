@@ -57,6 +57,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
   const mpage = [
     { id: 1, label: "aspect-ratio", icone: null, lien: "aspect-ratio" },
     { id: 2, label: "display", icone: null, lien: "display" },
+    { id: 3, label: "bloc", icone: null, lien: "bloc" },
 
   ];
 

@@ -15,6 +15,8 @@ const Tableau = ({ className = "", titre1, titre2, data }) => {
         <div className="aff-flex ai-mil jc-sb gap-2">
           <p className="te-noir">{titre1}</p>
           <p className="te-noir">{titre2}</p>
+     
+
         </div>
         <hr style={{ border: "1px solid #f5f5f5" }} />
 
