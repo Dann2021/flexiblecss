@@ -1,0 +1,1 @@
+import{j as s,b as c,a as x}from"./index-VggpmcaW.js";function j({type:o="primaire",variant:u=!1,className:a,children:r,chemin:e,mode:i,taille:n,forme:t,...b}){return s.jsx(c,{to:e,className:"td-none",children:s.jsxs("button",{className:x("bouton",u?`bouton-contour-${o}`:`bouton-${o}`,n&&`bouton-${n}`,t&&`bouton-${t}`,a),type:i,...b,children:[r," "," "]})})}export{j as B};

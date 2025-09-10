@@ -1,0 +1,1 @@
+import{j as t,a as x}from"./index-VggpmcaW.js";function j({type:s,nombre:o,children:a,className:c,mobile:l=12,...r}){return t.jsx("div",{className:x(`bloc-${l}`,s&&o&&`bloc-${s}-${o}`,c),...r,children:a})}export{j as B};
