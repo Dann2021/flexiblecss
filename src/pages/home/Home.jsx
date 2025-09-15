@@ -6,11 +6,10 @@ import TexteDegrade from "../../composants/ui/TexteDegrade.jsx";
 
 import Couleurs from "../../constantes/Couleurs.js";
 import ImageMac from "../../assets/images/code.png";
-import Code1 from "../../assets/images/code1.png";
+
 import Ligne from "../../composants/ui/Ligne.jsx";
 import Image from "../../composants/ui/Image.jsx";
-import Bouton from "../../composants/ui/Bouton.jsx";
-import { ArrowRight, BookOpen, Minus, Square, X } from "lucide-react";
+import { Minus, Square, X } from "lucide-react";
 import Code2 from "../../assets/images/code2.png";
 import Icons from "../../constantes/Icone.js";
 import ImageTest from "../../assets/images/image.png";
@@ -23,19 +22,6 @@ import {
   SiReact,
 } from "react-icons/si";
 import BoutonLien from "../../composants/brouillons/BoutonLien.jsx";
-import { Link } from "react-router-dom";
-import Dropdown from "../../composants/brouillons/Dropdown.jsx";
-//import { useState } from "react";
-//import { motion } from "framer-motion";
-
-/*const code = `
-  <div>
-    <p>Hello world</p>
-    <div class="bg-gris-claire">
-      <p>Salut tout le monde</p>
-    </div>
-  </div>
-`;*/
 
 export default function Home() {
   /*const ratios = [
@@ -50,7 +36,6 @@ export default function Home() {
   return (
     <Conteneur>
       {/*<CodeBloc langue={"html"}>{code}</CodeBloc> */}
-
 
       <HeroSection
         col={9}
@@ -71,8 +56,6 @@ export default function Home() {
         👋
       </HeroSection>
 
-   
-
       <Ligne className={"jc-sb bg-gris-claire ronde p-2 mh-8"}>
         <Bloc type={"myn"} nombre={6} className="col ai-mil jc-mil">
           <TexteDegrade
@@ -91,8 +74,13 @@ export default function Home() {
           </p>
           <div className="aff-flex ai-mil gap-2 jc-mil mh-2">
             <BoutonLien type={"primaire"}>Get started</BoutonLien>
-            <BoutonLien onClick={()=>console.log("hello")} chemin={"/docs/install"} type={"sombre"}>Installation</BoutonLien>
-
+            <BoutonLien
+              onClick={() => console.log("hello")}
+              chemin={"/docs/install"}
+              type={"sombre"}
+            >
+              Installation
+            </BoutonLien>
           </div>
         </Bloc>
 
@@ -101,14 +89,7 @@ export default function Home() {
         </Bloc>
       </Ligne>
 
-      {/*<div className={"mh-8 aff-flex ai-mil jc-sa gap-3"}>
-        <SiJavascript size={100} color="#F7DF1E" />
-        <SiPython size={100} color="#3776AB" />
-        <SiHtml5 size={100} color="#E34F26" />
-        <SiCss3 size={100} color="#1572B6" />
-        <SiReact size={100} color="#61DBFB" />
-        <SiSass size={100} color="#CC6699" />
-      </div>*/}
+
 
       <Ligne className={"jc-sb ai-mil bg-gris-c mh-10 ronde"}>
         <Bloc type={"myn"} nombre={6}>
@@ -181,10 +162,7 @@ export default function Home() {
             </div>
             <h1 className="texte-8">card</h1>
 
-            <Image
-              source={ImageTest}
-              className={"ronde ratio-large"}
-            />
+            <Image source={ImageTest} className={"ronde ratio-large"} />
 
             <p className="texte-2 texte-couleur-gris">
               Ceci est un composant{" "}
@@ -197,42 +175,6 @@ export default function Home() {
           </Bloc>
         </Ligne>
       </Col>
-
-      {/*<Col>
-
-
-        <div className="aff-flex jc-mil ai-mil gap-3 mb-5">
-           {ratios.map((r) => (
-                <button
-                  key={r.label}
-                  className={`bouton bouton-min bouton-contour-sombre taille-pt ${
-                    current.label === r.label ? "btn-actif" : ""
-                  }`}
-                  onClick={() => setCurrent(r)}
-                >
-                  {r.label}
-                </button>
-              ))}
-
-        </div>
-      
-           
-
-            <motion.div
-              key={current.label} // force le changement
-              className={`${current.className} image-cover col ai-mil`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-            >
-              <Image
-                source={ImageTest}
-                className={`ronde ${current.className}`}
-                height={800}
-                width={800}
-              />
-            </motion.div>
-      </Col>*/}
 
       <Col className={"ai-mil mh-8"}>
         <h1 className="texte-7 ta-mil texte-couleur-bleu-ciel">Composants</h1>

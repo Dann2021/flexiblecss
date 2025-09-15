@@ -49,7 +49,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
   // variable pour get_started
   const started = [
     { id: 1, label: "Introduction", icone: null, lien: "intro" },
-   // { id: 2, label: "Installation", icone: null, lien: "install" },
+    // { id: 2, label: "Installation", icone: null, lien: "install" },
     { id: 3, label: "Structure projet", icone: null, lien: "structure" },
   ];
 
@@ -58,7 +58,8 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 1, label: "aspect-ratio", icone: null, lien: "aspect-ratio" },
     { id: 2, label: "display", icone: null, lien: "display" },
     { id: 3, label: "bloc", icone: null, lien: "bloc" },
-
+    { id: 4, label: "couleurs", icone: null, lien: "couleurs" },
+    { id: 5, label: "ligne & col", icone: null, lien: "ligne-col" },
   ];
 
   //console.log("state : ", ouvert);

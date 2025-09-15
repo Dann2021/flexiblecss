@@ -13,6 +13,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 1rem;
+
 }
 
 * {
@@ -1449,6 +1450,7 @@ html {
   align-items: center;
   gap: 0.2rem;
   list-style-type: none;
+  overflow-y: auto;
 }
 @media (min-width: 992px) {
   .navigateur .menu {
@@ -1527,7 +1529,7 @@ html {
 .sidebar .item,
 .sidebar a,
 .sidebar li {
-  display: block;
+  /*display: block;*/
   text-decoration: none;
   padding: 8px 8px 8px 32px;
   color: #818181;
@@ -14295,4 +14297,5 @@ box-sizing: border-box;*/
   background-color: rgb(14, 14, 14) !important;
   color: white !important;
 }
+
 

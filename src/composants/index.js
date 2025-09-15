@@ -9,3 +9,5 @@ export {default as Conteneur} from "./ui/Conteneur";
 export {default as Ligne} from "./ui/Ligne";
 export {default as Image} from "./ui/Image"
 export {default as Lien} from "./ui/Lien"
+export {default as Table } from "./ui/Tableau.jsx";
+export {default as Carrousel} from "./ui/Carrousel.jsx"

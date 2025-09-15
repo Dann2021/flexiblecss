@@ -14,21 +14,23 @@ const AspectRatioPage = lazy(() => import("../pages/docs/AspectRatioPage"));
 const DisplayPage = lazy(() => import("../pages/docs/DisplayPage"));
 const PageErreur = lazy(() => import("../pages/404/PageErreur"));
 const BlocPage = lazy(() => import("../pages/docs/BlocPage"));
-
-
+const CouleurPage = lazy(() => import("../pages/docs/CouleurPage.jsx"));
+const Test = lazy(() => import("../pages/test/Test.jsx"));
+const LigneColPage = lazy(() => import("../pages/docs/LigneColPage.jsx"));
 
 function Routeur() {
   return (
     <Suspense fallback={<Spinner type={1} />}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/test" element={<Test />} />
         <Route path="/docs" element={<DocHome />}>
           <Route path="composant" element={<ComposantPages />} />
           <Route path="templates" element={<TemplatePage />} />
           <Route path="uikit" element={<UiKitPage />} />
-          <Route index  element={<IntroPage />} />
+          <Route index element={<IntroPage />} />
           <Route path="intro" element={<IntroPage />} />
-           <Route path="*" element={<PageErreur />} />
+          <Route path="*" element={<PageErreur />} />
           {/*<Route path="intro" element={<IntroPage />} />*/}
           {/* Page par défaut quand on est sur /docs */}
           {/*<Route index element={<InstallPage />} />*/}
@@ -37,6 +39,8 @@ function Routeur() {
           <Route path="aspect-ratio" element={<AspectRatioPage />} />
           <Route path="display" element={<DisplayPage />} />
           <Route path="bloc" element={<BlocPage />} />
+          <Route path="couleurs" element={<CouleurPage />} />
+          <Route path="ligne-col" element={<LigneColPage />} />
         </Route>
       </Routes>
     </Suspense>

@@ -1,0 +1,149 @@
+const Carrousel = ({ titre }) => {
+  const [index, setIndex] = useState(0);
+
+  // on selectionne toutes les images
+  /*const images = [
+        ImageTest,
+        ImageTest,
+        ImageTest,
+        ImageTest, ImageTest,
+        ImageTest
+    ]*/
+  const images = [Image1, Image2, Image3, Image4, Image5, Image6];
+  const total = images.length;
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+  };
+
+  // Fonction pour aller à droite
+  const nextSlide = () => {
+    setIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <>
+      <h1 className={"texte-6"}>{titre}</h1>
+      <div className="aff-flex jc-sb ai-mil gap-2 mh-4 mb-3 bloc-12">
+        <Bouton
+          theme={"claire"}
+          taille={"min"}
+          className={"ronde-2"}
+          onClick={prevSlide}
+        >
+          <ArrowLeft size={20} />
+        </Bouton>
+
+        <Bouton
+          theme={"claire"}
+          taille={"min"}
+          className={"ronde-2"}
+          onClick={nextSlide}
+        >
+          <ArrowRight size={20} />
+        </Bouton>
+      </div>
+
+      <div
+        className={
+          "bloc-12 ronde bord-2 bord-gris-claire bord-dashed overx-auto p-3"
+        }
+        style={{ scrollBehavior: "smooth" }}
+      >
+        <div
+          className="aff-flex gap-4 p-2"
+          style={{
+            transform: `translateX(-${index * 320}px)`,
+            transition: "transform 0.5s ease",
+          }}
+        >
+          {images.map((src, i) => (
+            <Image
+              key={i}
+              className={"ronde survol curseur-pointeur"}
+              alt={`image ${i + 1}`}
+              source={src}
+              height={320}
+              width={320}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+const Carrousel2 = ({ titre }) => {
+  const [index, setIndex] = useState(0);
+
+  // on selectionne toutes les images
+  /*const images = [
+        ImageTest,
+        ImageTest,
+        ImageTest,
+        ImageTest, ImageTest,
+        ImageTest
+    ]*/
+  const images = [Image1, Image2, Image3, Image4, Image5, Image6];
+  const total = images.length;
+
+  const prevSlide = () => {
+    setIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+  };
+
+  // Fonction pour aller à droite
+  const nextSlide = () => {
+    setIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <>
+      <h1 className={"texte-6"}>{titre}</h1>
+      <div className="aff-flex jc-sb ai-mil gap-2 mh-4 mb-3 bloc-12 bloc-myn-5">
+        <Bouton
+          theme={"claire"}
+          taille={"min"}
+          className={"ronde-2"}
+          onClick={prevSlide}
+        >
+          <ArrowLeft size={20} />
+        </Bouton>
+
+        <Bouton
+          theme={"claire"}
+          taille={"min"}
+          className={"ronde-2"}
+          onClick={nextSlide}
+        >
+          <ArrowRight size={20} />
+        </Bouton>
+      </div>
+
+      <div
+        className={
+          "col bloc-12 bloc-myn-5 ronde bord-2 bord-gris-claire bord-dashed overx-auto p-3"
+        }
+        style={{ scrollBehavior: "smooth" }}
+      >
+        <div
+          className="aff-flex gap-4 p-2 "
+          style={{
+            transform: `translateX(-${index * 320}px)`,
+            transition: "transform 0.5s ease",
+          }}
+        >
+          {images.map((src, i) => (
+            <Image
+              key={i}
+              className={"ronde survol curseur-pointeur"}
+              alt={`image ${i + 1}`}
+              source={src}
+              //height={320}
+              //width={320}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};

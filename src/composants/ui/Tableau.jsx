@@ -111,7 +111,7 @@
 
 */
 
-import convertDate from "../utiles/convertDate";
+
 import Spinner from "./Spinner";
 
 export default function Tableau({ datas, chargement, className = "" }) {
@@ -126,18 +126,18 @@ export default function Tableau({ datas, chargement, className = "" }) {
       width: "100%", // ajouter le 11/07/2025
       maxHeight: "200px",
       overflow: "auto",
-      backgroundColor: "#f5f5f5", // clair : presque blanc, sombre : presque noir
-      color: "#222", // texte noir en clair, gris clair en sombre
-      boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+      //backgroundColor: "#f5f5f5", // clair : presque blanc, sombre : presque noir
+      //color: "#222", // texte noir en clair, gris clair en sombre
+      //boxShadow: "0 0 10px rgba(0,0,0,0.1)",
     },
 
     th: {
       //backgroundColor: theme === 'claire' ? "#eeeeee" : "#2c2c2c", // en clair : gris très léger, en sombre : gris foncé
-      color: "#000000", // texte noir en clair, blanc en sombre
+     // color: "#000000", // texte noir en clair, blanc en sombre
       borderBottom: "1px solid #ddd", // bordure adaptée
     },
     td: {
-      color: "#333333", // texte foncé en clair
+      //color: "#333333", // texte foncé en clair
       borderBottom: "1px solid #ddd", // idem
     },
 
@@ -152,7 +152,7 @@ export default function Tableau({ datas, chargement, className = "" }) {
 
   return (
     <div
-      className={`bloc-12 bloc-pt-12 bloc-myn-12 mh-3 ${className}`}
+      className={`bloc-12 bloc-pt-12 bloc-myn-12 mh-3 fira ${className}`}
       style={tableStyle.conteneur}
     >
       {chargement ? (
@@ -163,8 +163,8 @@ export default function Tableau({ datas, chargement, className = "" }) {
             <tr>
               {labels.map((element, index) => (
                 <th
-                  className="ta-gauche  py-1 px-1"
-                  style={tableStyle.th}
+                  className="ta-gauche  py-1 px-1 texte-couleur-bleu-ciel"
+                  //style={tableStyle.th}
                   key={index}
                 >
                   {element}
@@ -175,7 +175,7 @@ export default function Tableau({ datas, chargement, className = "" }) {
           <tbody>
             {datas.map((element, indice) => (
               <tr
-                className="curseur-pointeur"
+                className="curseur-pointeur texte-couleur-bleu-acier"
                 key={indice}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor =
@@ -186,23 +186,15 @@ export default function Tableau({ datas, chargement, className = "" }) {
                 }
               >
                 {labels.map((label) =>
-                  label === "date" ? (
+
                     <td
-                      className="ta-gauche p-1 taille-pt"
-                      style={tableStyle.td}
-                      key={label}
-                    >
-                      {convertDate(element[label])}
-                    </td>
-                  ) : (
-                    <td
-                      className="ta-gauche p-1 taille-pt"
-                      style={tableStyle.td}
+                      className="ta-gauche p-1 taille-pt "
+                     style={tableStyle.td}
                       key={label}
                     >
                       {element[label]}
                     </td>
-                  ),
+                  ,
                 )}
               </tr>
             ))}
