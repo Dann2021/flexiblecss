@@ -1,0 +1,31 @@
+import{j as e}from"./index-B5HRH0AM.js";import{C as l}from"./Col-D21KYFnD.js";import{B as s}from"./Bloc-B2uNHbn7.js";import{C as t}from"./Codebloc-4y4CgKE7.js";import{b as r,d as c}from"./index-3f2g6Zcn.js";import"./Bouton-Dx0-ostr.js";import"./proxy-B9y9HqtZ.js";import"./copy-PgImx4lg.js";import"./iconBase-BVWEwULA.js";function $(){return e.jsxs("div",{children:[e.jsxs("h1",{className:"texte-5",children:["Structure de ",e.jsx("span",{className:"texte-couleur-bleu-ciel",children:"Flexible"})]}),e.jsxs(l,{className:"gap-3 mh-2",children:[e.jsx(s,{type:"myn",nombre:11,className:"my-2",children:e.jsxs("p",{className:"texte-couleur-gris",children:["Dans cette page vous verrez comment tous les projets qui utilisent"," ",e.jsx("span",{className:"texte-couleur-bleu-ciel te-noir",children:"Flexible CSS"})," ","doivent se présenter. Pour cela nous partiront de la structure la plus simple à la plus complexe"]})}),e.jsxs("div",{className:"aff-flex ai-mil gap-2",children:[e.jsx("h2",{className:"texte-4 texte-couleur-bleu-lavande tt-maj",children:"html"}),e.jsx(r,{size:40,color:"#E34F26"})]}),e.jsx(s,{type:"myn",nombre:11,className:"my-2",children:e.jsxs("p",{className:"texte-couleur-gris",children:["Un projet html utilsant"," ",e.jsx("span",{className:"texte-couleur-bleu-ciel te-noir",children:"Flexible CSS"})," ","doit respecter cette structure."]})}),e.jsx(t,{className:"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt",langage:"bash",children:`
+# Structure HTML
+
+projet/
+├── style/
+│   ├── flexible.css
+│   └── favicon.ico
+├── script/
+│   └── flexible.js
+└── index.html
+`}),e.jsxs("div",{className:"aff-flex ai-mil gap-2 mh-2",children:[e.jsx("h2",{className:"texte-4 texte-couleur-bleu-lavande",children:"React Js"})," ",e.jsx(c,{size:40,color:"#61DBFB"})]}),e.jsx(s,{type:"myn",nombre:11,className:"my-2",children:e.jsxs("p",{className:"texte-couleur-gris",children:["Un projet reatc js utilsant"," ",e.jsx("span",{className:"texte-couleur-bleu-ciel te-noir",children:"Flexible CSS"})," ","doit respecter cette structure."]})}),e.jsx(t,{className:"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt",langage:"bash",children:`
+# Structure React Js 
+
+my-app/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   └── Footer.jsx
+│   ├── style/
+│   │   └── flexible.css
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   └── About.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+  `})]})]})}export{$ as default};

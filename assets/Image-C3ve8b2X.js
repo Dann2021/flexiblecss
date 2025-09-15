@@ -1,0 +1,1 @@
+import{j as o,a as t}from"./index-B5HRH0AM.js";function c({source:a,className:s,alt:e,width:i,height:m,masque:r,...n}){return o.jsx("img",{loading:"lazy",src:a,className:t("image",s),alt:e,width:i,height:m,hidden:r,...n})}export{c as I};
