@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "code-highlighter-react": "^0.3.0",
     "lucide-react": "^0.540.0",
     "motion": "^12.23.12",
     "prism-react-renderer": "^2.4.1",

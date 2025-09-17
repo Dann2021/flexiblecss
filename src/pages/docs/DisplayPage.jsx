@@ -16,16 +16,10 @@ const data = [
   { id: 8, classe: "aff-inline-grid", style: "display : inline-grid" },
   { id: 9, classe: "aff-none", style: "display : none" },
 ];
-/*const html = `
-    <div class="aff-flex jc-mil ai-mil gap-3">
-        <div className="bloc-2 bg-gris-claire ronde p-2"></div>
-        <div className="bloc-2 bg-bleu-lavande ronde p-2"></div>
-        <div className="bloc-2 bg-rouge-cerise ronde p-2"></div>
-    </div>
-`;*/
+
 export default function DisplayPage() {
   const classe = `aff-[propriete]`;
-  const [valeur, setValeur] = useState("inline")
+
   
   return (
     <>
@@ -46,7 +40,7 @@ export default function DisplayPage() {
         </Bloc>
         <Tableau titre1={"classes"} titre2={"styles"} data={data} />
 
-        <p className="texte-2">Exemple</p>
+        <p className="texte-3">Exemple</p>
         <h3 className="mh-2 ls-2">
           <span className="fira texte-couleur-bleu-ciel">`aff-block`</span> et{" "}
           <span className="fira texte-couleur-bleu-ciel">`aff-inline`</span>
@@ -58,57 +52,11 @@ export default function DisplayPage() {
             positionne par rapport aux autres et comment il gère sa taille.
           </p>
         </Bloc>
-        {/* a deverouiller
-        <CardTexte>
-          <Bloc type={"myn"} nombre={5} className={"mb-3 ta-mil  aff-inline"}>
-            <h4>Paragraphe1</h4>
-            <p className="taille-pt ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              quae, iste illum eligendi ut iure officiis earum excepturi
-              quibusdam inventore minima cum vitae adipisci incidunt laboriosam
-              accusamus doloribus id voluptas!
-            </p>
-          </Bloc>
-          <Bloc type={"myn"} nombre={5} className={"aff-block"}>
-            <h4>Paragraphe2</h4>
-            <p className="taille-pt ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              quae, iste illum eligendi ut iure officiis earum excepturi
-              quibusdam inventore minima cum vitae adipisci incidunt laboriosam
-              accusamus doloribus id voluptas!
-            </p>
-          </Bloc>
-          <Bloc type={"myn"} nombre={5}>
-            <h4>Paragraphe2</h4>
-            <p className="taille-pt ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              quae, iste illum eligendi ut iure officiis earum excepturi
-              quibusdam inventore minima cum vitae adipisci incidunt laboriosam
-              accusamus doloribus id voluptas!
-            </p>
-          </Bloc>
-        </CardTexte>*/}
+
       </Col>
      
 
-      <div>
-        <h1>Test</h1>
-        <Ligne className={"jc-mil"}>
-          <Bloc type={"myn"} nombre={5}>
-            <h1>Bloc</h1>
-            <Bouton className={"m-1"} onClick={() => setValeur("inline")}>inline</Bouton>
-            <Bouton className={"m-1"} onClick={() => setValeur("flex")}>aff-flex</Bouton>
-            <Bouton className={"m-1"} onClick={() => setValeur("block")}>aff-block</Bouton>
-            <Bouton className={"m-1"} onClick={() => setValeur("flex")}>inline-flex</Bouton>
 
-          </Bloc>
-          <Bloc type={"myn"} nombre={6}>
-            <h1>Paragraphe</h1>
-            <h3>{valeur}</h3>
-            <p className={`aff-${valeur} taille-pt`}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi repudiandae sed optio quidem recusandae quis modi est vero officia dolorum, porro perspiciatis debitis explicabo nam dicta deserunt cum ipsum impedit.</p>
-          </Bloc>
-        </Ligne>
-      </div>
     </>
   );
 }

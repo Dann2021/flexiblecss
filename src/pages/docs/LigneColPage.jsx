@@ -3,6 +3,7 @@ import { Columns, Rows } from "lucide-react";
 import { Bloc, Col, Ligne } from "../../composants";
 import Codebloc from "../../utilitaire/Codebloc";
 import Tableau from "../../utilitaire/Tableau";
+import CodePlay from "../../utilitaire/CodePlay.jsx";
 
 
 

@@ -1,4 +1,5 @@
 import { Bloc } from "../composants";
+import clsx from "../composants/classe.js";
 
 /**
  * ce composant me permet d'afficher un tableau dont les colonnes sont classe et style
@@ -9,7 +10,7 @@ const Tableau = ({ className = "", titre1, titre2, data }) => {
     <Bloc
       type={"myn"}
       nombre={11}
-      className={`p-2 bg-gris-clair ronde ${className}`}
+      className={clsx("p-2", className)}
     >
       <div className="aff-flex fd-col gap-2">
         <div className="aff-flex ai-mil jc-sb gap-2">

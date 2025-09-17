@@ -62,6 +62,17 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 5, label: "ligne & col", icone: null, lien: "ligne-col" },
   ];
 
+  const composants = [
+    {id: 1, label: "Accordeon", icone: null, lien: "accordeon"},
+    {id: 2, label: "Bouton", icone: null, lien: "bouton"},
+    {id: 3, label: "Carrousel", icone: null, lien: "carrousel"},
+    {id: 4, label: "autre", icone: null, lien: "autre"},
+
+
+
+
+  ]
+
   //console.log("state : ", ouvert);
   return (
     <div className="conteneur">
@@ -94,7 +105,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
           {docs.map((element) => (
             <Lien
               key={element.id}
-              className="gap-2 aff-flex ai-mil"
+              className="gap-2  aff-flex ai-mil"
               onClick={() => onSelect?.(element.lien)}
               chemin={element.lien}
             >
@@ -122,6 +133,21 @@ export default function Sidebar2({ onToggle, onSelect }) {
         <h4 className="mg-2 tt-maj texte-couleur-gris my-2">Mise en page</h4>
         <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
           {mpage.map((element) => (
+            <Lien
+              key={element.id}
+              className="gap-2 aff-flex ai-mil"
+              onClick={() => onSelect?.(element.lien)}
+              chemin={element.lien}
+            >
+              {" "}
+              {element.label}
+            </Lien>
+          ))}
+        </div>
+
+        <h4 className={"mg-2 tt-maj texte-couleur-gris my-2"}>composants</h4>
+        <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
+          {composants.map((element) => (
             <Lien
               key={element.id}
               className="gap-2 aff-flex ai-mil"

@@ -17,7 +17,8 @@ const BlocPage = lazy(() => import("../pages/docs/BlocPage"));
 const CouleurPage = lazy(() => import("../pages/docs/CouleurPage.jsx"));
 const Test = lazy(() => import("../pages/test/Test.jsx"));
 const LigneColPage = lazy(() => import("../pages/docs/LigneColPage.jsx"));
-
+const AccordeonPage = lazy(() => import('../pages/docs/composants/AccordeonPage.jsx'))
+const CarrouselPage = lazy(() => import("../pages/docs/composants/CarrouselPage.jsx"))
 function Routeur() {
   return (
     <Suspense fallback={<Spinner type={1} />}>
@@ -41,6 +42,9 @@ function Routeur() {
           <Route path="bloc" element={<BlocPage />} />
           <Route path="couleurs" element={<CouleurPage />} />
           <Route path="ligne-col" element={<LigneColPage />} />
+
+          <Route path="accordeon" element={<AccordeonPage />} />
+          <Route path="carrousel" element={<CarrouselPage />} />
         </Route>
       </Routes>
     </Suspense>

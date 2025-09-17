@@ -41,10 +41,12 @@ import PythonLogo from "../assets/icones/jobs/python.svg?react";
 import ReactLogo from "../assets/icones/jobs/react.svg?react";
 import ViteLogo from "../assets/icones/jobs/vite.svg?react";
 import GitHub from "../assets/icones/jobs/github.svg?react";
+import WebDesign from "../assets/icones/jobs/webdesign.svg?react";
 
 
 // Export all icons as an object
 const Icons = {
+  WebDesign,
   GitHub,
   CSSLogo,
   Html5Logo,

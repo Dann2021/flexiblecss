@@ -61,14 +61,14 @@ export default function Navigateur({ logo, texte }) {
               Documentation
             </Lien>
           </li>
-          {/*<li className="effet">
+          <li className="effet">
             <Lien
               chemin={"/test"}
               className={"taille-pt texte-couleur-gris nav-item"}
             >
               Test
             </Lien>
-          </li>*/}
+          </li>
         </ul>
       </div>
     </nav>

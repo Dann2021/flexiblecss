@@ -76,7 +76,7 @@ const CardCouleur = ({ couleurName, datasColor = [] }) => {
           <span
             className={`bord-1 survol ta-mil curseur-pointeur bord-solid bord-${couleur.nom} ronde-1 p-2 bloc-4 bloc-tp-2  bloc-myn-2 bg-${couleur.nom}`}
           >
-            <span className={"taille-pt te-noir"}>{couleur.valeur}</span>
+            <span className={"taille-pt tt-maj te-noir"}>{couleur.valeur}</span>
           </span>
         ))}
       </div>
