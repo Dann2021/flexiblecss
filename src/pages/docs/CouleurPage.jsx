@@ -5,6 +5,12 @@ import {
   paletteVert,
   paletteBleu,
   paletteGris,
+  paletteViolet,
+  paletteRose,
+  paletteOrangeJaune,
+  paletteAutres
+
+
 } from "../../constantes/Color.js";
 import Tableau from "../../utilitaire/Tableau.jsx";
 
@@ -51,6 +57,10 @@ export default function CouleurPage() {
         <CardCouleur couleurName={"Bleu"} datasColor={paletteBleu} />
         <CardCouleur couleurName={"Vert"} datasColor={paletteVert} />
         <CardCouleur couleurName={"Gris"} datasColor={paletteGris} />
+        <CardCouleur couleurName={"Violet"} datasColor={paletteViolet} />
+        <CardCouleur couleurName={"Rose"} datasColor={paletteRose} />
+        <CardCouleur couleurName={"Orange & Jaune"} datasColor={paletteOrangeJaune} />
+        <CardCouleur couleurName={"Autres"} datasColor={paletteAutres} />
       </Bloc>
        
       </Col>
