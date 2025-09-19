@@ -1,17 +1,13 @@
 import React from "react";
-import {Bloc, Col, Ligne, Image, Bouton} from "../../composants/index.js"
+import { Bloc, Col, Ligne, Image, Bouton } from "../../composants/index.js";
 import UiKitImage from "../../assets/images/uikit.png";
 import UiKitImageFlexible from "../../assets/images/flex3.png";
 import Icons from "../../constantes/Icone.js";
-import {Heart, HomeIcon, Shapes, User2} from "lucide-react";
-
+import { Heart, HomeIcon, Shapes, User2 } from "lucide-react";
 
 export default function UiKitPage() {
-
   return (
     <>
-
-
       <div className="aff-flex ai-mil gap-2 texte-couleur-bleu-ciel mb-2">
         <Shapes className={"image"} size={30} />
         <h1 className={"fira te-noir ls-2 lh-3"}>Ui Kit</h1>
@@ -52,17 +48,17 @@ export default function UiKitPage() {
           </Bloc>
         </Ligne>*/}
 
-        <Ligne className={"jc-sb ai-mil gap-6"}>
-          <Bloc type={"myn"} nombre={4} className={"p-2"}  >
+        <Ligne className={"jc-sb  gap-6"}>
+          <Bloc type={"myn"} nombre={4} className={"p-2 m-1"}>
             <div className="aff-flex ai-mil gap-3 mb-3">
               <Icons.Avatar height={40} width={40} />
               <p className={"texte-couleur-gris taille-pt"}>Flexible Design</p>
             </div>
-            <h2>Flexible  Design Kit</h2>
+            <h2>Flexible Design Kit</h2>
             <div className="aff-flex ai-mil gap-2 texte-couleur-gris taille-pt mh-2 mb-3">
               <span>Design file</span>
               <span>.</span>
-              <Heart size={15}/>
+              <Heart size={15} />
               <span>47.7k</span>
               <span>.</span>
               <User2 size={15} />
@@ -71,12 +67,13 @@ export default function UiKitPage() {
             <Bouton taille={"me"}>Open in figma</Bouton>
           </Bloc>
           <Bloc type={"myn"} nombre={7}>
-            <Image source={UiKitImageFlexible}   className={"ronde curseur-pointeur survol"} alt={"Material design ui kit"} />
+            <Image
+              source={UiKitImageFlexible}
+              className={"ronde curseur-pointeur survol"}
+              alt={"Material design ui kit"}
+            />
           </Bloc>
-
         </Ligne>
-        
-
       </Col>
     </>
   );

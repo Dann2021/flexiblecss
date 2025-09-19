@@ -78,7 +78,7 @@ ${b}   ${b}   ${e} flexible.css
         </Bloc>
 
         <Codebloc
-          className={"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt"}
+          className={"ronde p-2 bloc-myn-11 taille-pt"}
           langage={"bash"}
         >
           {proj}
@@ -102,7 +102,7 @@ ${b}   ${b}   ${e} flexible.css
         </Bloc>
 
         <Codebloc
-          className={"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt"}
+          className={"p-2 bloc-myn-11 taille-pt"}
           langage={"bash"}
         >
           {projectTree}

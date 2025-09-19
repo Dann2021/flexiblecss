@@ -122,7 +122,7 @@ export default function IntroPage() {
         </Bloc>
 
         <Codebloc
-          className={"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt"}
+          className={"p-2 bloc-myn-11 taille-pt"}
           langage={"html"}
         >
           {code}
@@ -155,7 +155,7 @@ export default function IntroPage() {
 
         {/*<CodeBloc /> */}
         <Codebloc
-          className={"bg-gris-claire ronde p-2 bloc-myn-11 taille-pt"}
+          className={"p-2 bloc-myn-11 taille-pt"}
           langage={"bash"}
         >
           {npmInstall}

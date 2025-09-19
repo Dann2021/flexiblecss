@@ -24,18 +24,15 @@ import {
 import BoutonLien from "../../composants/brouillons/BoutonLien.jsx";
 
 export default function Home() {
-  /*const ratios = [
-    { label: "1:1", className: "ratio-carre", aspect: 1 / 1 },
-    { label: "4:3", className: "ratio-classique", aspect: 4 / 3 },
-    { label: "16:9", className: "ratio-large", aspect: 16 / 9 },
-    { label: "21:9", className: "ratio-ultraLarge", aspect: 21 / 9 },
-    { label: "auto", className: "ratio-auto", aspect: "auto" },
-  ];
+ 
 
-  const [current, setCurrent] = useState(ratios[0]);*/
+
+
+
+
   return (
     <Conteneur>
-      {/*<CodeBloc langue={"html"}>{code}</CodeBloc> */}
+    
 
       <HeroSection
         col={9}
@@ -55,6 +52,30 @@ export default function Home() {
         </span>{" "}
         👋
       </HeroSection>
+
+
+
+      <Col className={" mh-15 gap-3"}>
+        <TexteDegrade className="texte-3 ta-mil te-noir " couleurs={`${Couleurs.cyan}, ${Couleurs.grisClair}`}>Supported and backed by</TexteDegrade>
+        <div className="aff-flex jc-mil  gap-2 p-1">
+          <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
+              <SiReact size={30} color="#61DBFB" />
+              <span className="taille-pt">React</span>
+          </div>
+          <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
+            <SiJavascript size={30} color="#F7DF1E" />
+             <span className="taille-pt">JavaScript</span>
+          </div>
+          <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
+            <SiHtml5  size={30} color="#E34F26" />
+             <span className="taille-pt">Html</span>
+
+          </div>
+        </div>
+      </Col>
+
+
+     
 
       <Ligne className={"jc-sb bg-gris-claire ronde p-2 mh-8"}>
         <Bloc type={"myn"} nombre={6} className="col ai-mil jc-mil">
@@ -88,8 +109,6 @@ export default function Home() {
           <Icons.CodingIcon className="image" />
         </Bloc>
       </Ligne>
-
-
 
       <Ligne className={"jc-sb ai-mil bg-gris-c mh-10 ronde"}>
         <Bloc type={"myn"} nombre={6}>
@@ -211,6 +230,10 @@ export default function Home() {
           </Bloc>
         </Ligne>
       </Col>
+
+    
+      
+      
     </Conteneur>
   );
 }

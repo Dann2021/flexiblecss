@@ -1,0 +1,18 @@
+| Nom français            | Nom anglais (CSS) | Code Hex  |
+| ----------------------- | ----------------- | --------- |
+| Noir                    | Black             | `#000000` |
+| Argent / Argenté        | Silver            | `#C0C0C0` |
+| Gris                    | Gray              | `#808080` |
+| Blanc                   | White             | `#FFFFFF` |
+| Marron / Bordeaux foncé | Maroon            | `#800000` |
+| Rouge                   | Red               | `#FF0000` |
+| Violet foncé            | Purple            | `#800080` |
+| Fuchsia / Magenta       | Fuchsia           | `#FF00FF` |
+| Vert foncé              | Green             | `#008000` |
+| Vert clair (Citron)     | Lime              | `#00FF00` |
+| Olive                   | Olive             | `#808000` |
+| Jaune                   | Yellow            | `#FFFF00` |
+| Bleu marine             | Navy              | `#000080` |
+| Bleu                    | Blue              | `#0000FF` |
+| Sarcelle                | Teal              | `#008080` |
+| Aqua / Cyan             | Aqua              | `#00FFFF` |

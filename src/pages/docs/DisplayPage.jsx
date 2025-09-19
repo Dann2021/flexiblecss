@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Col from "../../composants/ui/Col";
 import { Bloc, Bouton } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
-import Ligne from "../../composants/ui/Ligne";
-import Codebloc from "../../utilitaire/Codebloc";
+
+
 
 const data = [
   { id: 1, classe: "aff-[prop]", style: "display : [prop]" },
@@ -24,7 +24,7 @@ export default function DisplayPage() {
   return (
     <>
       <Col className={"gap-2"}>
-        <h1 className="texte-5 texte-couleur-bleu-ciel">Display</h1>
+        <h1 className="texte-5 texte-couleur-bleu-ciel fira">Display</h1>
         <Bloc type={"myn"} nombre={11}>
           <p className="texte-couleur-gris">
             Cette classe permet de determiner le mode d'affichage d'un element

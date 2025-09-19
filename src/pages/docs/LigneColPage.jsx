@@ -107,7 +107,7 @@ export default function LigneColPage() {
         <Codebloc
           langage={"jsx"}
           className={
-            "bg-gris-claire ronde p-2 bloc-12 bloc-myn-11 taille-pt mh-8"
+            "p-2 bloc-12 bloc-myn-11 taille-pt mh-8"
           }
         >
           {ligneCode}

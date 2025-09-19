@@ -1,5 +1,5 @@
 import { IoColorPaletteSharp } from "react-icons/io5";
-import { Bloc, Carrousel, Col } from "../../composants/index.js";
+import { Bloc, Carrousel, Col, Lien } from "../../composants/index.js";
 import {
   paletteRouge,
   paletteVert,
@@ -13,6 +13,9 @@ import {
 
 } from "../../constantes/Color.js";
 import Tableau from "../../utilitaire/Tableau.jsx";
+import { BiLeftArrow } from "react-icons/bi";
+import { Link } from "react-router-dom";
+
 
 
 const couleurData = [
@@ -22,6 +25,7 @@ const couleurData = [
 ];
 
 export default function CouleurPage() {
+
   return (
     <>
       <div className="aff-flex ai-mil gap-2 mb-3">
@@ -63,6 +67,7 @@ export default function CouleurPage() {
         <CardCouleur couleurName={"Autres"} datasColor={paletteAutres} />
       </Bloc>
        
+
       </Col>
     </>
   );

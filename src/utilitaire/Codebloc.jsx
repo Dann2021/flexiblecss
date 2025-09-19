@@ -1,10 +1,13 @@
 import { Copy, Check } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+// eslint-disable-next-line no-unused-vars
+import {  vscDarkPlus, dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Bouton } from "../composants";
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
+import clsx from "../composants/classe";
+
 
 export default function Codebloc({ children, langage, className }) {
   const [copie, setCopie] = useState(false);
@@ -40,11 +43,11 @@ export default function Codebloc({ children, langage, className }) {
   };
 
   return (
-    <div className={className}>
+    <div className={clsx('ronde', className)} style={{background: "rgb(30,30,30)"}}>
       <div className="aff-flex ai-mil gap-3 jc-sb">
-        <p className="taille-pt te-noir">Terminal</p>
+        <p className="taille-pt te-noir texte-couleur-gris-claire">Terminal</p>
 
-        <Bouton theme="claire" taille="min" onClick={() => copieTexte(children)}>
+        <Bouton theme="sombre" taille="min" className={"ronde-1"} onClick={() => copieTexte(children)}>
           <AnimatePresence mode="wait">
             {copie ? (
               <motion.span
@@ -54,7 +57,7 @@ export default function Codebloc({ children, langage, className }) {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
               >
-                <Check size={18} />
+                <Check size={15} />
               </motion.span>
             ) : (
               <motion.span
@@ -64,7 +67,7 @@ export default function Codebloc({ children, langage, className }) {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
               >
-                <Copy size={18} />
+                <Copy size={15} />
               </motion.span>
             )}
           </AnimatePresence>
@@ -73,8 +76,9 @@ export default function Codebloc({ children, langage, className }) {
 
       <SyntaxHighlighter
         language={langage}
-        style={coy}
-        className="bloc-12 bg-gris-claire"
+        style={vscDarkPlus}
+        showLineNumbers
+        className="bloc-12"
       >
         {children}
       </SyntaxHighlighter>

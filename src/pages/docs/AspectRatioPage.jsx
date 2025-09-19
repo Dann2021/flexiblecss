@@ -45,8 +45,7 @@ export default function AspectRatioPage() {
   return (
     <>
       <Col className={"gap-3"}>
-    
-        <h1 className="texte-5 texte-couleur-bleu-ciel">aspect-ratio</h1>
+        <h1 className="texte-5 texte-couleur-bleu-ciel fira">Aspect-ratio</h1>
         <Bloc type={"myn"} nombre={11} className={"mb-4 mh-2"}>
           <p className="texte-couleur-gris">
             Classe utilitaire pour contrôler le ratio d'un élément
@@ -84,8 +83,6 @@ export default function AspectRatioPage() {
     </>
   );
 }
-
-
 
 const CardResize = ({ sourceImage, className = "", langage }) => {
   const [ratio, setRatio] = useState("large");
