@@ -1,22 +1,19 @@
-import React, { useRef, useState } from "react";
-import {
-  BookOpen,
-  Component,
-  ComponentIcon,
-  Package,
-  Sidebar,
-  X,
-} from "lucide-react";
+import { useRef, useState } from "react";
+import { BookOpen, Component, Package, Sidebar, X } from "lucide-react";
 import { CgTemplate } from "react-icons/cg";
-import { MdClose } from "react-icons/md";
-import Bouton from "./Bouton";
-
 import Lien from "./Lien";
-export default function Sidebar2({ onToggle, onSelect }) {
-  const sidebarRef = useRef(null);
-  // eslint-disable-next-line no-unused-vars
-  const [ouvert, setOuvert] = useState(false);
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
+import clsx from "../classe";
+
+export default function Sidebar2({ onToggle, onSelect }) {
+  // variables de state
+  const sidebarRef = useRef(null);
+  const [ouvert, setOuvert] = useState(false);
+  const [lienActif, setLienActif] = useState(null);
+
+  // fonctions de state
   const ouvrir = () => {
     if (sidebarRef.current) sidebarRef.current.style.width = "50%";
     setOuvert(true);
@@ -63,17 +60,49 @@ export default function Sidebar2({ onToggle, onSelect }) {
   ];
 
   const composants = [
-    {id: 1, label: "Accordeon", icone: null, lien: "accordeon"},
-    {id: 2, label: "Bouton", icone: null, lien: "bouton"},
-    {id: 3, label: "Carrousel", icone: null, lien: "carrousel"},
-    {id: 4, label: "autre", icone: null, lien: "autre"},
+    { id: 1, label: "Accordeon", icone: null, lien: "accordeon" },
+    { id: 2, label: "Bouton", icone: null, lien: "bouton" },
+    { id: 3, label: "Carrousel", icone: null, lien: "carrousel" },
+    { id: 4, label: "autre", icone: null, lien: "autre" },
+  ];
 
+  const itemVariants = {
+    hover: { background: "#f1f3f5" },
+    exit: { opacity: 0, scale: 0.7 },
+  };
 
-
-
-  ]
+  // #e9ecef,#f1f3f5 (très bien), #dee2e6 (bien), #e6f2ea
 
   //console.log("state : ", ouvert);
+  
+
+  const renduLien = (elements) =>
+    elements.map((element) => {
+      const lienChoisit = lienActif === element.lien;
+
+      return (
+        <motion.div
+          key={element.id}
+          initial={false}
+          whileHover="hover"
+          variants={itemVariants}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className={`ronde-1 curseur-pointeur mb-1`}
+          style={{ background: lienChoisit ? "#f1f3f5" : "transparent" }}
+          onClick={() => {
+            setLienActif(element.lien);
+            onSelect?.(element.lien);
+          }}
+        >
+          <Lien
+            chemin={element.lien}
+            className="gap-2 aff-flex ai-mil px-2 py-1"
+          >
+            {element.icone} {element.label}
+          </Lien>
+        </motion.div>
+      );
+    });
   return (
     <div className="conteneur">
       {/* Bouton pour ouvrir la sidebar */}
@@ -83,13 +112,13 @@ export default function Sidebar2({ onToggle, onSelect }) {
 
       <div
         ref={sidebarRef}
-        className="sidebar p-myn-3 fixe haut-13 gauche-0 bg-gris-claire ronde "
+        className={clsx(
+          "sidebar p-myn-3 fixe haut-13 gauche-0",
+          ouvert && "ronde",
+          ouvert && "bg-gris-claire"
+        )}
         id="maSidebar"
       >
-        {/*<h3 onClick={fermer} className="fermer texte-couleur-vert-sauge te-noir">
-          &times;
-        </h3>*/}
-
         <X
           size={20}
           className="fermer curseur-pointeur mh-2"
@@ -102,62 +131,22 @@ export default function Sidebar2({ onToggle, onSelect }) {
         </div>
 
         <div className="taille-pt mh-2 texte-couleur-gris px-1 ">
-          {docs.map((element) => (
-            <Lien
-              key={element.id}
-              className="gap-2  aff-flex ai-mil"
-              onClick={() => onSelect?.(element.lien)}
-              chemin={element.lien}
-            >
-              {" "}
-              {element.icone} {element.label}
-            </Lien>
-          ))}
+          {renduLien(docs)}
         </div>
 
         <h4 className="mg-2 tt-maj texte-couleur-gris my-2">get started</h4>
         <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
-          {started.map((element) => (
-            <Lien
-              key={element.id}
-              className="gap-2 aff-flex ai-mil"
-              onClick={() => onSelect?.(element.lien)}
-              chemin={element.lien}
-            >
-              {" "}
-              {element.label}
-            </Lien>
-          ))}
+          {renduLien(started)}
         </div>
 
         <h4 className="mg-2 tt-maj texte-couleur-gris my-2">Mise en page</h4>
         <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
-          {mpage.map((element) => (
-            <Lien
-              key={element.id}
-              className="gap-2 aff-flex ai-mil"
-              onClick={() => onSelect?.(element.lien)}
-              chemin={element.lien}
-            >
-              {" "}
-              {element.label}
-            </Lien>
-          ))}
+          {renduLien(mpage)}
         </div>
 
         <h4 className={"mg-2 tt-maj texte-couleur-gris my-2"}>composants</h4>
         <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
-          {composants.map((element) => (
-            <Lien
-              key={element.id}
-              className="gap-2 aff-flex ai-mil"
-              onClick={() => onSelect?.(element.lien)}
-              chemin={element.lien}
-            >
-              {" "}
-              {element.label}
-            </Lien>
-          ))}
+          {renduLien(composants)}
         </div>
       </div>
     </div>
