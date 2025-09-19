@@ -1,27 +1,26 @@
 import { Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import Spinner from "../composants/ui/Spinner";
 
-const Home = lazy(() => import("../pages/home/Home"));
-const DocHome = lazy(() => import("../pages/docs/DocHome"));
-const ComposantPages = lazy(() => import("../pages/docs/ComposantPages"));
-const TemplatePage = lazy(() => import("../pages/docs/TemplatePage"));
-const UiKitPage = lazy(() => import("../pages/docs/UiKitPage"));
-const IntroPage = lazy(() => import("../pages/docs/IntroPage"));
-const InstallPage = lazy(() => import("../pages/docs/InstallPage"));
-const StructPage = lazy(() => import("../pages/docs/StructPage"));
-const AspectRatioPage = lazy(() => import("../pages/docs/AspectRatioPage"));
-const DisplayPage = lazy(() => import("../pages/docs/DisplayPage"));
-const PageErreur = lazy(() => import("../pages/404/PageErreur"));
-const BlocPage = lazy(() => import("../pages/docs/BlocPage"));
-const CouleurPage = lazy(() => import("../pages/docs/CouleurPage.jsx"));
-const Test = lazy(() => import("../pages/test/Test.jsx"));
-const LigneColPage = lazy(() => import("../pages/docs/LigneColPage.jsx"));
-const AccordeonPage = lazy(() => import('../pages/docs/composants/AccordeonPage.jsx'))
-const CarrouselPage = lazy(() => import("../pages/docs/composants/CarrouselPage.jsx"))
+// Imports directs (plus de lazy)
+import Home from "../pages/home/Home";
+import DocHome from "../pages/docs/DocHome";
+import ComposantPages from "../pages/docs/ComposantPages";
+import TemplatePage from "../pages/docs/TemplatePage";
+import UiKitPage from "../pages/docs/UiKitPage";
+import IntroPage from "../pages/docs/IntroPage";
+import InstallPage from "../pages/docs/InstallPage";
+import StructPage from "../pages/docs/StructPage";
+import AspectRatioPage from "../pages/docs/AspectRatioPage";
+import DisplayPage from "../pages/docs/DisplayPage";
+import PageErreur from "../pages/404/PageErreur";
+import BlocPage from "../pages/docs/BlocPage";
+import CouleurPage from "../pages/docs/CouleurPage";
+import Test from "../pages/test/Test";
+import LigneColPage from "../pages/docs/LigneColPage";
+import AccordeonPage from "../pages/docs/composants/AccordeonPage";
+import CarrouselPage from "../pages/docs/composants/CarrouselPage";
 function Routeur() {
   return (
-    <Suspense fallback={<Spinner type={1} />}>
+  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
@@ -42,12 +41,11 @@ function Routeur() {
           <Route path="bloc" element={<BlocPage />} />
           <Route path="couleurs" element={<CouleurPage />} />
           <Route path="ligne-col" element={<LigneColPage />} />
-
           <Route path="accordeon" element={<AccordeonPage />} />
           <Route path="carrousel" element={<CarrouselPage />} />
         </Route>
       </Routes>
-    </Suspense>
+ 
   );
 }
 
