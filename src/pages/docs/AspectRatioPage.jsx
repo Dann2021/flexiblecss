@@ -84,6 +84,7 @@ export default function AspectRatioPage() {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 const CardResize = ({ sourceImage, className = "", langage }) => {
   const [ratio, setRatio] = useState("large");
   const valeurRatio = [
@@ -92,6 +93,7 @@ const CardResize = ({ sourceImage, className = "", langage }) => {
     { id: 3, classe: "large", valeur: "16/9" },
     //{id: 4, classe: "ultraLarge", valeur: "21/9"},
   ];
+  // eslint-disable-next-line no-unused-vars
   const codeReact = `<img class="image ratio-${ratio} ..." src="./img/mac.jpeg" />`;
 
   // mise du ratio
@@ -125,9 +127,9 @@ const CardResize = ({ sourceImage, className = "", langage }) => {
         />
       </motion.div>
 
-      <div className="aff-flex fd-col mh-3">
+      {/*<div className="aff-flex fd-col mh-3">
         <Codebloc langage={langage}>{codeReact}</Codebloc>
-      </div>
+      </div>*/}
     </Bloc>
   );
 };
