@@ -10,5 +10,6 @@ export {default as Ligne} from "./ui/Ligne";
 export {default as Image} from "./ui/Image"
 export {default as Lien} from "./ui/Lien"
 export {default as Table } from "./ui/Tableau.jsx";
-export {default as Carrousel} from "./ui/Carrousel.jsx"
-export {default as Breadcrumbs} from "./ui/Breadcrumbs.jsx"
+export {default as Carrousel} from "./ui/Carrousel.jsx";
+export {default as Breadcrumbs} from "./ui/Breadcrumbs.jsx";
+export {default as Card} from "./ui/Card.jsx"
