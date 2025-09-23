@@ -18,6 +18,8 @@ import Test from "../pages/test/Test";
 import LigneColPage from "../pages/docs/LigneColPage";
 import AccordeonPage from "../pages/docs/composants/AccordeonPage";
 import CarrouselPage from "../pages/docs/composants/CarrouselPage";
+import ZIndexPage from "../pages/docs/ZIndexPage";
+
 function Routeur() {
   return (
   
@@ -43,6 +45,7 @@ function Routeur() {
           <Route path="ligne-col" element={<LigneColPage />} />
           <Route path="accordeon" element={<AccordeonPage />} />
           <Route path="carrousel" element={<CarrouselPage />} />
+          <Route path="zindex" element={<ZIndexPage />} />
         </Route>
       </Routes>
  

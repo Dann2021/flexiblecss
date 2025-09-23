@@ -57,6 +57,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 3, label: "bloc", icone: null, lien: "bloc" },
     { id: 4, label: "couleurs", icone: null, lien: "couleurs" },
     { id: 5, label: "ligne & col", icone: null, lien: "ligne-col" },
+    { id: 6, label: "z-index", icone: null, lien: "zindex" },
   ];
 
   const composants = [
