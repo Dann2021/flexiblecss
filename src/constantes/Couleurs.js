@@ -38,6 +38,9 @@ const Couleurs = {
   // Blanc et noir (utiles pour contraste fixe)
   blanc: "#ffffff",
   noir: "#000000",
+
+  orange1: "#FF705B",
+  orange2: "#FFB457"
 };
 
 export default Couleurs;

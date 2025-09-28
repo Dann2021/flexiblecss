@@ -1,8 +1,9 @@
-import React from "react";
-import Col from "../../composants/ui/Col";
-import { Bloc, Bouton } from "../../composants";
-import Tableau from "../../utilitaire/Tableau";
 
+
+import { Bloc, Col } from "../../composants";
+import Tableau from "../../utilitaire/Tableau";
+import { Layout } from "lucide-react";
+import TitreDoc from "../../composants/docs_composant/TitreDoc";
 
 
 const data = [
@@ -20,11 +21,15 @@ const data = [
 export default function DisplayPage() {
   const classe = `aff-[propriete]`;
 
-  
   return (
     <>
+    
+      <TitreDoc
+        icone={<Layout size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Display"}
+      />
+
       <Col className={"gap-2"}>
-        <h1 className="texte-5 texte-couleur-bleu-ciel fira">Display</h1>
         <Bloc type={"myn"} nombre={11}>
           <p className="texte-couleur-gris">
             Cette classe permet de determiner le mode d'affichage d'un element
@@ -52,11 +57,7 @@ export default function DisplayPage() {
             positionne par rapport aux autres et comment il gère sa taille.
           </p>
         </Bloc>
-
       </Col>
-     
-
-
     </>
   );
 }
@@ -72,4 +73,3 @@ const CardTexte = ({ children, className = "" }) => {
     </Bloc>
   );
 };
-

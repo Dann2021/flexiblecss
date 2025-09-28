@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import Col from "../../composants/ui/Col";
-import { Bloc } from "../../composants";
-import Codebloc from "../../utilitaire/Codebloc";
+import { useState } from "react";
+
+import { Bloc, Col } from "../../composants";
+
 import Image from "../../composants/ui/Image";
 import ImageTest from "../../assets/images/image.png";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import Ligne from "../../composants/ui/Ligne";
 
 import Tableau from "../../utilitaire/Tableau";
+import { Proportions } from "lucide-react";
+import TitreDoc from "../../composants/docs_composant/TitreDoc";
+
 const data = [
   { id: 1, classe: "ratio-<ratio>", style: "aspect-ratio : <ratio>" },
   { id: 2, classe: "ratio-carre", style: "aspect-ratio : 1 / 1" },
@@ -44,8 +46,12 @@ const data = [
 export default function AspectRatioPage() {
   return (
     <>
+      <TitreDoc
+        icone={<Proportions size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Aspect-ratio"}
+      />
+
       <Col className={"gap-3"}>
-        <h1 className="texte-5 texte-couleur-bleu-ciel fira">Aspect-ratio</h1>
         <Bloc type={"myn"} nombre={11} className={"mb-4 mh-2"}>
           <p className="texte-couleur-gris">
             Classe utilitaire pour contrôler le ratio d'un élément

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Conteneur from "../../composants/ui/Conteneur";
+import  { useState } from "react";
+
 import Sidebar2 from "../../composants/ui/Sidebar2";
 import { Outlet } from "react-router-dom";
 import {HomeIcon} from "lucide-react";
-import {Breadcrumbs} from "../../composants/index.js";
+import {Breadcrumbs, Conteneur} from "../../composants";
 
 export default function DocHome() {
   const [sidebarOuverte, setSidebarOuverte] = useState(false);

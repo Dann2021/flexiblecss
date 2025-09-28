@@ -993,8 +993,7 @@ html {
 .dropdown-anime .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   margin-top: 0.5rem;
   max-height: 0;
   min-width: 160px;
@@ -1033,8 +1032,7 @@ html {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   background-color: #f3f4f5;
   min-width: 150px;
   list-style-type: none;
@@ -1455,7 +1453,7 @@ html {
 }
 
 .sidebar {
-  z-index: 9999;
+  z-index: 99999999;
   height: 100%;
   width: 0;
   position: fixed;
@@ -1468,6 +1466,7 @@ html {
 .sidebar .item,
 .sidebar a,
 .sidebar li {
+  /*display: block;*/
   text-decoration: none;
   padding: 8px 8px 8px 32px;
   color: #818181;

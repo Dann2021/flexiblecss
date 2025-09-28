@@ -1,16 +1,18 @@
-
-import { Bloc, Col, Ligne, Image, Bouton } from "../../composants/index.js";
+import { Bloc, Col, Ligne, Image, Bouton } from "../../composants";
 import UiKitImageFlexible from "../../assets/images/flex3.png";
 import Icons from "../../constantes/Icone.js";
-import { Heart, HomeIcon, Shapes, User2 } from "lucide-react";
+import { Heart,  Shapes, User2 } from "lucide-react";
+import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
+
 
 export default function UiKitPage() {
   return (
     <>
-      <div className="aff-flex ai-mil gap-2 texte-couleur-bleu-ciel mb-2">
-        <Shapes className={"image"} size={30} />
-        <h1 className={"fira te-noir ls-2 lh-3"}>Ui Kit</h1>
-      </div>
+    
+      <TitreDoc
+        icone={<Shapes className="texte-couleur-bleu-ciel" size={30} />}
+        titre={"Ui Kit"}
+      />
 
       <Col>
         <Ligne className={"jc-sb  gap-6"}>

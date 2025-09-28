@@ -1,14 +1,5 @@
-import Conteneur from "../../composants/ui/Conteneur.jsx";
-import HeroSection from "../../composants/ui/HeroSection.jsx";
-import Col from "../../composants/ui/Col.jsx";
-import Bloc from "../../composants/ui/Bloc.jsx";
-import TexteDegrade from "../../composants/ui/TexteDegrade.jsx";
-
 import Couleurs from "../../constantes/Couleurs.js";
 import ImageMac from "../../assets/images/code.png";
-
-import Ligne from "../../composants/ui/Ligne.jsx";
-import Image from "../../composants/ui/Image.jsx";
 import { Minus, Square, X } from "lucide-react";
 import Code2 from "../../assets/images/code2.png";
 import Icons from "../../constantes/Icone.js";
@@ -21,19 +12,21 @@ import {
   SiCss3,
   SiReact,
 } from "react-icons/si";
-import BoutonLien from "../../composants/brouillons/BoutonLien.jsx";
+import {
+  Bouton,
+  Col,
+  Bloc,
+  TexteDegrade,
+  HeroSection,
+  Image,
+  Ligne,
+  Conteneur,
+} from "../../composants/index.js";
+import { Link } from "react-router-dom";
 
 export default function Home() {
- 
-
-
-
-
-
   return (
     <Conteneur>
-    
-
       <HeroSection
         col={9}
         textePrincipale={"Build your website with FlexibleCss"}
@@ -53,29 +46,28 @@ export default function Home() {
         👋
       </HeroSection>
 
-
-
       <Col className={" mh-15 gap-3"}>
-        <TexteDegrade className="texte-3 ta-mil te-noir " couleurs={`${Couleurs.cyan}, ${Couleurs.grisClair}`}>Supported and backed by</TexteDegrade>
+        <TexteDegrade
+          className="texte-3 ta-mil te-noir "
+          couleurs={`${Couleurs.cyan}, ${Couleurs.grisClair}`}
+        >
+          Supported and backed by
+        </TexteDegrade>
         <div className="aff-flex jc-mil  gap-2 p-1">
           <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
-              <SiReact size={30} color="#61DBFB" />
-              <span className="taille-pt">React</span>
+            <SiReact size={30} color="#61DBFB" />
+            <span className="taille-pt">React</span>
           </div>
           <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
             <SiJavascript size={30} color="#F7DF1E" />
-             <span className="taille-pt">JavaScript</span>
+            <span className="taille-pt">JavaScript</span>
           </div>
           <div className="bloc-myn-2 aff-flex  ai-mil gap-2 bord-1 bg-gris-claire ronde p-1">
-            <SiHtml5  size={30} color="#E34F26" />
-             <span className="taille-pt">Html</span>
-
+            <SiHtml5 size={30} color="#E34F26" />
+            <span className="taille-pt">Html</span>
           </div>
         </div>
       </Col>
-
-
-     
 
       <Ligne className={"jc-sb bg-gris-claire ronde p-2 mh-8"}>
         <Bloc type={"myn"} nombre={6} className="col ai-mil jc-mil">
@@ -94,14 +86,15 @@ export default function Home() {
             </span>
           </p>
           <div className="aff-flex ai-mil gap-2 jc-mil mh-2">
-            <BoutonLien type={"primaire"}>Get started</BoutonLien>
-            <BoutonLien
+            <Bouton type={"primaire"}>Get started</Bouton>
+            <Bouton
+              as={Link}
               onClick={() => console.log("hello")}
-              chemin={"/docs/install"}
+              to={"/docs/install"}
               type={"sombre"}
             >
               Installation
-            </BoutonLien>
+            </Bouton>
           </div>
         </Bloc>
 
@@ -230,10 +223,6 @@ export default function Home() {
           </Bloc>
         </Ligne>
       </Col>
-
-    
-      
-      
     </Conteneur>
   );
 }

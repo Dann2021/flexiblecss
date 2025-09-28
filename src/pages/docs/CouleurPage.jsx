@@ -1,5 +1,5 @@
 import { IoColorPaletteSharp } from "react-icons/io5";
-import { Bloc, Carrousel, Col, Lien } from "../../composants/index.js";
+import { Bloc,  Col  } from "../../composants";
 import {
   paletteRouge,
   paletteVert,
@@ -8,14 +8,10 @@ import {
   paletteViolet,
   paletteRose,
   paletteOrangeJaune,
-  paletteAutres
-
-
+  paletteAutres,
 } from "../../constantes/Color.js";
 import Tableau from "../../utilitaire/Tableau.jsx";
-import { BiLeftArrow } from "react-icons/bi";
-import { Link } from "react-router-dom";
-
+import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
 
 
 const couleurData = [
@@ -25,13 +21,15 @@ const couleurData = [
 ];
 
 export default function CouleurPage() {
-
   return (
     <>
-      <div className="aff-flex ai-mil gap-2 mb-3">
-        <IoColorPaletteSharp size={30} className="texte-couleur-bleu-ciel" />
-        <h1 className="texte-couleur-bleu-ciel texte-5 fira">Couleurs </h1>
-      </div>
+    
+      <TitreDoc
+        icone={
+          <IoColorPaletteSharp size={30} className="texte-couleur-bleu-ciel" />
+        }
+        titre={"Couleurs"}
+      />
 
       <Col className={"gap-5"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
@@ -53,21 +51,19 @@ export default function CouleurPage() {
         </Bloc>
         <Tableau titre1={"Classes"} titre2={"Style"} data={couleurData} />
 
-    
-
-     
-      <Bloc type={"myn"} nombre={12}>
-         <CardCouleur couleurName={"Rouge"} datasColor={paletteRouge} />
-        <CardCouleur couleurName={"Bleu"} datasColor={paletteBleu} />
-        <CardCouleur couleurName={"Vert"} datasColor={paletteVert} />
-        <CardCouleur couleurName={"Gris"} datasColor={paletteGris} />
-        <CardCouleur couleurName={"Violet"} datasColor={paletteViolet} />
-        <CardCouleur couleurName={"Rose"} datasColor={paletteRose} />
-        <CardCouleur couleurName={"Orange & Jaune"} datasColor={paletteOrangeJaune} />
-        <CardCouleur couleurName={"Autres"} datasColor={paletteAutres} />
-      </Bloc>
-       
-
+        <Bloc type={"myn"} nombre={12}>
+          <CardCouleur couleurName={"Rouge"} datasColor={paletteRouge} />
+          <CardCouleur couleurName={"Bleu"} datasColor={paletteBleu} />
+          <CardCouleur couleurName={"Vert"} datasColor={paletteVert} />
+          <CardCouleur couleurName={"Gris"} datasColor={paletteGris} />
+          <CardCouleur couleurName={"Violet"} datasColor={paletteViolet} />
+          <CardCouleur couleurName={"Rose"} datasColor={paletteRose} />
+          <CardCouleur
+            couleurName={"Orange & Jaune"}
+            datasColor={paletteOrangeJaune}
+          />
+          <CardCouleur couleurName={"Autres"} datasColor={paletteAutres} />
+        </Bloc>
       </Col>
     </>
   );
@@ -98,5 +94,3 @@ const CardCouleur = ({ couleurName, datasColor = [] }) => {
     </>
   );
 };
-
-

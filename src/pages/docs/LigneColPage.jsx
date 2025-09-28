@@ -1,11 +1,9 @@
-import { Columns, Rows } from "lucide-react";
+import { Columns } from "lucide-react";
 
 import { Bloc, Col, Ligne } from "../../composants";
 import Codebloc from "../../utilitaire/Codebloc";
 import Tableau from "../../utilitaire/Tableau";
-import CodePlay from "../../utilitaire/CodePlay.jsx";
-
-
+import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
 
 const dataTable = [
   { id: 1, classe: ".ligne", style: "display : flex" },
@@ -30,15 +28,19 @@ export default function LigneColPage() {
   return (
     <>
       {/** haut de pages */}
-      <div className="aff-flex ai-mil gap-2 mb-3">
+      {/*<div className="aff-flex ai-mil gap-2 mb-3">
         <div className="aff-flex jc-mil ai-mil gap-2">
           <Rows size={30} className="texte-couleur-bleu-ciel" />
           <Columns size={30} className="texte-couleur-bleu-ciel" />
         </div>
         <h1 className="texte-couleur-bleu-ciel texte-5 fira">Ligne & Col </h1>
-      </div>
+      </div>*/}
+      <TitreDoc
+        icone={<Columns size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Ligne & Col"}
+      />
 
-      <Col className={"gap-5"}>
+      <Col className={"gap-5"}> 
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-6"}>
           <p>
             Les classes{" "}
@@ -106,9 +108,7 @@ export default function LigneColPage() {
         </Bloc>
         <Codebloc
           langage={"jsx"}
-          className={
-            "p-2 bloc-12 bloc-myn-11 taille-pt mh-8"
-          }
+          className={"p-2 bloc-12 bloc-myn-11 taille-pt mh-8"}
         >
           {ligneCode}
         </Codebloc>
@@ -125,11 +125,8 @@ export default function LigneColPage() {
             c'est à dire une disposition en colonne.
           </p>
         </Bloc>
-
-       
       </Col>
     </>
   );
-
 }
 // atomDark, dracula, vscDarkPlus

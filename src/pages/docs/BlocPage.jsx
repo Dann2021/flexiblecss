@@ -1,8 +1,10 @@
 import React from "react";
-import { Bloc, Bouton, Col, Ligne, Table } from "../../composants";
-import { ContainerIcon, Smartphone } from "lucide-react";
+import { Bloc, Col, Ligne} from "../../composants";
+import {  Grid2X2, Smartphone } from "lucide-react";
 import Tableau from "../../utilitaire/Tableau";
-import { ImPhone } from "react-icons/im";
+
+import TitreDoc from "../../composants/docs_composant/TitreDoc";
+
 
 const data = [
   {
@@ -91,10 +93,11 @@ export default function BlocPage() {
   const prop = `.bloc-<valeur>`;
   return (
     <>
-      <div className="aff-flex ai-mil gap-2 mb-3">
-        <ContainerIcon size={30} className="texte-couleur-bleu-ciel" />
-        <h1 className="texte-couleur-bleu-ciel texte-5 fira">Bloc </h1>
-      </div>
+    
+      <TitreDoc
+        icone={<Grid2X2 size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Bloc"}
+      />
 
       <Col className={"gap-10"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>

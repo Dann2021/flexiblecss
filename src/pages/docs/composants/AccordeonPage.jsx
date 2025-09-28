@@ -1,9 +1,17 @@
-import { React } from "react";
-import { Accordeon, Bloc, Col } from "../../../composants/index.js";
+import {
+  Accordeon,
+  Bloc,
+  Bouton,
+  Col,
+  TexteDegrade,
+} from "../../../composants";
 import { BsGithub } from "react-icons/bs";
 import { CgNpm } from "react-icons/cg";
 import Codebloc from "../../../utilitaire/Codebloc.jsx";
 import Tableau from "../../../utilitaire/Tableau.jsx";
+import { ListCollapse } from "lucide-react";
+import TitreDoc from "../../../composants/docs_composant/TitreDoc.jsx";
+import Couleurs from "../../../constantes/Couleurs.js";
 
 const dataAccordeon = [
   { id: 1, classe: "titre", style: "nom de l'accordeon" },
@@ -19,9 +27,11 @@ export default function AccordeonPage() {
 
   return (
     <>
-      <h1 className={"texte-5 fira te-noir texte-couleur-bleu-ciel"}>
-        Accordeon
-      </h1>
+      <TitreDoc
+        icone={<ListCollapse size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Accordeon"}
+      />
+
       <Col className={"mh-2 gap-3 mb-4"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-3"}>
           <p>
@@ -123,6 +133,10 @@ export default function AccordeonPage() {
             </Accordeon>
           </div>
         </Bloc>
+
+        {/*<TexteDegrade className="te-noir texte-7 ls-2 lh-2" couleurs={`${Couleurs.orange1}, ${Couleurs.orange2}`}>
+          Universalité
+        </TexteDegrade>*/}
       </Col>
     </>
   );

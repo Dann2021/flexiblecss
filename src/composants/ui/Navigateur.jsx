@@ -5,6 +5,7 @@ import TexteDegrade from "./TexteDegrade";
 
 import { useState } from "react";
 import Couleurs from "../../constantes/Couleurs";
+import Dropdown from "./Dropdown";
 
 export default function Navigateur({ logo, texte }) {
   const [activeur, setActiveur] = useState(false);
@@ -33,9 +34,9 @@ export default function Navigateur({ logo, texte }) {
                        
                 </div>*/}
           <div className="bt-user">
-              {/*<Sun size={30} />*/}
-              <AlertCircle size={30} color="#FF8C00" />
-            </div>
+            {/*<Sun size={30} />*/}
+            <AlertCircle size={30} color="#FF8C00" />
+          </div>
 
           <div className="bt-hamburger" onClick={ouverture}>
             <Menu size={30} />
@@ -61,14 +62,21 @@ export default function Navigateur({ logo, texte }) {
               Documentation
             </Lien>
           </li>
-          {/*<li className="effet">
-            <Lien
-              chemin={"/test"}
-              className={"taille-pt texte-couleur-gris nav-item"}
-            >
-              Test
-            </Lien>
-          </li>*/}
+          {/*<Dropdown
+            contenuClassName={""}
+            className={"effet"}
+            labelClassName={"texte-couleur-gris"}
+            label={"Labo"}
+          >
+            <li className="effet">
+              <Lien
+                chemin={"/test"}
+                className={"taille-pt texte-couleur-gris nav-item"}
+              >
+                Test
+              </Lien>
+            </li>
+          </Dropdown>*/}
         </ul>
       </div>
     </nav>

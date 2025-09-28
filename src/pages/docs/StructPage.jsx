@@ -1,8 +1,5 @@
-import React from "react";
-import Col from "../../composants/ui/Col";
-import { Bloc } from "../../composants";
+import { Bloc, Col } from "../../composants";
 import Codebloc from "../../utilitaire/Codebloc";
-import Icons from "../../constantes/Icone";
 import { SiHtml5, SiReact } from "react-icons/si";
 
 export default function StructPage() {

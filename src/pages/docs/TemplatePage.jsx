@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Bouton, Card, Col } from "../../composants";
 import TexteDegrade from "../../composants/ui/TexteDegrade";
 import Couleurs from "../../constantes/Couleurs";

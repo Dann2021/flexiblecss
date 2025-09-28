@@ -63,8 +63,9 @@ export default function Sidebar2({ onToggle, onSelect }) {
   const composants = [
     { id: 1, label: "Accordeon", icone: null, lien: "accordeon" },
     { id: 2, label: "Bouton", icone: null, lien: "bouton" },
-    { id: 3, label: "Carrousel", icone: null, lien: "carrousel" },
-    { id: 4, label: "autre", icone: null, lien: "autre" },
+    { id: 3, label: "Card", icone: null, lien: "card" },
+    { id: 4, label: "Carrousel", icone: null, lien: "carrousel" },
+    //{ id: 5, label: "Dropdown", icone: null, lien: "dropdown" },
   ];
 
   const itemVariants = {
@@ -75,7 +76,6 @@ export default function Sidebar2({ onToggle, onSelect }) {
   // #e9ecef,#f1f3f5 (très bien), #dee2e6 (bien), #e6f2ea
 
   //console.log("state : ", ouvert);
-  
 
   const renduLien = (elements) =>
     elements.map((element) => {
@@ -97,7 +97,10 @@ export default function Sidebar2({ onToggle, onSelect }) {
         >
           <Lien
             chemin={element.lien}
-            className="gap-2 aff-flex ai-mil px-2 py-1"
+            className={clsx(
+              "gap-2 aff-flex ai-mil px-2 py-1 te-noir",
+              lienChoisit && "texte-couleur-bleu-ciel"
+            )}
           >
             {element.icone} {element.label}
           </Lien>

@@ -20,7 +20,7 @@ import clsx from "../classe";
 
 export default function Bouton({
   theme = "primaire",
-  variant = "normal",
+  variant,
   className,
   children,
   mode = "button",
@@ -34,7 +34,8 @@ export default function Bouton({
       className={clsx(
         "bouton",
         "td-none",
-        variant === "contour" ? `bouton-contour-${theme}` : `bouton-${theme}`,
+        
+        variant  ? `bouton-contour-${theme}` : `bouton-${theme}`,
         taille && `bouton-${taille}`,
         forme && `bouton-${forme}`,
         className

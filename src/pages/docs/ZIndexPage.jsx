@@ -1,6 +1,8 @@
-import React from "react";
 import { Bloc, Col } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
+import { Layers2 } from "lucide-react";
+import TitreDoc from "../../composants/docs_composant/TitreDoc";
+
 
 const data = [
   { id: 1, classe: ".z-n1", style: "z-index: -1" },
@@ -16,12 +18,28 @@ const data = [
   { id: 11, classe: ".z-auto", style: "z-index: auto" },
 ];
 
+// eslint-disable-next-line no-unused-vars
+const code = `
+<div className="aff-flex relative gap-5">
+  <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire survol ronde p-5 absolue z-10 bord-1 bord-dashed bord-gris">
+    <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-10</h1>
+  </div>
+  <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire survol ronde p-5 absolue haut-20 gauche-30 bord-1 bord-dashed bord-gris z-max">
+    <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-max</h1>
+  </div>
+</div>
+`;
+
 export default function ZIndexPage() {
   return (
     <>
-      <h1 className="texte-couleur-bleu-ciel texte-5 fira">z-index</h1>
+   
+      <TitreDoc
+        icone={<Layers2 size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"z-index"}
+      />
 
-      <Col className={"mh-3"}>
+      <Col className={"mh-3 p-1"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
           <p className="taille-p">
             <span className="texte-couleur-bleu-ciel te-noir">z-index</span>{" "}
@@ -55,21 +73,24 @@ export default function ZIndexPage() {
         />
 
         <h2>Exemple</h2>
+
         <Bloc type={"myn"} nombre={11} className={"mh-5"}>
           <p className="texte-couleur-gris mb-2">
             Deux blocs qui se chevauchent.
           </p>
           <p className="texte-couleur-gris mb-2">
-            Le premier a <span className="p-1 bg-bleu-claire taille-pt ronde">z-10</span>,
-            le second a <span className="p-1 bg-bleu-claire taille-pt ronde">z-max</span>.
-            → Le bloc avec <b>z-max</b> passe toujours devant.
+            Le premier a{" "}
+            <span className="p-1 bg-bleu-claire taille-pt ronde">z-10</span>, le
+            second a{" "}
+            <span className="p-1 bg-bleu-claire taille-pt ronde">z-max</span>. →
+            Le bloc avec <b>z-max</b> passe toujours devant.
           </p>
           <div className="aff-flex relative gap-5">
-            <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire ronde p-5 absolue z-10 bord-1 bord-dashed bord-gris">
+            <div className="bloc-7 box-2 bloc-myn-4 bg-vert-claire survol ronde p-5 absolue z-10">
               <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-10</h1>
             </div>
-            <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire ronde p-5 absolue haut-20 gauche-30 bord-1 bord-dashed bord-gris z-max">
-              <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-max</h1>
+            <div className="bloc-7 box-2 bloc-myn-4 bg-violet-lavande-clair survol ronde p-5 absolue haut-20 gauche-30 z-max">
+              <h1 className="ta-mil fira">z-max</h1>
             </div>
           </div>
         </Bloc>

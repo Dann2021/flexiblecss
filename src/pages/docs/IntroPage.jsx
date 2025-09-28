@@ -1,12 +1,16 @@
-import React from "react";
-import Col from "../../composants/ui/Col";
-import { Accordeon, Bloc, Bouton, BoutonLien } from "../../composants";
-import Icons from "../../constantes/Icone";
-import { Copy } from "lucide-react";
+import {
+  Accordeon,
+  Bloc,
+  Bouton,
+  Card,
+  Col,
+  TexteDegrade,
+} from "../../composants";
+import Couleurs from "../../constantes/Couleurs";
 import Codebloc from "../../utilitaire/Codebloc";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { BsGithub } from "react-icons/bs";
+import { BsDiscord, BsGithub, BsTwitterX } from "react-icons/bs";
 
 export default function IntroPage() {
   const code = `
@@ -39,7 +43,6 @@ export default function IntroPage() {
           </div>
 
           <Bouton theme="claire" taille={"min"} className={"bouton-icone"}>
-           
             <BsGithub size={20} />
           </Bouton>
         </div>
@@ -60,7 +63,11 @@ export default function IntroPage() {
           </motion.span>
         </h1>
 
-        <Bloc type={"myn"} nombre={11} className={"mh-2 p-myn-2 mb-2 texte-couleur-gris"}>
+        <Bloc
+          type={"myn"}
+          nombre={11}
+          className={"mh-2 p-myn-2 mb-2 texte-couleur-gris"}
+        >
           {/*<p className="texte-couleur-gris">
             L’idée de créer ce framework m’est venue un peu par hasard 🤔. Je
             n’arrivais pas à adopter des solutions existantes comme Tailwind ou
@@ -69,7 +76,13 @@ export default function IntroPage() {
             construire les choses par lui-même 🙏.
           </p>*/}
 
-          <p>Ce framework est né d’une volonté simple : comprendre en profondeur les mécanismes du CSS et bâtir une solution adaptée, plutôt que d’adopter des outils préexistants comme Tailwind ou Bootstrap. Mon objectif est d’offrir une alternative conçue avec clarté, logique et maîtrise.</p>
+          <p>
+            Ce framework est né d’une volonté simple : comprendre en profondeur
+            les mécanismes du CSS et bâtir une solution adaptée, plutôt que
+            d’adopter des outils préexistants comme Tailwind ou Bootstrap. Mon
+            objectif est d’offrir une alternative conçue avec clarté, logique et
+            maîtrise.
+          </p>
         </Bloc>
 
         <Bloc type={"myn"} nombre={11} className={"mh-2 p-myn-2 mb-3"}>
@@ -91,7 +104,7 @@ export default function IntroPage() {
 
         <h2>Démarrage rapide</h2>
         <Bloc type={"myn"} nombre={11} className={"mh-2 texte-couleur-gris"}>
-          <p >
+          <p>
             Pour bien commencer, installez tout d'abord les fichiers{" "}
             <span className="texte-couleur-rouge-cerise te-noir fira">
               `flexible.css`
@@ -103,12 +116,22 @@ export default function IntroPage() {
             à la racine de votre projet.
           </p>
           <ul className="mh-2 mg-3 taille-pt py-1">
-            <li className="mb-2"> <span className="texte-couleur-rouge-cerise te-noir fira">
-              `flexible.css`
-            </span>contient toutes les classes nécessaire au bon fonctionnement du framework</li>
-             <li> <span className="texte-couleur-rouge-cerise te-noir fira">
-              `flexible.js`
-            </span>contient tous les scripts nécessaire au bon fonctionnement du framework</li>
+            <li className="mb-2">
+              {" "}
+              <span className="texte-couleur-rouge-cerise te-noir fira">
+                `flexible.css`
+              </span>
+              contient toutes les classes nécessaire au bon fonctionnement du
+              framework
+            </li>
+            <li>
+              {" "}
+              <span className="texte-couleur-rouge-cerise te-noir fira">
+                `flexible.js`
+              </span>
+              contient tous les scripts nécessaire au bon fonctionnement du
+              framework
+            </li>
           </ul>
           <p className=" mh-2 mb-1">
             Après avoir installer les fichiers vous n'avez qu'à les inclures
@@ -118,13 +141,9 @@ export default function IntroPage() {
             </span>{" "}
             comme le montre l'exemple ci-dessous.
           </p>
-
         </Bloc>
 
-        <Codebloc
-          className={"p-2 bloc-myn-11 taille-pt"}
-          langage={"html"}
-        >
+        <Codebloc className={"p-2 bloc-myn-11 taille-pt"} langage={"html"}>
           {code}
         </Codebloc>
 
@@ -154,12 +173,16 @@ export default function IntroPage() {
         </Bloc>
 
         {/*<CodeBloc /> */}
-        <Codebloc
-          className={"p-2 bloc-myn-11 taille-pt"}
-          langage={"bash"}
-        >
+        <Codebloc className={"p-2 bloc-myn-11 taille-pt mb-5"} langage={"bash"}>
           {npmInstall}
         </Codebloc>
+
+        {/*<TexteDegrade
+          className="te-noir texte-4 ls-1 lh-2"
+          couleurs={`${Couleurs.orange1}, ${Couleurs.orange2}`}
+        >
+          Communauté
+        </TexteDegrade>*/}
       </Col>
     </>
   );

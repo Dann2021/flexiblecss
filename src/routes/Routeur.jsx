@@ -19,36 +19,41 @@ import LigneColPage from "../pages/docs/LigneColPage";
 import AccordeonPage from "../pages/docs/composants/AccordeonPage";
 import CarrouselPage from "../pages/docs/composants/CarrouselPage";
 import ZIndexPage from "../pages/docs/ZIndexPage";
+import BoutonPage from "../pages/docs/composants/BoutonPage";
+import CardPage from "../pages/docs/composants/CardPage";
+import DropdownPage from "../pages/docs/composants/DropdownPage.mdx";
 
 function Routeur() {
   return (
-  
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/docs" element={<DocHome />}>
-          <Route path="composant" element={<ComposantPages />} />
-          <Route path="templates" element={<TemplatePage />} />
-          <Route path="uikit" element={<UiKitPage />} />
-          <Route index element={<IntroPage />} />
-          <Route path="intro" element={<IntroPage />} />
-          <Route path="*" element={<PageErreur />} />
-          {/*<Route path="intro" element={<IntroPage />} />*/}
-          {/* Page par défaut quand on est sur /docs */}
-          {/*<Route index element={<InstallPage />} />*/}
-          {/*<Route path="install" element={<InstallPage />} />*/}
-          <Route path="structure" element={<StructPage />} />
-          <Route path="aspect-ratio" element={<AspectRatioPage />} />
-          <Route path="display" element={<DisplayPage />} />
-          <Route path="bloc" element={<BlocPage />} />
-          <Route path="couleurs" element={<CouleurPage />} />
-          <Route path="ligne-col" element={<LigneColPage />} />
-          <Route path="accordeon" element={<AccordeonPage />} />
-          <Route path="carrousel" element={<CarrouselPage />} />
-          <Route path="zindex" element={<ZIndexPage />} />
-        </Route>
-      </Routes>
- 
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/*<Route path="/test" element={<Test />} />*/} {/** a enlever */}
+      <Route path="/docs" element={<DocHome />}>
+        <Route path="composant" element={<ComposantPages />} />
+        <Route path="templates" element={<TemplatePage />} />
+        <Route path="uikit" element={<UiKitPage />} />
+        <Route index element={<IntroPage />} />
+        <Route path="intro" element={<IntroPage />} />
+        <Route path="*" element={<PageErreur />} />
+        {/*<Route path="intro" element={<IntroPage />} />*/}
+        {/* Page par défaut quand on est sur /docs */}
+        {/*<Route index element={<InstallPage />} />*/}
+        {/*<Route path="install" element={<InstallPage />} />*/}
+        <Route path="structure" element={<StructPage />} />
+        <Route path="aspect-ratio" element={<AspectRatioPage />} />
+        <Route path="display" element={<DisplayPage />} />
+        <Route path="bloc" element={<BlocPage />} />
+        <Route path="couleurs" element={<CouleurPage />} />
+        <Route path="ligne-col" element={<LigneColPage />} />
+        <Route path="accordeon" element={<AccordeonPage />} />
+        <Route path="carrousel" element={<CarrouselPage />} />
+        <Route path="zindex" element={<ZIndexPage />} />
+        <Route path="bouton" element={<BoutonPage />} />
+        {/*<Route path="dropdown" element={<DropdownPage />} /> */}{" "}
+        {/** a enlever */}
+        <Route path="card" element={<CardPage />} />
+      </Route>
+    </Routes>
   );
 }
 

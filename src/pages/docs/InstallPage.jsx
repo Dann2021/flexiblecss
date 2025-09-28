@@ -4,7 +4,7 @@ import Col from "../../composants/ui/Col";
 import Bloc from "../../composants/ui/Bloc";
 import { ChevronDown, Copy, MenuSquare, Plus, X } from "lucide-react";
 import Ligne from "../../composants/ui/Ligne";
-import { Accordeon, Bouton, BoutonCoulissant } from "../../composants";
+import { Accordeon, Bouton } from "../../composants";
 import Lien from "../../composants/ui/Lien";
 import { Outlet } from "react-router-dom";
 

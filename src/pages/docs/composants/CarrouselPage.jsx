@@ -1,5 +1,4 @@
-import React from "react";
-import { Bloc, Carrousel, Col, Table } from "../../../composants/index.js";
+import { Bloc, Carrousel, Col } from "../../../composants/index.js";
 import Tableau from "../../../utilitaire/Tableau.jsx";
 import Image1 from "../../../assets/images/carousel/1.jpg";
 import Image2 from "../../../assets/images/carousel/2.jpg";
@@ -7,8 +6,8 @@ import Image3 from "../../../assets/images/carousel/3.jpg";
 import Image4 from "../../../assets/images/carousel/4.jpg";
 import Image5 from "../../../assets/images/carousel/5.jpg";
 import Image6 from "../../../assets/images/carousel/6.jpg";
-
-
+import { Images } from "lucide-react";
+import TitreDoc from "../../../composants/docs_composant/TitreDoc.jsx";
 
 
 /*
@@ -28,11 +27,14 @@ const dataProps = [
   { id: 4, classe: "children", style: "Element enfant" },
 ];
 
-
 export default function CarrouselPage() {
   return (
     <>
-      <h1 className={"texte-5 texte-couleur-bleu-ciel fira"}>Carrousel</h1>
+  
+      <TitreDoc
+        icone={<Images size={30} className="texte-couleur-bleu-ciel" />}
+        titre={"Carrousel"}
+      />
 
       <Col className={"mh-3 gap-5"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-8"}>
@@ -59,8 +61,6 @@ export default function CarrouselPage() {
             titre={"Carrousel"}
           />
         </Bloc>
-
-
       </Col>
     </>
   );
