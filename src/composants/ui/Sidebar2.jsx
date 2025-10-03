@@ -152,7 +152,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
           {renduLien(started)}
         </div>
 
-        <h4 className="mg-2 tt-maj texte-couleur-gris my-2">Mise en page</h4>
+        <h4 className="mg-2 tt-maj texte-couleur-gris my-2">Classes</h4>
         <div className="mg-2 taille-pt mh-3 texte-couleur-gris">
           {renduLien(mpage)}
         </div>

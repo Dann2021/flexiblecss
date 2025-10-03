@@ -1,4 +1,4 @@
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, MoreHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import clsx from "../classe";
 import Bouton from "./Bouton";
@@ -41,7 +41,7 @@ export default function Table({
       {/*<h1>Un tableau</h1>*/}
 
       {/** Creation d'un input pour avoir la possibilité d'ajouter des filtres */}
-      <div className="aff-flex jc-sb ai-mil gap-2 mh-2 mb-2 st">
+      <div className="aff-flex jc-sb ai-mil gap-2 mh-2 mb-2">
         <div className="col gap-2">
           <input
             placeholder="Saisir un mot clé"
@@ -82,7 +82,7 @@ export default function Table({
           </Dropdown>
 
           <Bouton theme="claire" taille={"min"} className={"ronde-1"}>
-            <Menu size={16} />
+            <MoreHorizontal size={18} />
           </Bouton>
         </div>
       </div>
@@ -90,7 +90,11 @@ export default function Table({
       {/** Element principale permettant de creer un tableau */}
       <table
         className="bg-gris-clair theme-claire ronde p-2 ta-gauche"
-        style={{ width: "100%", borderCollapse: "collapse" }}
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+        }}
       >
         {/** header */}
 
