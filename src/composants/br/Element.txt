@@ -1,0 +1,38 @@
+const Drop = () => {
+  const [ouvert, setOuvert] = useState(false);
+
+  const toggleChange = () => setOuvert(!ouvert);
+
+  return (
+    <div>
+      <motion.button
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1.1 }}
+        whileHover={{ scale: 1.2 }}
+        onClick={toggleChange}
+        className="bouton bouton-min bouton-primaire"
+      >
+        teste
+      </motion.button>
+
+      <AnimatePresence>
+        {ouvert ? (
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 50 }}
+            className="mh-2 bloc-myn-3 ronde bg-gris-claire curseur-pointeur p-2"
+            transition={{ duration: 0.3, ease: "easeIn" }}
+          >
+            <p className="taille-pt">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
+              consectetur vero accusantium sed, autem soluta ea repellat maiores
+              facere corrupti expedita, minus facilis alias omnis! Dolorum,
+              saepe. Iure, quod in.
+            </p>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
+  );
+};

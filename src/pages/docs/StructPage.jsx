@@ -42,7 +42,8 @@ ${b}   ${b}   ${e} flexible.css
   return (
     <div>
       <h1 className="texte-5">
-        Structure de <span className="texte-couleur-bleu-ciel">Flexible</span>
+        Structure de{" "}
+        <span className="texte-couleur-bleu-ciel fira">Flexible</span>
       </h1>
       <Col className={"gap-3 mh-2"}>
         <Bloc type={"myn"} nombre={11} className={"my-2"}>
@@ -57,10 +58,7 @@ ${b}   ${b}   ${e} flexible.css
         </Bloc>
 
         <div className="aff-flex ai-mil gap-2">
-          <h2 className="texte-4 texte-couleur-bleu-lavande tt-maj">
-            
-            html
-          </h2>
+          <h2 className="texte-4 texte-couleur-bleu-lavande tt-maj">html</h2>
           <SiHtml5 size={40} color="#E34F26" />
         </div>
 
@@ -82,9 +80,7 @@ ${b}   ${b}   ${e} flexible.css
         </Codebloc>
 
         <div className="aff-flex ai-mil gap-2 mh-2">
-          <h2 className="texte-4 texte-couleur-bleu-lavande">
-          React Js
-          </h2>{" "}
+          <h2 className="texte-4 texte-couleur-bleu-lavande">React Js</h2>{" "}
           <SiReact size={40} color="#61DBFB" />
         </div>
 
@@ -98,10 +94,7 @@ ${b}   ${b}   ${e} flexible.css
           </p>
         </Bloc>
 
-        <Codebloc
-          className={"p-2 bloc-myn-11 taille-pt"}
-          langage={"bash"}
-        >
+        <Codebloc className={"p-2 bloc-myn-11 taille-pt"} langage={"bash"}>
           {projectTree}
         </Codebloc>
       </Col>

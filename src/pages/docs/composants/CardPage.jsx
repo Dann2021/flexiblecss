@@ -172,7 +172,7 @@ export default function CardPage() {
             "col ai-mil mh-1 bord-3 p-2 bord-dashed bord-gris-claire ronde-1"
           }
         >
-          <Card className={"bloc-myn-11"} style={cardStyle2}>
+          <Card className={"bloc-myn-12"} style={cardStyle2}>
             <Card.Corps className={"ligne jc-sb  p-1 "}>
               <Image
                 alt={"image shoe"}
@@ -230,7 +230,7 @@ export default function CardPage() {
             "col ai-mil mh-1 bord-3 p-2 bord-dashed bord-gris-claire ronde-1"
           }
         >
-          <Card className={"bloc-myn-11 relative"} style={cardStyle2}>
+          <Card className={"bloc-myn-12 relative"} style={cardStyle2}>
             <Card.Header className={"mb-2"}>
               <p className="te-gras texte-2 ubuntu">Nike Adapt BB 2.0</p>
             </Card.Header>

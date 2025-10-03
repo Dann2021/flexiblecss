@@ -1,5 +1,12 @@
 import { useRef, useState } from "react";
-import { BookOpen, Component, Package, Sidebar, X } from "lucide-react";
+import {
+  BadgeCheckIcon,
+  BookOpen,
+  Component,
+  Package,
+  Sidebar,
+  X,
+} from "lucide-react";
 import { CgTemplate } from "react-icons/cg";
 import Lien from "./Lien";
 
@@ -65,7 +72,8 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 2, label: "Bouton", icone: null, lien: "bouton" },
     { id: 3, label: "Card", icone: null, lien: "card" },
     { id: 4, label: "Carrousel", icone: null, lien: "carrousel" },
-    //{ id: 5, label: "Dropdown", icone: null, lien: "dropdown" },
+    { id: 5, label: "Dropdown", icone: null, lien: "dropdown" },
+    { id: 6, label: "Tableau", icone: null, lien: "tableau" },
   ];
 
   const itemVariants = {
@@ -89,13 +97,14 @@ export default function Sidebar2({ onToggle, onSelect }) {
           variants={itemVariants}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className={`ronde-1 curseur-pointeur mb-1`}
-          style={{ background: lienChoisit ? "#f1f3f5" : "transparent" }}
+          style={{ background: lienChoisit ? "#f1f3f5" : "" }}
           onClick={() => {
             setLienActif(element.lien);
             onSelect?.(element.lien);
           }}
         >
           <Lien
+            key={element.id}
             chemin={element.lien}
             className={clsx(
               "gap-2 aff-flex ai-mil px-2 py-1 te-noir",
@@ -129,7 +138,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
           onClick={fermer}
         />
 
-        <div className="mg-2 aff-flex ai-mil gap-2">
+        <div className="mg-2 aff-flex ai-mil gap-2 texte-couleur-gris">
           <BookOpen size={20} />
           <h5>Documentation</h5>
         </div>

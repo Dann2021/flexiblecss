@@ -3,7 +3,6 @@ import Tableau from "../../utilitaire/Tableau";
 import { Layers2 } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
 
-
 const data = [
   { id: 1, classe: ".z-n1", style: "z-index: -1" },
   { id: 2, classe: ".z-0", style: "z-index: 0" },
@@ -33,7 +32,6 @@ const code = `
 export default function ZIndexPage() {
   return (
     <>
-   
       <TitreDoc
         icone={<Layers2 size={30} className="texte-couleur-bleu-ciel" />}
         titre={"z-index"}

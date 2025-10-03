@@ -1,5 +1,5 @@
 import Couleurs from "../../constantes/Couleurs.js";
-import ImageMac from "../../assets/images/code.png";
+import ImageMac from "../../assets/images/flex3.png";
 import { Minus, Square, X } from "lucide-react";
 import Code2 from "../../assets/images/code2.png";
 import Icons from "../../constantes/Icone.js";
@@ -23,6 +23,7 @@ import {
   Conteneur,
 } from "../../composants/index.js";
 import { Link } from "react-router-dom";
+import CardModele from "../../modeles/CardModele.jsx";
 
 export default function Home() {
   return (
@@ -142,7 +143,7 @@ export default function Home() {
         <Ligne className={"jc-sa p-2"}>
           <Bloc
             type={"myn"}
-            nombre={5}
+            nombre={4}
             className="col ai-mil bg-gris-claire  ronde p-2 survol"
           >
             <p className="texte-5 ls-2 lh-3">
@@ -162,7 +163,7 @@ export default function Home() {
               </p>
             </div>
           </Bloc>
-          <Bloc
+          {/*<Bloc
             type={"myn"}
             nombre={5}
             className="bg-gris-claire ronde p-2 survol relative"
@@ -184,6 +185,9 @@ export default function Home() {
                 .bloc-taille, .ronde, .survol et .relative
               </span>
             </p>
+          </Bloc>*/}
+          <Bloc type={"myn"} nombre={7}>
+            <CardModele />
           </Bloc>
         </Ligne>
       </Col>

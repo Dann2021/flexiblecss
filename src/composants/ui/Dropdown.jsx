@@ -1,7 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import clsx from "../classe";
 
-export default function Dropdown({ label, labelClassName, children, className,  contenuClassName, ...props }) {
+export default function Dropdown({
+  label,
+  labelClassName,
+  icone,
+  children,
+  className,
+  contenuClassName,
+  ...props
+}) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -21,14 +29,17 @@ export default function Dropdown({ label, labelClassName, children, className,  
   return (
     <div
       ref={dropdownRef}
-      className={clsx("dropdown", className)}
+      className={clsx(
+        "dropdown                                                                                                                                                                                                                                                                                                                                   ",
+        className
+      )}
       {...props}
     >
       <button
         className={clsx("dropdown-btn", labelClassName)}
         onClick={() => setOpen(!open)}
       >
-        {label}
+        {label} {icone}
       </button>
 
       {open && (

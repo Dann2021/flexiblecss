@@ -13,7 +13,10 @@ export default function Navigateur({ logo, texte }) {
   const ouverture = () => setActiveur(!activeur);
 
   return (
-    <nav className={"conteneur navigateur theme-claire"}>
+    <nav
+      className={"conteneur navigateur theme-clair"}
+      style={{ background: "#ffffff" }}
+    >
       <div className="elements">
         <div className="logo">
           <Lien chemin={"/"}>

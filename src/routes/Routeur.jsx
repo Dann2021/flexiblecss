@@ -21,7 +21,8 @@ import CarrouselPage from "../pages/docs/composants/CarrouselPage";
 import ZIndexPage from "../pages/docs/ZIndexPage";
 import BoutonPage from "../pages/docs/composants/BoutonPage";
 import CardPage from "../pages/docs/composants/CardPage";
-import DropdownPage from "../pages/docs/composants/DropdownPage.mdx";
+import DropdownPage from "../pages/docs/composants/DropdownPage";
+import TableauPage from "../pages/docs/composants/TableauPage";
 
 function Routeur() {
   return (
@@ -49,8 +50,9 @@ function Routeur() {
         <Route path="carrousel" element={<CarrouselPage />} />
         <Route path="zindex" element={<ZIndexPage />} />
         <Route path="bouton" element={<BoutonPage />} />
-        {/*<Route path="dropdown" element={<DropdownPage />} /> */}{" "}
-        {/** a enlever */}
+        <Route path="dropdown" element={<DropdownPage />} />
+        <Route path="tableau" element={<TableauPage />} />
+
         <Route path="card" element={<CardPage />} />
       </Route>
     </Routes>
