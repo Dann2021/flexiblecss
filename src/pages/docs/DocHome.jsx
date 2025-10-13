@@ -1,9 +1,9 @@
-import  { useState } from "react";
+import { useState } from "react";
 
 import Sidebar2 from "../../composants/ui/Sidebar2";
 import { Outlet } from "react-router-dom";
-import {HomeIcon} from "lucide-react";
-import {Breadcrumbs, Conteneur} from "../../composants";
+import { HomeIcon } from "lucide-react";
+import { Breadcrumbs, Conteneur } from "../../composants";
 
 export default function DocHome() {
   const [sidebarOuverte, setSidebarOuverte] = useState(false);
@@ -14,10 +14,7 @@ export default function DocHome() {
       <Sidebar2 onToggle={setSidebarOuverte} />
 
       <Conteneur className={`decalage ${sidebarOuverte ? "flou-1" : ""}`}>
-     
-
-
-      <Breadcrumbs/>
+        <Breadcrumbs />
         <Outlet />
       </Conteneur>
     </div>

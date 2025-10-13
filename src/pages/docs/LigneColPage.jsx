@@ -40,7 +40,7 @@ export default function LigneColPage() {
         titre={"Ligne & Col"}
       />
 
-      <Col className={"gap-5"}> 
+      <Col className={"gap-5"}>
         <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-6"}>
           <p>
             Les classes{" "}

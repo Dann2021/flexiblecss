@@ -1,8 +1,9 @@
-import { ChevronDown, Menu, MoreHorizontal } from "lucide-react";
+import { ChevronDown, Menu, MoreHorizontal, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import clsx from "../classe";
 import Bouton from "./Bouton";
 import Dropdown from "./Dropdown";
+import Input from "./Input";
 
 /**
  *  data :  Liste des données à afficher dans le tableau
@@ -50,6 +51,14 @@ export default function Table({
             onChange={(e) => setValeurRechercher(e.target.value)}
             className="p-1 ronde bord-1  bord-solid bord-gris"
           />
+          <Input
+            dataType={"arrondie"}
+            value={valeurRechercher}
+            simple
+            onChange={(e) => setValeurRechercher(e.target.value)}
+          >
+            <Search />
+          </Input>
           <p className="taille-pt texte-couleur-gris">
             {filteredData.length} résultat(s)
           </p>

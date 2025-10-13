@@ -1,21 +1,19 @@
 import { Bloc, Col, Ligne, Image, Bouton } from "../../composants";
 import UiKitImageFlexible from "../../assets/images/flex3.png";
 import Icons from "../../constantes/Icone.js";
-import { Heart,  Shapes, User2 } from "lucide-react";
+import { Heart, Shapes, User2 } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
-
 
 export default function UiKitPage() {
   return (
     <>
-    
       <TitreDoc
         icone={<Shapes className="texte-couleur-bleu-ciel" size={30} />}
         titre={"Ui Kit"}
       />
 
       <Col>
-        <Ligne className={"jc-sb  gap-6"}>
+        <Ligne className={"jc-sb  gap-6 mb-5"}>
           <Bloc type={"myn"} nombre={4} className={"p-2 m-1"}>
             <div className="aff-flex ai-mil gap-3 mb-3">
               <Icons.Avatar height={40} width={40} />
@@ -41,6 +39,17 @@ export default function UiKitPage() {
             />
           </Bloc>
         </Ligne>
+
+        <h1>Flexible Design</h1>
+        <Bloc type={"myn"} nombre={11} className={"mh-3 texte-couleur-gris"}>
+          <p>
+            Le développement initial de{" "}
+            <span className="texte-couleur-bleu-ciel te-noir">FlexibleCSS</span>{" "}
+            s'est fait avec du CSS natif. Cependant, pour améliorer Flexible,
+            j'ai dû créer un site en React et perfectionner certains composants
+            en utilisant la librairie Framer Motion.
+          </p>
+        </Bloc>
       </Col>
     </>
   );

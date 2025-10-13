@@ -7,7 +7,7 @@ import {
   Sidebar,
   X,
 } from "lucide-react";
-import { CgTemplate } from "react-icons/cg";
+import { CgTemplate, CgComponents } from "react-icons/cg";
 import Lien from "./Lien";
 
 // eslint-disable-next-line no-unused-vars
@@ -38,7 +38,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
     {
       id: 1,
       label: "Composants",
-      icone: <Component size={20} />,
+      icone: <CgComponents size={20} />,
       lien: "composant",
     },
     {
@@ -65,6 +65,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 4, label: "couleurs", icone: null, lien: "couleurs" },
     { id: 5, label: "ligne & col", icone: null, lien: "ligne-col" },
     { id: 6, label: "z-index", icone: null, lien: "zindex" },
+    { id: 7, label: "dimensions", icone: null, lien: "width-height" },
   ];
 
   const composants = [
@@ -74,6 +75,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
     { id: 4, label: "Carrousel", icone: null, lien: "carrousel" },
     { id: 5, label: "Dropdown", icone: null, lien: "dropdown" },
     { id: 6, label: "Tableau", icone: null, lien: "tableau" },
+    // { id: 7, label: "Modal", icone: null, lien: "modal" },
   ];
 
   const itemVariants = {
@@ -117,7 +119,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
       );
     });
   return (
-    <div className="conteneur">
+    <div className="conteneur mh-7">
       {/* Bouton pour ouvrir la sidebar */}
       <span className="ouvrir" onClick={ouvrir}>
         <Sidebar size={20} />
@@ -126,7 +128,7 @@ export default function Sidebar2({ onToggle, onSelect }) {
       <div
         ref={sidebarRef}
         className={clsx(
-          "sidebar p-myn-3 fixe haut-13 gauche-0",
+          "sidebar p-myn-3 fixe haut-10 gauche-0",
           ouvert && "ronde",
           ouvert && "bg-gris-claire"
         )}

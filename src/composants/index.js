@@ -15,3 +15,5 @@ export { default as TexteDegrade } from "./ui/TexteDegrade.jsx";
 export { default as Spinner } from "./ui/Spinner.jsx";
 export { default as Dropdown } from "./ui/Dropdown.jsx";
 export { default as Table } from "./ui/Table.jsx";
+export { default as Input } from "./ui/Input.jsx";
+export { default as Modal } from "./ui/Modal.jsx";
