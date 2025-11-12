@@ -20,12 +20,12 @@ export default function BoutonPage() {
   return (
     <>
       <TitreDoc
-        icone={<MousePointer2 size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<MousePointer2 size={30} className="couleur-bleu-ciel" />}
         titre={"Bouton"}
       />
 
       <Col className={"mh-5 gap-5s"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
             Le bouton est un élément d'interface utilisé pour exécuter une
             action

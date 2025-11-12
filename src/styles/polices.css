@@ -91,6 +91,137 @@
   font-style: normal;
 }
 
+/* Ajout de nouvelles polices */
+
+@font-face {
+  font-family: "inter-1";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-2";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-3";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-4";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-5";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-6";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-7";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-8";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-9";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-10";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-11";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-12";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-13";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-14";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-15";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-16";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "inter-17";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter-18";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Ensuite tu continues avec les fichiers 24pt, 28pt, etc. en incrémentant inter-19, inter-20... */
+
+
 .dancing {
   font-family: "dancing", sans-serif; /* Ajoutez une police de secours */
 }
@@ -131,6 +262,25 @@
   font-family: "poppins", sans-serif; /* Ajoutez une police de secours */
 }
 
+
+.inter-1  { font-family: "inter-1", sans-serif; font-weight: normal; font-style: normal; }
+.inter-2  { font-family: "inter-2", sans-serif; font-weight: normal; font-style: italic; }
+.inter-3  { font-family: "inter-3", sans-serif; font-weight: bold;   font-style: normal; }
+.inter-4  { font-family: "inter-4", sans-serif; font-weight: bold;   font-style: italic; }
+.inter-5  { font-family: "inter-5", sans-serif; font-weight: 800;    font-style: normal; }
+.inter-6  { font-family: "inter-6", sans-serif; font-weight: 800;    font-style: italic; }
+.inter-7  { font-family: "inter-7", sans-serif; font-weight: 200;    font-style: normal; }
+.inter-8  { font-family: "inter-8", sans-serif; font-weight: 200;    font-style: italic; }
+.inter-9  { font-family: "inter-9", sans-serif; font-weight: normal; font-style: italic; }
+.inter-10 { font-family: "inter-10", sans-serif; font-weight: 300;   font-style: normal; }
+.inter-11 { font-family: "inter-11", sans-serif; font-weight: 300;   font-style: italic; }
+.inter-12 { font-family: "inter-12", sans-serif; font-weight: 500;   font-style: normal; }
+.inter-13 { font-family: "inter-13", sans-serif; font-weight: 500;   font-style: italic; }
+.inter-14 { font-family: "inter-14", sans-serif; font-weight: normal; font-style: normal; }
+.inter-15 { font-family: "inter-15", sans-serif; font-weight: 600;   font-style: normal; }
+.inter-16 { font-family: "inter-16", sans-serif; font-weight: 600;   font-style: italic; }
+.inter-17 { font-family: "inter-17", sans-serif; font-weight: 100;   font-style: normal; }
+.inter-18 { font-family: "inter-18", sans-serif; font-weight: 100;   font-style: italic; }
 
 
 /* Add more @font-face rules as needed for other fonts */

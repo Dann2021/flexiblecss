@@ -11,14 +11,14 @@ export default function ModalPage() {
     <>
       <TitreDoc
         titre={"Modal"}
-        icone={<Monitor size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Monitor size={30} className="couleur-bleu-ciel" />}
       />
 
       <Col className={"gap-3"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
             Le composant{" "}
-            <span className="fira texte-couleur-bleu-ciel te-noir">Modal</span>{" "}
+            <span className="fira couleur-bleu-ciel te-noir">Modal</span>{" "}
             affiche une fenêtre au-dessus de la page pour montrer un message,
             une action ou un formulaire sans changer de page.
           </p>

@@ -6,10 +6,7 @@ export default function PageErreur() {
   return (
     <Conteneur className={"poppins"}>
       <Col className={"jc-mil ai-mil gap-5"}>
-        <Titre
-          titre={"Page Introuvable"}
-          className={"texte-couleur-rouge-cerise"}
-        >
+        <Titre titre={"Page Introuvable"} className={"couleur-rouge-cerise"}>
           <AlertCircleIcon />
         </Titre>
 
@@ -19,11 +16,11 @@ export default function PageErreur() {
         <div className="defilement">
           <Titre
             titre={"Retournez en arrière"}
-            className={"texte-couleur-rouge-cerise element-defile"}
+            className={"couleur-rouge-cerise element-defile"}
           />
         </div>
         <p className="ta-mil">
-          <Lien chemin={"/"} className={"texte-couleur-vert-jade"}>
+          <Lien chemin={"/"} className={"couleur-vert-jade"}>
             Retournez à l&apos;acceuil
           </Lien>
         </p>
@@ -32,10 +29,9 @@ export default function PageErreur() {
   );
 }
 
-
 function Titre({ titre, className, children }) {
   return (
-    <p className={`taille-gd te-gras texte-couleur-gris ${className}`}>
+    <p className={`taille-gd te-gras couleur-gris ${className}`}>
       {children} {titre}
     </p>
   );

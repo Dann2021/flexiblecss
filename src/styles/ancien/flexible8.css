@@ -14342,463 +14342,463 @@ box-sizing: border-box;*/
   position: sticky;
 }
 
-.texte-couleur-transparent {
+.couleur-transparent {
   color: transparent !important;
 }
 
-.texte-couleur-none {
+.couleur-none {
   color: none !important;
 }
 
-.texte-couleur-bleu {
+.couleur-bleu {
   color: blue !important;
 }
 
-.texte-couleur-dark-bleu {
+.couleur-dark-bleu {
   color: darkblue !important;
 }
 
-.texte-couleur-bleu-claire {
+.couleur-bleu-claire {
   color: #ebf7ff !important;
 }
 
-.texte-couleur-gris {
+.couleur-gris {
   color: gray !important;
 }
 
-.texte-couleur-darkgray {
+.couleur-darkgray {
   color: darkgrey !important;
 }
 
-.texte-couleur-gris-claire {
+.couleur-gris-claire {
   color: #f8f9fa !important;
 }
 
-.texte-couleur-gris-autre {
+.couleur-gris-autre {
   color: rgb(16, 16, 16) !important;
 }
 
-.texte-couleur-gris-claire-100 {
+.couleur-gris-claire-100 {
   color: #333 !important;
 }
 
-.texte-couleur-gris-form {
+.couleur-gris-form {
   color: #f5f5f5 !important;
 }
 
-.texte-couleur-vert {
+.couleur-vert {
   color: green !important;
 }
 
-.texte-couleur-rose {
+.couleur-rose {
   color: #ffe1ee !important;
 }
 
-.texte-couleur-vert-claire {
+.couleur-vert-claire {
   color: rgba(79, 250, 107, 0.5019607843) !important;
 }
 
-.texte-couleur-noire {
+.couleur-noire {
   color: black !important;
 }
 
-.texte-couleur-bleu-electrique {
+.couleur-bleu-electrique {
   color: #1150d1 !important;
 }
 
-.texte-couleur-marron-terre {
+.couleur-marron-terre {
   color: #6a5224 !important;
 }
 
-.texte-couleur-vert-foret-fonce {
+.couleur-vert-foret-fonce {
   color: #193d0c !important;
 }
 
-.texte-couleur-bleu-royal {
+.couleur-bleu-royal {
   color: #050adb !important;
 }
 
-.texte-couleur-bleu-lavande {
+.couleur-bleu-lavande {
   color: #5d58e6 !important;
 }
 
-.texte-couleur-bleu-acier {
+.couleur-bleu-acier {
   color: #4255a5 !important;
 }
 
-.texte-couleur-vert-sauge {
+.couleur-vert-sauge {
   color: #729780 !important;
 }
 
-.texte-couleur-vert-menthe {
+.couleur-vert-menthe {
   color: #98db83 !important;
 }
 
-.texte-couleur-vert-vif {
+.couleur-vert-vif {
   color: #4eaf30 !important;
 }
 
-.texte-couleur-rose-framboise {
+.couleur-rose-framboise {
   color: #ce3a7b !important;
 }
 
-.texte-couleur-turquoise-clair {
+.couleur-turquoise-clair {
   color: #07c6ad !important;
 }
 
-.texte-couleur-rouge-vif {
+.couleur-rouge-vif {
   color: #d0181b !important;
 }
 
-.texte-couleur-noir-charbon {
+.couleur-noir-charbon {
   color: #201b1d !important;
 }
 
-.texte-couleur-beige-sable {
+.couleur-beige-sable {
   color: #a58a6f !important;
 }
 
-.texte-couleur-magenta-vif {
+.couleur-magenta-vif {
   color: #d755d7 !important;
 }
 
-.texte-couleur-violet-sombre {
+.couleur-violet-sombre {
   color: #442051 !important;
 }
 
-.texte-couleur-violet-electrique {
+.couleur-violet-electrique {
   color: #971ed1 !important;
 }
 
-.texte-couleur-violet-ardoise {
+.couleur-violet-ardoise {
   color: #57486b !important;
 }
 
-.texte-couleur-bleu-petrole {
+.couleur-bleu-petrole {
   color: #2d5a86 !important;
 }
 
-.texte-couleur-vert-citron {
+.couleur-vert-citron {
   color: #4ed414 !important;
 }
 
-.texte-couleur-rose-fuchsia {
+.couleur-rose-fuchsia {
   color: #de3278 !important;
 }
 
-.texte-couleur-orange-safran {
+.couleur-orange-safran {
   color: #e4a842 !important;
 }
 
-.texte-couleur-vert-pin {
+.couleur-vert-pin {
   color: #3fa35a !important;
 }
 
-.texte-couleur-rose-bonbon {
+.couleur-rose-bonbon {
   color: #d98cc5 !important;
 }
 
-.texte-couleur-bleu-cobalt {
+.couleur-bleu-cobalt {
   color: #1a299c !important;
 }
 
-.texte-couleur-rose-antique {
+.couleur-rose-antique {
   color: #da668f !important;
 }
 
-.texte-couleur-peche {
+.couleur-peche {
   color: #e4ae76 !important;
 }
 
-.texte-couleur-rose-pale {
+.couleur-rose-pale {
   color: #edbacc !important;
 }
 
-.texte-couleur-jaune-citron {
+.couleur-jaune-citron {
   color: #d6f010 !important;
 }
 
-.texte-couleur-violet-intense {
+.couleur-violet-intense {
   color: #7102fa !important;
 }
 
-.texte-couleur-magenta-lumineux {
+.couleur-magenta-lumineux {
   color: #cc31e4 !important;
 }
 
-.texte-couleur-bleu-gris {
+.couleur-bleu-gris {
   color: #4a646d !important;
 }
 
-.texte-couleur-bleu-sarcelle {
+.couleur-bleu-sarcelle {
   color: #36626a !important;
 }
 
-.texte-couleur-vert-pistache {
+.couleur-vert-pistache {
   color: #c1f061 !important;
 }
 
-.texte-couleur-rose-saumon {
+.couleur-rose-saumon {
   color: #ff809d !important;
 }
 
-.texte-couleur-bleu-gris-clair {
+.couleur-bleu-gris-clair {
   color: #809bb0 !important;
 }
 
-.texte-couleur-bleu-ciel {
+.couleur-bleu-ciel {
   color: #3095e0 !important;
 }
 
-.texte-couleur-violet-prune {
+.couleur-violet-prune {
   color: #911594 !important;
 }
 
-.texte-couleur-bleu-saphir {
+.couleur-bleu-saphir {
   color: #2b8fee !important;
 }
 
-.texte-couleur-vert-jade {
+.couleur-vert-jade {
   color: #65dd90 !important;
 }
 
-.texte-couleur-bleu-lagon {
+.couleur-bleu-lagon {
   color: #60d7e7 !important;
 }
 
-.texte-couleur-vert-herbe {
+.couleur-vert-herbe {
   color: #69c518 !important;
 }
 
-.texte-couleur-vert-olive-clair {
+.couleur-vert-olive-clair {
   color: #9da383 !important;
 }
 
-.texte-couleur-gris-ardoise-fonce {
+.couleur-gris-ardoise-fonce {
   color: #2a2f34 !important;
 }
 
-.texte-couleur-bleu-lilas {
+.couleur-bleu-lilas {
   color: #8381fd !important;
 }
 
-.texte-couleur-vert-emeraude {
+.couleur-vert-emeraude {
   color: #058606 !important;
 }
 
-.texte-couleur-orange-corail {
+.couleur-orange-corail {
   color: #ec8d53 !important;
 }
 
-.texte-couleur-fuchsia {
+.couleur-fuchsia {
   color: #c41ea5 !important;
 }
 
-.texte-couleur-vert-pomme {
+.couleur-vert-pomme {
   color: #2aba10 !important;
 }
 
-.texte-couleur-bleu-indigo {
+.couleur-bleu-indigo {
   color: #3f1db1 !important;
 }
 
-.texte-couleur-jaune-canari {
+.couleur-jaune-canari {
   color: #edec17 !important;
 }
 
-.texte-couleur-vert-pomme-clair {
+.couleur-vert-pomme-clair {
   color: #7ec952 !important;
 }
 
-.texte-couleur-vert-lime {
+.couleur-vert-lime {
   color: #8ce732 !important;
 }
 
-.texte-couleur-bleu-azur {
+.couleur-bleu-azur {
   color: #1556f9 !important;
 }
 
-.texte-couleur-rouge-bordeaux {
+.couleur-rouge-bordeaux {
   color: #923a43 !important;
 }
 
-.texte-couleur-vert-chartreuse {
+.couleur-vert-chartreuse {
   color: #9dd54c !important;
 }
 
-.texte-couleur-rouge-rouille {
+.couleur-rouge-rouille {
   color: #d25e47 !important;
 }
 
-.texte-couleur-gris-perle {
+.couleur-gris-perle {
   color: #91a6b1 !important;
 }
 
-.texte-couleur-rose-magenta {
+.couleur-rose-magenta {
   color: #bd3b7d !important;
 }
 
-.texte-couleur-vert-mousse {
+.couleur-vert-mousse {
   color: #313f05 !important;
 }
 
-.texte-couleur-violet-aubergine {
+.couleur-violet-aubergine {
   color: #422674 !important;
 }
 
-.texte-couleur-violet-fonce {
+.couleur-violet-fonce {
   color: #581abe !important;
 }
 
-.texte-couleur-violet-pastel {
+.couleur-violet-pastel {
   color: #794fcb !important;
 }
 
-.texte-couleur-vert-olive-fonce {
+.couleur-vert-olive-fonce {
   color: #2d2d1c !important;
 }
 
-.texte-couleur-gris-argent {
+.couleur-gris-argent {
   color: #a6b8b4 !important;
 }
 
-.texte-couleur-vert-kaki {
+.couleur-vert-kaki {
   color: #759d39 !important;
 }
 
-.texte-couleur-vert-neon {
+.couleur-vert-neon {
   color: #08fea2 !important;
 }
 
-.texte-couleur-vert-lichen {
+.couleur-vert-lichen {
   color: #8eb540 !important;
 }
 
-.texte-couleur-bleu-glacial {
+.couleur-bleu-glacial {
   color: #d7f9f6 !important;
 }
 
-.texte-couleur-vert-sapin {
+.couleur-vert-sapin {
   color: #168b5d !important;
 }
 
-.texte-couleur-bleu-nuit {
+.couleur-bleu-nuit {
   color: #5326d2 !important;
 }
 
-.texte-couleur-vert-fluo {
+.couleur-vert-fluo {
   color: #5ce347 !important;
 }
 
-.texte-couleur-blanc-menthe {
+.couleur-blanc-menthe {
   color: #dffdf0 !important;
 }
 
-.texte-couleur-vert-olive {
+.couleur-vert-olive {
   color: #7b932b !important;
 }
 
-.texte-couleur-rose-fuchsia-fonce {
+.couleur-rose-fuchsia-fonce {
   color: #c23290 !important;
 }
 
-.texte-couleur-rose-orchidee {
+.couleur-rose-orchidee {
   color: #b75d9d !important;
 }
 
-.texte-couleur-violet-lilas {
+.couleur-violet-lilas {
   color: #a17ec3 !important;
 }
 
-.texte-couleur-bleu-turquoise {
+.couleur-bleu-turquoise {
   color: #3e99e9 !important;
 }
 
-.texte-couleur-violet-intense-2 {
+.couleur-violet-intense-2 {
   color: #3a0293 !important;
 }
 
-.texte-couleur-bleu-cyan {
+.couleur-bleu-cyan {
   color: #3ec3de !important;
 }
 
-.texte-couleur-bleu-royal-clair {
+.couleur-bleu-royal-clair {
   color: #4279f9 !important;
 }
 
-.texte-couleur-violet-lavande-clair {
+.couleur-violet-lavande-clair {
   color: #c557ff !important;
 }
 
-.texte-couleur-brun-sable {
+.couleur-brun-sable {
   color: #746126 !important;
 }
 
-.texte-couleur-vert-olive-pale {
+.couleur-vert-olive-pale {
   color: #aaa96a !important;
 }
 
-.texte-couleur-vert-menthe-pastel {
+.couleur-vert-menthe-pastel {
   color: #9ce59b !important;
 }
 
-.texte-couleur-bleu-marine-fonce {
+.couleur-bleu-marine-fonce {
   color: #0f2e51 !important;
 }
 
-.texte-couleur-rouge-cerise {
+.couleur-rouge-cerise {
   color: #ff3b5d !important;
 }
 
-.texte-couleur-jaune-olive {
+.couleur-jaune-olive {
   color: #b0c50a !important;
 }
 
-.texte-couleur-violet-cassis {
+.couleur-violet-cassis {
   color: #490e49 !important;
 }
 
-.texte-couleur-bleu-canard {
+.couleur-bleu-canard {
   color: #1f8696 !important;
 }
 
-.texte-couleur-vert-foret {
+.couleur-vert-foret {
   color: #3d6a3f !important;
 }
 
-.texte-couleur-orange-vif {
+.couleur-orange-vif {
   color: #e8870b !important;
 }
 
-.texte-couleur-rouge-tomate {
+.couleur-rouge-tomate {
   color: #f0280f !important;
 }
 
-.texte-couleur-rose-pastel {
+.couleur-rose-pastel {
   color: #f6bae3 !important;
 }
 
-.texte-couleur-violet-prune-clair {
+.couleur-violet-prune-clair {
   color: #745774 !important;
 }
 
-.texte-couleur-rose-barbe-a-papa {
+.couleur-rose-barbe-a-papa {
   color: #f195e7 !important;
 }
 
-.texte-couleur-beige-dore {
+.couleur-beige-dore {
   color: #dab765 !important;
 }
 
-.texte-couleur-bleu-acier-fonce {
+.couleur-bleu-acier-fonce {
   color: #20607b !important;
 }
 
-.texte-couleur-vert-jade-fonce {
+.couleur-vert-jade-fonce {
   color: #08b053 !important;
 }
 
-.texte-couleur-rose-framboise-fonce {
+.couleur-rose-framboise-fonce {
   color: #ce1655 !important;
 }
 

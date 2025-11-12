@@ -57,13 +57,13 @@ export default function CardPage() {
     <>
       <TitreDoc
         titre={"Card"}
-        icone={<BiCard size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<BiCard size={30} className="couleur-bleu-ciel" />}
       />
 
       <Col className={"mh-3 gap-6"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-5"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-5"}>
           <p>
-            <span className="texte-couleur-bleu-ciel te-noir">Card</span> est un
+            <span className="couleur-bleu-ciel te-noir">Card</span> est un
             élément conteneur dans lequel on peut mettre du texte, photos ou
             boutons.
           </p>
@@ -71,11 +71,10 @@ export default function CardPage() {
 
         <h2 className="texte-3">Usage</h2>
 
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-5"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-5"}>
           <p>
-            Le composant{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">Card</span> est
-            composé de quatre parties principales :
+            Le composant <span className="couleur-bleu-ciel te-noir">Card</span>{" "}
+            est composé de quatre parties principales :
           </p>
 
           <ul className="mg-3 mh-5">
@@ -189,17 +188,17 @@ export default function CardPage() {
                     <Star size={14} />
                   </Bouton>
                 </div>
-                <p className="texte-couleur-gris taille-pt">
+                <p className="couleur-gris taille-pt">
                   Consistent, customized fit, game-changing.
                 </p>
                 <div className="aff-flex gap-2 te-noir">
-                  <p className="texte-couleur-noir-charbon">$279.97</p>
-                  <p className="td-barre texte-couleur-gris ">$350</p>
-                  <p className="texte-couleur-vert-jade-fonce">20% off</p>
+                  <p className="couleur-noir-charbon">$279.97</p>
+                  <p className="td-barre couleur-gris ">$350</p>
+                  <p className="couleur-vert-jade-fonce">20% off</p>
                 </div>
 
                 <div className="aff-flex gap-4 te-noir taille-pt">
-                  <p className="tt-maj texte-couleur-bleu-ciel">x</p>
+                  <p className="tt-maj couleur-bleu-ciel">x</p>
                   <p className="tt-maj">s</p>
                   <p className="tt-maj">m</p>
                   <p className="tt-maj">l</p>

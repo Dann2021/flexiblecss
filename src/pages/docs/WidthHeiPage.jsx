@@ -21,29 +21,28 @@ export default function WidthHeiPage() {
   return (
     <>
       <TitreDoc
-        icone={<MdWidthFull size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<MdWidthFull size={30} className="couleur-bleu-ciel" />}
         titre={"Dimensions"}
       />
 
       <Col className={"gap-4"}>
         <Bloc type={"myn"} nombre={11}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Cette classe permet de déterminer ou de fixer la largeur{" "}
-            <span className="texte-couleur-bleu-ciel fira">`width`</span> ou la
-            hauteur{" "}
-            <span className="texte-couleur-bleu-ciel fira">`height`</span> d'un
-            élément
+            <span className="couleur-bleu-ciel fira">`width`</span> ou la
+            hauteur <span className="couleur-bleu-ciel fira">`height`</span>{" "}
+            d'un élément
           </p>
 
           <ul className="mg-3 mh-2 mb-2">
             <li>
-              <span className="texte-couleur-bleu-ciel te-noir fira">
+              <span className="couleur-bleu-ciel te-noir fira">
                 .w-[valeur]
               </span>{" "}
               permet de fixer une largeur
             </li>
             <li>
-              <span className="texte-couleur-bleu-ciel te-noir fira">
+              <span className="couleur-bleu-ciel te-noir fira">
                 .h-[valeur]
               </span>{" "}
               permet de fixer un hauteur
@@ -56,7 +55,7 @@ export default function WidthHeiPage() {
         <h2>Exemple</h2>
 
         <h3>
-          Avec <span className="texte-couleur-bleu-ciel fira">width</span>
+          Avec <span className="couleur-bleu-ciel fira">width</span>
         </h3>
         <Bloc
           type={"myn"}
@@ -85,13 +84,11 @@ export default function WidthHeiPage() {
           <div className="w-full bloc-12 bg-gris-claire ronde p-1 mb-1">
             <span className="taille-pt  te-noir">.w-full</span>
           </div>
-          <div className="w-ecran  bloc-12 bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.w-ecran</span>
-          </div>
+          
         </Bloc>
 
         <h3>
-          Avec <span className="texte-couleur-bleu-ciel fira">height</span>
+          Avec <span className="couleur-bleu-ciel fira">height</span>
         </h3>
         <Bloc
           type={"myn"}
@@ -122,9 +119,7 @@ export default function WidthHeiPage() {
           <div className="h-full  bg-gris-claire ronde p-1 mb-1">
             <span className="taille-pt  te-noir">.h-full</span>
           </div>
-          <div className="h-ecran  bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.h-ecran</span>
-          </div>
+         
         </Bloc>
       </Col>
     </>

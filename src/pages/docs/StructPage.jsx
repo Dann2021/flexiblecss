@@ -1,6 +1,6 @@
-import { Bloc, Col } from "../../composants";
+import { Bloc, Card, Col, Ligne } from "../../composants";
 import Codebloc from "../../utilitaire/Codebloc";
-import { SiHtml5, SiReact } from "react-icons/si";
+import { SiHtml5, SiNextdotjs, SiNextui, SiReact } from "react-icons/si";
 
 export default function StructPage() {
   const t = "├──";
@@ -41,34 +41,56 @@ ${b}   ${b}   ${e} flexible.css
   `;
   return (
     <div>
-      <h1 className="texte-5">
-        Structure de{" "}
-        <span className="texte-couleur-bleu-ciel fira">Flexible</span>
+      <h1 className="texte-5 inter">
+        Structure de <span className="couleur-bleu-ciel fira">Flexible</span>
       </h1>
       <Col className={"gap-3 mh-2"}>
         <Bloc type={"myn"} nombre={11} className={"my-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Dans cette page vous verrez comment tous les projets qui utilisent{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
-              Flexible CSS
-            </span>{" "}
+            <span className="couleur-bleu-ciel te-noir">Flexible CSS</span>{" "}
             doivent se présenter. Pour cela nous partiront de la structure la
             plus simple à la plus complexe
           </p>
         </Bloc>
 
         <div className="aff-flex ai-mil gap-2">
-          <h2 className="texte-4 texte-couleur-bleu-lavande tt-maj">html</h2>
+          <h2 className="texte-4 couleur-bleu-lavande tt-maj">html</h2>
           <SiHtml5 size={40} color="#E34F26" />
         </div>
 
+        <Ligne className={"my-1"}>
+
+          <Card className={"bloc-myn-3 ronde p-2"} style={{ border: "1px solid #ccc" }}>
+            <Card.Header>
+              <SiHtml5 size={40} color="#E34F26" />
+
+            </Card.Header>
+             
+             <Card.Corps className={"mh-1"}>
+              <p className="fira">Html</p>
+              <p className="inter">utilisez cela avec html</p>
+             </Card.Corps>
+          </Card>
+
+            <Card className={"bloc-myn-3 ronde p-2"} style={{ border: "1px solid #ccc" }}>
+            <Card.Header>
+              <SiNextdotjs size={40} color="#333" />
+
+            </Card.Header>
+             
+             <Card.Corps className={"mh-1"}>
+              <p className="fira">Html</p>
+              <p className="inter">utilisez cela avec html</p>
+             </Card.Corps>
+          </Card>
+        </Ligne>
+
         <Bloc type={"myn"} nombre={11} className={"my-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Un projet html utilsant{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
-              Flexible CSS
-            </span>{" "}
-            doit respecter cette structure.
+            <span className="couleur-bleu-ciel te-noir">Flexible CSS</span> doit
+            respecter cette structure.
           </p>
         </Bloc>
 
@@ -80,17 +102,15 @@ ${b}   ${b}   ${e} flexible.css
         </Codebloc>
 
         <div className="aff-flex ai-mil gap-2 mh-2">
-          <h2 className="texte-4 texte-couleur-bleu-lavande">React Js</h2>{" "}
+          <h2 className="texte-4 couleur-bleu-lavande">React Js</h2>{" "}
           <SiReact size={40} color="#61DBFB" />
         </div>
 
         <Bloc type={"myn"} nombre={11} className={"my-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Un projet reatc js utilsant{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
-              Flexible CSS
-            </span>{" "}
-            doit respecter cette structure.
+            <span className="couleur-bleu-ciel te-noir">Flexible CSS</span> doit
+            respecter cette structure.
           </p>
         </Bloc>
 

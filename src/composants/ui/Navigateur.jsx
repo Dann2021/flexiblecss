@@ -6,6 +6,8 @@ import TexteDegrade from "./TexteDegrade";
 import { useState } from "react";
 import Couleurs from "../../constantes/Couleurs";
 import Dropdown from "./Dropdown";
+import { FaGithub } from "react-icons/fa6";
+import Bouton from "./Bouton";
 
 export default function Navigateur({ logo, texte }) {
   const [activeur, setActiveur] = useState(false);
@@ -14,7 +16,7 @@ export default function Navigateur({ logo, texte }) {
 
   return (
     <nav
-      className={"conteneur navigateur theme-clair"}
+      className={"conteneur sticky haut-0 navigateur theme-clair z-50"}
       style={{ background: "#ffffff" }}
     >
       <div className="elements">
@@ -23,10 +25,11 @@ export default function Navigateur({ logo, texte }) {
             {logo && <img src={logo} alt="" className="logo-image" />}
             {texte && (
               <TexteDegrade
-                texte={texte}
                 className="playwrite"
                 couleurs={`${Couleurs.cyan}, ${Couleurs.indigo}`}
-              />
+              >
+                {texte}
+              </TexteDegrade>
             )}
           </Lien>
         </div>
@@ -41,6 +44,12 @@ export default function Navigateur({ logo, texte }) {
             <AlertCircle size={30} color="#FF8C00" />
           </div>
 
+          <div className="aff-none aff-myn-block absolue droite-3 haut-2 bas-2">
+            <Bouton taille={"min"} theme="claire" className={"ronde-1"}>
+              <FaGithub />
+            </Bouton>
+          </div>
+
           <div className="bt-hamburger" onClick={ouverture}>
             <Menu size={30} />
           </div>
@@ -50,31 +59,36 @@ export default function Navigateur({ logo, texte }) {
       <div className={`menu-conteneur ${activeur ? "activeur" : ""}`}>
         <ul className="menu">
           <li className="effet">
-            <Lien
-              chemin={"/"}
-              className={"taille-pt texte-couleur-gris nav-item"}
-            >
+            <Lien chemin={"/"} className={"taille-pt couleur-gris nav-item"}>
               Home
             </Lien>
           </li>
           <li className="effet">
             <Lien
               chemin={"/docs"}
-              className={"taille-pt texte-couleur-gris nav-item"}
+              className={"taille-pt couleur-gris nav-item"}
             >
-              Documentation
+              Docs
+            </Lien>
+          </li>
+           <li className="effet">
+            <Lien
+              chemin={"/docs"}
+              className={"taille-pt couleur-gris nav-item"}
+            >
+              Vitrines
             </Lien>
           </li>
           {/*<Dropdown
             contenuClassName={""}
             className={"effet"}
-            labelClassName={"texte-couleur-gris"}
+            labelClassName={"couleur-gris"}
             label={"Labo"}
           >
             <li className="effet">
               <Lien
                 chemin={"/test"}
-                className={"taille-pt texte-couleur-gris nav-item"}
+                className={"taille-pt couleur-gris nav-item"}
               >
                 Test
               </Lien>

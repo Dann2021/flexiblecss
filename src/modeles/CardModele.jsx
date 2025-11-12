@@ -29,17 +29,17 @@ export default function CardModele() {
 
             <Star size={14} />
           </div>
-          <p className="texte-couleur-gris taille-pt">
+          <p className="couleur-gris taille-pt">
             Consistent, customized fit, game-changing.
           </p>
           <div className="aff-flex gap-2 te-noir">
-            <p className="texte-couleur-noir-charbon">$279.97</p>
-            <p className="td-barre texte-couleur-gris ">$350</p>
-            <p className="texte-couleur-vert-jade-fonce">20% off</p>
+            <p className="couleur-noir-charbon">$279.97</p>
+            <p className="td-barre couleur-gris ">$350</p>
+            <p className="couleur-vert-jade-fonce">20% off</p>
           </div>
 
           <div className="aff-flex gap-4 te-noir taille-pt">
-            <p className="tt-maj texte-couleur-bleu-ciel">x</p>
+            <p className="tt-maj couleur-bleu-ciel">x</p>
             <p className="tt-maj">s</p>
             <p className="tt-maj">m</p>
             <p className="tt-maj">l</p>

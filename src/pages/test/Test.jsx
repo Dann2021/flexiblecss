@@ -66,71 +66,26 @@ export default function Test() {
           images={[Image1, Image2, Image3, Image4, Image5, Image6]}
         />
 
-      
-      <Bloc type={"myn"} nombre={11} className={"mh-3 ronde bg-gris-claire"}>
+        <Bloc type={"myn"} nombre={11} className={"mh-3 ronde bg-gris-claire"}>
+          <h1 className="texte-4">
+            Apprendre{" "}
+            <span className="fira couleur-bleu-ciel">{name}</span>{" "}
+          </h1>
 
-        <h1 className="texte-4">Apprendre <span className="fira texte-couleur-bleu-ciel">{name}</span> </h1>
-
-        <Box />
-
-       
-
-      </Bloc>
+          <Box />
+        </Bloc>
       </Col>
     </Conteneur>
   );
 }
 
-
 const Box = () => {
-
   return (
     <motion.div
-    className="box-1 bg-bleu-ciel ronde mh-3 mb-5 curseur-pointeur"
-      animate={{rotate: 360}}
-      whileHover={{scale: 1.2}}
-     
-      transition={{duration: 0.3}}
-    >
-
-    </motion.div>
-  )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      className="box-1 bg-bleu-ciel ronde mh-3 mb-5 curseur-pointeur"
+      animate={{ rotate: 360 }}
+      whileHover={{ scale: 1.2 }}
+      transition={{ duration: 0.3 }}
+    ></motion.div>
+  );
+};

@@ -59,7 +59,7 @@ export default function Table({
           >
             <Search />
           </Input>
-          <p className="taille-pt texte-couleur-gris">
+          <p className="taille-pt couleur-gris">
             {filteredData.length} résultat(s)
           </p>
         </div>

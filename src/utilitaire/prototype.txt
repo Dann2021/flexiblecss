@@ -8,11 +8,11 @@ const Tab = ({ className = "", data }) => {
   const labels = Object.keys(data[0]).filter((key) => key !== "id");
 
   const couleurs = [
-    "texte-couleur-bleu-lagon",
-    "texte-couleur-bleu-lavande",
-    "texte-couleur-bleu-ciel",
-    "texte-couleur-rouge-cerise",
-    "texte-couleur-vert-sauge",
+    "couleur-bleu-lagon",
+    "couleur-bleu-lavande",
+    "couleur-bleu-ciel",
+    "couleur-rouge-cerise",
+    "couleur-vert-sauge",
   ];
 
   return (

@@ -1,56 +1,7 @@
-import React from "react";
 import TitreDoc from "../../../composants/docs_composant/TitreDoc";
 import { Archive, File, Share, TableIcon, X } from "lucide-react";
-import { Bloc, Col, Table } from "../../../composants";
+import { Bloc, Col, Table, TexteDegrade } from "../../../composants";
 import Tableau from "../../../utilitaire/Tableau";
-
-/*const dataTest = [
-  {
-    id: 1,
-    nom: "Ngomo Mba",
-    prenom: "Dann Sloann",
-    age: 26,
-    ecole: "BBS",
-    niveau: "M1 SIB",
-    quartier: "Malibé 1",
-  },
-  {
-    id: 2,
-    nom: "Othamot Mohamed Hamissou",
-    prenom: "Zeïtoune",
-    age: 25,
-    ecole: "BBS",
-    niveau: "M2 CCA",
-    quartier: "Awendjé",
-  },
-  {
-    id: 3,
-    nom: "Hounsokou",
-    prenom: "Arnaud Roland",
-    age: 27,
-    ecole: "ITA",
-    niveau: "M1 ",
-    quartier: "Mindoubé 1",
-  },
-  {
-    id: 4,
-    nom: "Nyingone Obieghe",
-    prenom: "Grâce Orphé",
-    age: 26,
-    ecole: "ISP",
-    niveau: "L3",
-    quartier: "Ouakam",
-  },
-  {
-    id: 5,
-    nom: "Salou Konitatou Achabi Modoukpè",
-    prenom: "Ola",
-    age: 25,
-    ecole: "UOB",
-    niveau: "M1 BF",
-    quartier: "Belle-vue 2",
-  },
-];*/
 
 const dataTest = [
   {
@@ -513,7 +464,7 @@ const dataActions = [
     id: 4,
     label: "Supprimer",
     icone: <X size={16} />,
-    className: "texte-couleur-rouge-vif te-noir",
+    className: "couleur-rouge-vif te-noir",
   },
 ];
 
@@ -529,11 +480,11 @@ export default function TableauPage() {
     <>
       <TitreDoc
         titre={"Tableau"}
-        icone={<TableIcon size={20} className="texte-couleur-bleu-ciel" />}
+        icone={<TableIcon size={20} className="couleur-bleu-ciel" />}
       />
 
       <Col className={"mh-5 gap-6"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-6"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-6"}>
           <p>
             Un tableau sert à organiser et afficher des données sous forme de
             lignes et de colonnes, afin de faciliter la lecture, la comparaison
@@ -552,6 +503,41 @@ export default function TableauPage() {
           conteneurClassName={"bloc-myn-11"}
         />
       </Col>
+
+      {/*<Container
+        className={"p-5 ronde"}
+        direction={"180deg"}
+        couleurs={"red, yellow"}
+      >
+        <Bloc
+          type={"myn"}
+          nombre={6}
+          className={"bord-1 bord-dashed p-5 ronde"}
+        >
+          <h3>Mon bloc de code</h3>
+        </Bloc>
+      </Container>
+
+      <TexteDegrade
+        as="h1"
+        direction={"45deg"}
+        className={"texte-6"}
+        couleurs={"#4ffa6b80, #ce3a7b"}
+      >
+        Yo ici
+      </TexteDegrade>*/}
     </>
   );
 }
+
+/*const Container = ({ children, direction, couleurs, className, ...props }) => {
+  return (
+    <div
+      style={{ background: `linear-gradient(${direction}, ${couleurs})` }}
+      className={clsx("conteneur", className)}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};*/

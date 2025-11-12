@@ -47,13 +47,13 @@ export default function AspectRatioPage() {
   return (
     <>
       <TitreDoc
-        icone={<Proportions size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Proportions size={30} className="couleur-bleu-ciel" />}
         titre={"Aspect-ratio"}
       />
 
       <Col className={"gap-3"}>
         <Bloc type={"myn"} nombre={11} className={"mb-4 mh-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Classe utilitaire pour contrôler le ratio d'un élément
           </p>
         </Bloc>
@@ -65,12 +65,12 @@ export default function AspectRatioPage() {
           data={data}
         />
 
-        <p className="texte-couleur-gris">Exemple</p>
-        <p className="texte-couleur-gri texte-2">Exemple de base</p>
+        <p className="couleur-gris">Exemple</p>
+        <p className="couleur-gri texte-2">Exemple de base</p>
         <Bloc type={"myn"} nombre={11} className={"mb-4 mh-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Utilisez la class utilitaire{" "}
-            <span className="texte-couleur-bleu-ciel fira">{`ratio-<ratio>`}</span>{" "}
+            <span className="couleur-bleu-ciel fira">{`ratio-<ratio>`}</span>{" "}
             pour contrôler les proportions d'un élément peu importe la taille de
             son conteneur.
           </p>
@@ -79,9 +79,9 @@ export default function AspectRatioPage() {
         <CardResize sourceImage={ImageTest} langage={"jsx"} />
         <h4>Utilisation dans une video</h4>
         <Bloc type={"myn"} nombre={11} className={"mb-4 mh-2"}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Tout comme les images, le{" "}
-            <span className="texte-couleur-bleu-ciel fira">{`ratio-<ratio>`}</span>{" "}
+            <span className="couleur-bleu-ciel fira">{`ratio-<ratio>`}</span>{" "}
             fonctionne tout aussi bien avec les vidéos.
           </p>
         </Bloc>

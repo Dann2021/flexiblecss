@@ -8,7 +8,7 @@ import Image from "./Image";
  *  images : représente une liste qui contiendra tous les chemin (path ou source) des images
  *  taille : represente la taille en pixel que l'on souhaite donnée à toutes nos images
  *  titre  : C'est le nom que vous donnez à votre carrousel
- * 
+ *
  */
 
 export default function Carrousel({
@@ -16,9 +16,8 @@ export default function Carrousel({
   titre,
   classNameImages,
   taille,
-  children
+  children,
 }) {
-
   // Vérification du tableau d'images
   if (!Array.isArray(images)) {
     console.error("❌ La prop 'images' doit être un tableau.");
@@ -30,13 +29,14 @@ export default function Carrousel({
 
   // dataImages est un tableau d'images pour le carrousel
 
-
   // Filtrage : garder uniquement les valeurs valides (string non vide par ex)
-  const validImages = images.filter((src) => typeof src === "string" && src.trim() !== "");
+  const validImages = images.filter(
+    (src) => typeof src === "string" && src.trim() !== ""
+  );
 
   // total du tableau dataImages
   const total = validImages.length;
- 
+
   //const total = images.length;
 
   // fonctions pour les boutons
@@ -54,7 +54,9 @@ export default function Carrousel({
   if (total === 0) {
     return (
       <div className="bloc-12 ronde bord-2 bord-rouge-cerise p-3">
-        <p className="texte-couleur-rouge-cerise">⚠️ Aucune image disponible dans le carrousel.</p>
+        <p className="couleur-rouge-cerise">
+          ⚠️ Aucune image disponible dans le carrousel.
+        </p>
       </div>
     );
   }
@@ -80,7 +82,6 @@ export default function Carrousel({
           taille={"min"}
           className={"ronde-1"}
           onClick={nextImage}
-          
         >
           <ArrowRight size={15} />
         </Bouton>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import { HomeIcon, ChevronRight } from "lucide-react";
-import {motion, AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Breadcrumbs() {
   // ici on obtient le chemin en cours d'utilisation qu'on met dans une variable
@@ -13,10 +13,9 @@ export default function Breadcrumbs() {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="aff-flex ai-mil gap-2 texte-couleur-gris taille-pt mb-2" >
-    <HomeIcon size={18} />
+    <nav className="aff-flex ai-mil gap-2 couleur-gris taille-pt mb-2">
+      <HomeIcon size={18} />
       {pathnames.map((nom, index) => {
-
         // ici on map le tableau et on prend une route puis on la convertit en string en mettant / devant et derriere
         const route = "/" + pathnames.slice(0, index + 1).join("/");
         const isLast = index === pathnames.length - 1;
@@ -26,7 +25,7 @@ export default function Breadcrumbs() {
             {/*isLast ? (
               <span>{name}</span>
             ) : (
-              <Link className={"texte-couleur-gris"} to={routeTo}>{name}</Link>
+              <Link className={"couleur-gris"} to={routeTo}>{name}</Link>
             )*/}
             <AnimatePresence mode="wait">
               {isLast ? (

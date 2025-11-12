@@ -18,11 +18,11 @@ export default function DropdownPage() {
 <Dropdown
   contenuClassName={""}
   className={"effet"}
-  labelClassName={"texte-couleur-gris"}
+  labelClassName={"couleur-gris"}
   label={"Labo"}>
   
   <li className="effet">
-    <Lien chemin={"/docs"} className={"taille-pt texte-couleur-gris nav-item"}>
+    <Lien chemin={"/docs"} className={"taille-pt couleur-gris nav-item"}>
         Documentation
     </Lien>
   </li>
@@ -31,15 +31,13 @@ export default function DropdownPage() {
     <>
       <TitreDoc
         titre={"Dropdown"}
-        icone={
-          <IoMdArrowDropdown size={20} className="texte-couleur-bleu-ciel" />
-        }
+        icone={<IoMdArrowDropdown size={20} className="couleur-bleu-ciel" />}
       />
 
       <Col className={"mh-3"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-5"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-5"}>
           <p>
-            Le <span className="texte-couleur-bleu-ciel te-noir">Dropdown</span>{" "}
+            Le <span className="couleur-bleu-ciel te-noir">Dropdown</span>{" "}
             permet d’afficher ou de cacher du contenu.
           </p>
 
@@ -70,14 +68,12 @@ export default function DropdownPage() {
 
         <h3 className="fira">Exemple</h3>
 
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-5"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-5"}>
           <p className="mh-2 mb-4">
             {" "}
             Dans cet exemple vous verrez un{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
-              dropdown
-            </span>{" "}
-            que vous pouvez cliquer et ce dernier affichera un menu contextuel.
+            <span className="couleur-bleu-ciel te-noir">dropdown</span> que vous
+            pouvez cliquer et ce dernier affichera un menu contextuel.
           </p>
         </Bloc>
         <Table data={dataTest} label={"Dropdown"} actions={dataActions} />
@@ -94,7 +90,7 @@ const dataActions = [
     id: 4,
     label: "Supprimer",
     icone: <X size={16} />,
-    className: "texte-couleur-rouge-vif te-noir",
+    className: "couleur-rouge-vif te-noir",
   },
 ];
 

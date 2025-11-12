@@ -1,5 +1,5 @@
 import { IoColorPaletteSharp } from "react-icons/io5";
-import { Bloc,  Col  } from "../../composants";
+import { Bloc, Col } from "../../composants";
 import {
   paletteRouge,
   paletteVert,
@@ -13,9 +13,8 @@ import {
 import Tableau from "../../utilitaire/Tableau.jsx";
 import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
 
-
 const couleurData = [
-  { id: 1, classe: ".texte-couleur-bleu-ciel", style: "color : #3095e0" },
+  { id: 1, classe: ".couleur-bleu-ciel", style: "color : #3095e0" },
   { id: 2, classe: ".bord-bleu-ciel", style: "border-color : #3095e0" },
   { id: 3, classe: ".bg-bleu-ciel", style: "background : #3095e0" },
 ];
@@ -23,29 +22,26 @@ const couleurData = [
 export default function CouleurPage() {
   return (
     <>
-    
       <TitreDoc
-        icone={
-          <IoColorPaletteSharp size={30} className="texte-couleur-bleu-ciel" />
-        }
+        icone={<IoColorPaletteSharp size={30} className="couleur-bleu-ciel" />}
         titre={"Couleurs"}
       />
 
       <Col className={"gap-5"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
-            <span className="te-noir texte-couleur-bleu-ciel">Flexible</span>{" "}
-            propose une large palette de couleurs qui vous sera utile dans les{" "}
-            <span className={"texte-couleur-bleu-ciel fira te-noir"}>
+            <span className="te-noir couleur-bleu-ciel">Flexible</span> propose
+            une large palette de couleurs qui vous sera utile dans les{" "}
+            <span className={"couleur-bleu-ciel fira te-noir"}>
               border-[color], font-color, background et background-color
             </span>{" "}
           </p>
         </Bloc>
-        <h2 className={"texte-couleur-gris"}>Utilisation</h2>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <h2 className={"couleur-gris"}>Utilisation</h2>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
             Les couleurs dans{" "}
-            <span className={"te-noir texte-couleur-bleu-ciel"}>Flexible</span>{" "}
+            <span className={"te-noir couleur-bleu-ciel"}>Flexible</span>{" "}
             permettent d'appliquer du styles à des éléments dans une page web.
           </p>
         </Bloc>
@@ -75,7 +71,7 @@ const CardCouleur = ({ couleurName, datasColor = [] }) => {
   }
   return (
     <>
-      <h3 className={"texte-couleur-gris fira"}>{couleurName}</h3>
+      <h3 className={"couleur-gris fira"}>{couleurName}</h3>
 
       <div
         className="mg-pt-9 aff-flex jc-deb ai-mil gap-3 bloc-12  bloc-myn-12 over-auto p-1  mh-1"

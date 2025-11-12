@@ -1,10 +1,9 @@
 import React from "react";
-import { Bloc, Col, Ligne} from "../../composants";
-import {  Grid2X2, Smartphone } from "lucide-react";
+import { Bloc, Col, Ligne } from "../../composants";
+import { Grid2X2, Smartphone } from "lucide-react";
 import Tableau from "../../utilitaire/Tableau";
 
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
-
 
 const data = [
   {
@@ -93,32 +92,29 @@ export default function BlocPage() {
   const prop = `.bloc-<valeur>`;
   return (
     <>
-    
       <TitreDoc
-        icone={<Grid2X2 size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Grid2X2 size={30} className="couleur-bleu-ciel" />}
         titre={"Bloc"}
       />
 
       <Col className={"gap-10"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
-            <span className="te-noir texte-couleur-bleu-ciel">Flexible</span>{" "}
-            propose un systeme de conteneur nommé{" "}
-            <span className="te-noir texte-couleur-bleu-ciel">`Bloc`</span> qui
-            permet de créer une zone spéficique à dimension fixe dans la page
-            web.
+            <span className="te-noir couleur-bleu-ciel">Flexible</span> propose
+            un systeme de conteneur nommé{" "}
+            <span className="te-noir couleur-bleu-ciel">`Bloc`</span> qui permet
+            de créer une zone spéficique à dimension fixe dans la page web.
           </p>
           <p className="mh-2">
-            La zone de{" "}
-            <span className="te-noir texte-couleur-bleu-ciel">`Bloc`</span> se
-            créée en fonction de la{" "}
-            <span className="texte-couleur-rouge-cerise te-noir">taille</span>{" "}
-            d'écran de l'appareil{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
+            La zone de <span className="te-noir couleur-bleu-ciel">`Bloc`</span>{" "}
+            se créée en fonction de la{" "}
+            <span className="couleur-rouge-cerise te-noir">taille</span> d'écran
+            de l'appareil{" "}
+            <span className="couleur-bleu-ciel te-noir">
               -tp, -pt, -myn, -gd et -tg
             </span>{" "}
             et de la{" "}
-            <span className="texte-couleur-rouge-cerise te-noir">
+            <span className="couleur-rouge-cerise te-noir">
               proportion voulue
             </span>{" "}
             généralement allant de 1 à 12.
@@ -127,33 +123,29 @@ export default function BlocPage() {
         <Tableau titre1={"Classes"} titre2={"Styles"} data={data} />
 
         <div className="aff-flex ai-mil gap-2 mb-3">
-          <Smartphone size={30} className="texte-couleur-bleu-ciel" />
-          <h1 className="texte-couleur-bleu-ciel texte-4 fira">
-            Mobile First{" "}
-          </h1>
+          <Smartphone size={30} className="couleur-bleu-ciel" />
+          <h1 className="couleur-bleu-ciel texte-4 fira">Mobile First </h1>
         </div>
 
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p>
-            <span className="texte-couleur-bleu-ciel te-noir">Flexible ✨</span>{" "}
-            est un framework CSS basé sur le principe du{" "}
-            <span className="texte-couleur-bleu-ciel te-noir fira">
-              mobile-first
-            </span>{" "}
+            <span className="couleur-bleu-ciel te-noir">Flexible ✨</span> est
+            un framework CSS basé sur le principe du{" "}
+            <span className="couleur-bleu-ciel te-noir fira">mobile-first</span>{" "}
             : on pense d’abord aux petits écrans, puis on adapte aux plus
             grands.
           </p>
 
           <p className="mh-3">
             La classe{" "}
-            <span className="bg-gris-claire fira  texte-couleur-bleu-ciel te-noir">
+            <span className="bg-gris-claire fira  couleur-bleu-ciel te-noir">
               {prop}
             </span>{" "}
             permet définir une zone qui sera la même quelque soit le type
             d'écran et d'appareils.
           </p>
         </Bloc>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <h3>Exemples</h3>
           <Ligne
             className={
@@ -184,15 +176,14 @@ export default function BlocPage() {
             </div>
           </Ligne>
         </Bloc>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <h3>Types d'écrans</h3>
           <p className="mh-2">
             La classe{" "}
-            <span className="texte-couleur-bleu-ciel te-noir fira">
+            <span className="couleur-bleu-ciel te-noir fira">
               .bloc-[screen]-[valeur]
             </span>{" "}
-            de{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">Flexible ✨</span>{" "}
+            de <span className="couleur-bleu-ciel te-noir">Flexible ✨</span>{" "}
             utilise les types d'écrans ci-dessous :
           </p>
         </Bloc>

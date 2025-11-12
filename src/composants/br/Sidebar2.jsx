@@ -13,15 +13,25 @@ import Lien from "./Lien";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 import clsx from "../classe";
-import TexteDegrade from "./TexteDegrade";
 
-export default function Sidebar2({  onSelect, ouvert, onClose }) {
+export default function Sidebar2({ onToggle, onSelect }) {
   // variables de state
   const sidebarRef = useRef(null);
-
+  const [ouvert, setOuvert] = useState(false);
   const [lienActif, setLienActif] = useState(null);
 
- 
+  // fonctions de state
+  const ouvrir = () => {
+    if (sidebarRef.current) sidebarRef.current.style.width = "50%";
+    setOuvert(true);
+    onToggle?.(true); // prévenir le parent
+  };
+
+  const fermer = () => {
+    if (sidebarRef.current) sidebarRef.current.style.width = "0";
+    setOuvert(false);
+    onToggle?.(false); // prévenir le parent
+  };
 
   // variable pour section Documentation
   const docs = [
@@ -89,7 +99,7 @@ export default function Sidebar2({  onSelect, ouvert, onClose }) {
           variants={itemVariants}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className={`ronde-1 curseur-pointeur mb-1`}
-          style={{ background: lienChoisit ? "#f1f3f5" : "transparent" }}
+          style={{ background: lienChoisit ? "#f1f3f5" : "" }}
           onClick={() => {
             setLienActif(element.lien);
             onSelect?.(element.lien);
@@ -109,36 +119,51 @@ export default function Sidebar2({  onSelect, ouvert, onClose }) {
       );
     });
   return (
-    <div
-      ref={sidebarRef}
-      style={{background: "#fff"}}
-      className={clsx(
-        "bloc-myn-3 fixe new-sidebar h-full overx-cache overy-auto pos-myn-sticky z-100",
-        ouvert && "active"
-        //ouvert && "ronde",
-        //ouvert && "bg-gris-claire"
-      )}
-      id="maSidebar"
-    >
-      <div className="aff-flex jc-fin mb-2  aff-myn-none p-1">
-        <X size={20} className="fermer curseur-pointeur mh-2" onClick={onClose} />
+    <div className="conteneur mh-7">
+      {/* Bouton pour ouvrir la sidebar */}
+      <span className="ouvrir" onClick={ouvrir}>
+        <Sidebar size={20} />
+      </span>
+
+      <div
+        ref={sidebarRef}
+        className={clsx(
+          "sidebar p-myn-3 fixe haut-10 gauche-0",
+          ouvert && "ronde",
+          ouvert && "bg-gris-claire"
+        )}
+        id="maSidebar"
+      >
+        <X
+          size={20}
+          className="fermer curseur-pointeur mh-2"
+          onClick={fermer}
+        />
+
+        <div className="mg-2 aff-flex ai-mil gap-2 couleur-gris">
+          <BookOpen size={20} />
+          <h5>Documentation</h5>
+        </div>
+
+        <div className="taille-pt mh-2 couleur-gris px-1 ">
+          {renduLien(docs)}
+        </div>
+
+        <h4 className="mg-2 tt-maj couleur-gris my-2">get started</h4>
+        <div className="mg-2 taille-pt mh-3 couleur-gris">
+          {renduLien(started)}
+        </div>
+
+        <h4 className="mg-2 tt-maj couleur-gris my-2">Classes</h4>
+        <div className="mg-2 taille-pt mh-3 couleur-gris">
+          {renduLien(mpage)}
+        </div>
+
+        <h4 className={"mg-2 tt-maj couleur-gris my-2"}>composants</h4>
+        <div className="mg-2 taille-pt mh-3 couleur-gris">
+          {renduLien(composants)}
+        </div>
       </div>
-
-      <div className="mg-1 aff-flex ai-mil gap-2 couleur-gri">
-        <BookOpen size={20} />
-        <h5>Documentation</h5>
-      </div>
-
-      <div className="taille-pt mh-2 couleur-gris">{renduLien(docs)}</div>
-
-      <p className="mg-1 tt-cap couleur-gri my-2">get started</p>
-      <div className="taille-pt mh-3 couleur-gris">{renduLien(started)}</div>
-
-      <p className="mg-1 tt-cap couleur-gri my-2">Classes</p>
-      <div className="taille-pt mh-3 couleur-gris">{renduLien(mpage)}</div>
-
-      <p className={"mg-1 tt-cap couleur-gri my-2"}>composants</p>
-      <div className="taille-pt mh-3 couleur-gris">{renduLien(composants)}</div>
     </div>
   );
 }

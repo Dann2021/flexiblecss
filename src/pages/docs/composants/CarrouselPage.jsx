@@ -9,7 +9,6 @@ import Image6 from "../../../assets/images/carousel/6.jpg";
 import { Images } from "lucide-react";
 import TitreDoc from "../../../composants/docs_composant/TitreDoc.jsx";
 
-
 /*
  *   images = [],
   titre,
@@ -30,18 +29,16 @@ const dataProps = [
 export default function CarrouselPage() {
   return (
     <>
-  
       <TitreDoc
-        icone={<Images size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Images size={30} className="couleur-bleu-ciel" />}
         titre={"Carrousel"}
       />
 
       <Col className={"mh-3 gap-5"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-8"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-8"}>
           <p>
-            Le{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">carrousel</span>{" "}
-            est un composant UI qui permet de faire défiler plusieurs contenus
+            Le <span className="couleur-bleu-ciel te-noir">carrousel</span> est
+            un composant UI qui permet de faire défiler plusieurs contenus
             (images, cartes, textes, etc.) de manière interactive et élégante.
           </p>
         </Bloc>

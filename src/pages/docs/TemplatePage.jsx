@@ -1,4 +1,3 @@
-
 import { Bouton, Card, Col } from "../../composants";
 import TexteDegrade from "../../composants/ui/TexteDegrade";
 import Couleurs from "../../constantes/Couleurs";
@@ -27,16 +26,14 @@ export default function TemplatePage() {
             <div className="aff-flex gap-4 ai-mil mh-1">
               <p className="texte-5 te-noir"> 90$</p>
               <div className="col">
-                <div className="texte-couleur-gris taille-pt aff-flex ai-mil gap-1">
+                <div className="couleur-gris taille-pt aff-flex ai-mil gap-1">
                   <p>par user</p>
                   <User size={15} />
                 </div>
-                <p className="texte-couleur-gris taille-pt">par mois</p>
+                <p className="couleur-gris taille-pt">par mois</p>
               </div>
             </div>
-            <p className="texte-couleur-gris ta-mil">
-              Votre usage au plan standard
-            </p>
+            <p className="couleur-gris ta-mil">Votre usage au plan standard</p>
           </Card.Header>
 
           <Card.Corps className={"py-2"}>
@@ -50,25 +47,21 @@ export default function TemplatePage() {
             >
               S'abonner
             </Bouton>
-            <p className="texte-2 texte-couleur-gris tt-maj mb-2">Avantages</p>
-            <div className="aff-flex ai-mil gap-2 texte-couleur-gris taille-pt mb-1">
+            <p className="texte-2 couleur-gris tt-maj mb-2">Avantages</p>
+            <div className="aff-flex ai-mil gap-2 couleur-gris taille-pt mb-1">
               <CheckCircle2Icon size={20} />
               <p>5 jours minimum</p>
             </div>
 
-            <div className="aff-flex ai-mil gap-2 texte-couleur-gris taille-pt mb-1">
+            <div className="aff-flex ai-mil gap-2 couleur-gris taille-pt mb-1">
               <CheckCircle2Icon size={20} />
               <p>5 jours minimum</p>
             </div>
 
-            <div className="aff-flex ai-mil gap-2 texte-couleur-gris taille-pt">
+            <div className="aff-flex ai-mil gap-2 couleur-gris taille-pt">
               <CheckCircle2Icon size={20} />
               <p>5 jours minimum</p>
             </div>
-
-
-
-
           </Card.Corps>
         </Card>
       </Col>

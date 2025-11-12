@@ -21,10 +21,10 @@ const data = [
 const code = `
 <div className="aff-flex relative gap-5">
   <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire survol ronde p-5 absolue z-10 bord-1 bord-dashed bord-gris">
-    <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-10</h1>
+    <h1 className="ta-mil fira couleur-bleu-ciel">z-10</h1>
   </div>
   <div className="bloc-7 box-2 bloc-myn-4 bg-gris-claire survol ronde p-5 absolue haut-20 gauche-30 bord-1 bord-dashed bord-gris z-max">
-    <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-max</h1>
+    <h1 className="ta-mil fira couleur-bleu-ciel">z-max</h1>
   </div>
 </div>
 `;
@@ -33,15 +33,15 @@ export default function ZIndexPage() {
   return (
     <>
       <TitreDoc
-        icone={<Layers2 size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Layers2 size={30} className="couleur-bleu-ciel" />}
         titre={"z-index"}
       />
 
       <Col className={"mh-3 p-1"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris"}>
           <p className="taille-p">
-            <span className="texte-couleur-bleu-ciel te-noir">z-index</span>{" "}
-            gère l’ordre d’empilement des éléments.
+            <span className="couleur-bleu-ciel te-noir">z-index</span> gère
+            l’ordre d’empilement des éléments.
           </p>
           <p>
             Plus la valeur est haute, plus l’élément passe devant. Utilisable
@@ -73,10 +73,8 @@ export default function ZIndexPage() {
         <h2>Exemple</h2>
 
         <Bloc type={"myn"} nombre={11} className={"mh-5"}>
-          <p className="texte-couleur-gris mb-2">
-            Deux blocs qui se chevauchent.
-          </p>
-          <p className="texte-couleur-gris mb-2">
+          <p className="couleur-gris mb-2">Deux blocs qui se chevauchent.</p>
+          <p className="couleur-gris mb-2">
             Le premier a{" "}
             <span className="p-1 bg-bleu-claire taille-pt ronde">z-10</span>, le
             second a{" "}
@@ -85,9 +83,9 @@ export default function ZIndexPage() {
           </p>
           <div className="aff-flex relative gap-5">
             <div className="bloc-7 box-2 bloc-myn-4 bg-vert-claire survol ronde p-5 absolue z-10">
-              <h1 className="ta-mil fira texte-couleur-bleu-ciel">z-10</h1>
+              <h1 className="ta-mil fira couleur-bleu-ciel">z-10</h1>
             </div>
-            <div className="bloc-7 box-2 bloc-myn-4 bg-violet-lavande-clair survol ronde p-5 absolue haut-20 gauche-30 z-max">
+            <div className="bloc-7 box-2 bloc-myn-4 bg-violet-lavande-clair survol ronde p-5 absolue haut-20 gauche-30 z-50">
               <h1 className="ta-mil fira">z-max</h1>
             </div>
           </div>

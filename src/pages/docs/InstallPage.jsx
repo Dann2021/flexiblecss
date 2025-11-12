@@ -18,12 +18,12 @@ export default function InstallPage() {
       <Col className={"p-1 gap-3"}>
         <h1 className="texte-5">Installation</h1>
         <Bloc type={"myn"} nombre={11}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             L'installation de Flexible se fait à partir des méthodes suivantes :
           </p>
         </Bloc>
         <Bloc type={"myn"} nombre={11}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
             saepe tempore ut, deserunt cumque culpa dolores nemo perferendis
             nisi unde numquam cupiditate! Sed, maiores nihil at obcaecati quia
@@ -31,10 +31,10 @@ export default function InstallPage() {
           </p>
         </Bloc>
         <h2 className="my-3">Dépendances</h2>
-        <hr className="bord-1 texte-couleur-gris-claire bloc-myn-8" />
+        <hr className="bord-1 couleur-gris-claire bloc-myn-8" />
 
         <Bloc type={"myn"} nombre={8}>
-          <p className="texte-2 texte-couleur-gris">
+          <p className="texte-2 couleur-gris">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eius
             repellat magnam accusamus ea consequatur, quisquam molestiae enim,
             iusto commodi reprehenderit expedita debitis excepturi veniam non?
@@ -55,9 +55,9 @@ export default function InstallPage() {
             <Copy className="absolue haut-1 droite-2" />
             <div className="aff-flex ai-mil gap-2">
               <p>$</p>
-              <p className="texte-couleur-rouge-cerise te-noir">{np}</p>
-              <p className="texte-couleur-bleu-ciel">{i}</p>
-              <p className="texte-couleur-bleu-ciel">{fl}</p>
+              <p className="couleur-rouge-cerise te-noir">{np}</p>
+              <p className="couleur-bleu-ciel">{i}</p>
+              <p className="couleur-bleu-ciel">{fl}</p>
             </div>
           </Bloc>
         </Ligne>

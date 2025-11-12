@@ -28,12 +28,12 @@ export default function AccordeonPage() {
   return (
     <>
       <TitreDoc
-        icone={<ListCollapse size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<ListCollapse size={30} className="couleur-bleu-ciel" />}
         titre={"Accordeon"}
       />
 
       <Col className={"mh-2 gap-3 mb-4"}>
-        <Bloc type={"myn"} nombre={11} className={"texte-couleur-gris mb-3"}>
+        <Bloc type={"myn"} nombre={11} className={"couleur-gris mb-3"}>
           <p>
             Un accordéon permet d’afficher ou masquer du contenu afin de gagner
             de l’espace et améliorer la lisibilité.
@@ -75,11 +75,7 @@ export default function AccordeonPage() {
 
         <span className={"te-noir texte-3"}>Import</span>
 
-        <Bloc
-          type={"myn"}
-          nombre={11}
-          className={"mh-3 mb-4 texte-couleur-gris"}
-        >
+        <Bloc type={"myn"} nombre={11} className={"mh-3 mb-4 couleur-gris"}>
           <p>Cet élément est conçut pour masquer le contenu</p>
           <ul className={"mg-3 mh-3"}>
             <li>

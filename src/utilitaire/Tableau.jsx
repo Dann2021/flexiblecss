@@ -7,27 +7,21 @@ import clsx from "../composants/classe.js";
  */
 const Tableau = ({ className = "", titre1, titre2, data }) => {
   return (
-    <Bloc
-      type={"myn"}
-      nombre={11}
-      className={clsx("p-2", className)}
-    >
+    <Bloc type={"myn"} nombre={11} className={clsx("p-2", className)}>
       <div className="aff-flex fd-col gap-2">
         <div className="aff-flex ai-mil jc-sb gap-2">
           <p className="te-noir">{titre1}</p>
           <p className="te-noir">{titre2}</p>
-     
-
         </div>
         <hr style={{ border: "1px solid #f5f5f5" }} />
 
         {data.map((element) => (
           <>
             <div className="aff-flex ai-mil jc-sb gap-2" key={element.id}>
-              <p className="texte-couleur-bleu-lavande te-noir taille-pt fira">
+              <p className="couleur-bleu-lavande te-noir taille-pt fira">
                 {element.classe}
               </p>
-              <p className="texte-couleur-bleu-lagon te-noir taille-pt fira">
+              <p className="couleur-bleu-lagon te-noir taille-pt fira">
                 {element.style}
               </p>
             </div>

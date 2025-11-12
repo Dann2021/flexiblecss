@@ -111,7 +111,6 @@
 
 */
 
-
 import Spinner from "./Spinner";
 
 export default function Tableau({ datas, chargement, className = "" }) {
@@ -133,7 +132,7 @@ export default function Tableau({ datas, chargement, className = "" }) {
 
     th: {
       //backgroundColor: theme === 'claire' ? "#eeeeee" : "#2c2c2c", // en clair : gris très léger, en sombre : gris foncé
-     // color: "#000000", // texte noir en clair, blanc en sombre
+      // color: "#000000", // texte noir en clair, blanc en sombre
       borderBottom: "1px solid #ddd", // bordure adaptée
     },
     td: {
@@ -163,7 +162,7 @@ export default function Tableau({ datas, chargement, className = "" }) {
             <tr>
               {labels.map((element, index) => (
                 <th
-                  className="ta-gauche  py-1 px-1 texte-couleur-bleu-ciel"
+                  className="ta-gauche  py-1 px-1 couleur-bleu-ciel"
                   //style={tableStyle.th}
                   key={index}
                 >
@@ -175,7 +174,7 @@ export default function Tableau({ datas, chargement, className = "" }) {
           <tbody>
             {datas.map((element, indice) => (
               <tr
-                className="curseur-pointeur texte-couleur-bleu-acier"
+                className="curseur-pointeur couleur-bleu-acier"
                 key={indice}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor =
@@ -185,17 +184,15 @@ export default function Tableau({ datas, chargement, className = "" }) {
                   (e.currentTarget.style.backgroundColor = "")
                 }
               >
-                {labels.map((label) =>
-
-                    <td
-                      className="ta-gauche p-1 taille-pt "
-                     style={tableStyle.td}
-                      key={label}
-                    >
-                      {element[label]}
-                    </td>
-                  ,
-                )}
+                {labels.map((label) => (
+                  <td
+                    className="ta-gauche p-1 taille-pt "
+                    style={tableStyle.td}
+                    key={label}
+                  >
+                    {element[label]}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>

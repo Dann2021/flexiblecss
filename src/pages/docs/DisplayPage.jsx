@@ -1,10 +1,7 @@
-
-
 import { Bloc, Col } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
 import { Layout } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
-
 
 const data = [
   { id: 1, classe: "aff-[prop]", style: "display : [prop]" },
@@ -23,35 +20,30 @@ export default function DisplayPage() {
 
   return (
     <>
-    
       <TitreDoc
-        icone={<Layout size={30} className="texte-couleur-bleu-ciel" />}
+        icone={<Layout size={30} className="couleur-bleu-ciel" />}
         titre={"Display"}
       />
 
       <Col className={"gap-2"}>
         <Bloc type={"myn"} nombre={11}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Cette classe permet de determiner le mode d'affichage d'un element
             et dans{" "}
-            <span className="texte-couleur-bleu-ciel te-noir">
-              Flexible CSS
-            </span>{" "}
+            <span className="couleur-bleu-ciel te-noir">Flexible CSS</span>{" "}
             cette classe se nomme{" "}
-            <span className="te-noir texte-couleur-bleu-ciel fira">
-              {classe}
-            </span>
+            <span className="te-noir couleur-bleu-ciel fira">{classe}</span>
           </p>
         </Bloc>
         <Tableau titre1={"classes"} titre2={"styles"} data={data} />
 
         <p className="texte-3">Exemple</p>
         <h3 className="mh-2 ls-2">
-          <span className="fira texte-couleur-bleu-ciel">`aff-block`</span> et{" "}
-          <span className="fira texte-couleur-bleu-ciel">`aff-inline`</span>
+          <span className="fira couleur-bleu-ciel">`aff-block`</span> et{" "}
+          <span className="fira couleur-bleu-ciel">`aff-inline`</span>
         </h3>
         <Bloc type={"myn"} nombre={11}>
-          <p className="texte-couleur-gris">
+          <p className="couleur-gris">
             Ces classes permettent de contrôler le comportement d'affichage des
             éléments HTML sur la page. Elles déterminent comment un élément se
             positionne par rapport aux autres et comment il gère sa taille.

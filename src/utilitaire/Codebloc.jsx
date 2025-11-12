@@ -1,13 +1,15 @@
 import { Copy, Check } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 // eslint-disable-next-line no-unused-vars
-import {  vscDarkPlus, dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  vscDarkPlus,
+  dracula,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Bouton } from "../composants";
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "../composants/classe";
-
 
 export default function Codebloc({ children, langage, className }) {
   const [copie, setCopie] = useState(false);
@@ -18,7 +20,7 @@ export default function Codebloc({ children, langage, className }) {
       await navigator.clipboard.writeText(texte);
       setCopie(true);
       setTimeout(() => setCopie(false), 2000);
-    // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars
     } catch (err) {
       // fallback pour tous les appareils
       const textarea = document.createElement("textarea");
@@ -33,7 +35,7 @@ export default function Codebloc({ children, langage, className }) {
         const success = document.execCommand("copy");
         setCopie(success);
         setTimeout(() => setCopie(false), 2000);
-      // eslint-disable-next-line no-unused-vars
+        // eslint-disable-next-line no-unused-vars
       } catch (err) {
         alert("Impossible de copier le texte");
       }
@@ -43,11 +45,19 @@ export default function Codebloc({ children, langage, className }) {
   };
 
   return (
-    <div className={clsx('ronde', className)} style={{background: "rgb(30,30,30)"}}>
+    <div
+      className={clsx("ronde", className)}
+      style={{ background: "rgb(30,30,30)" }}
+    >
       <div className="aff-flex ai-mil gap-3 jc-sb">
-        <p className="taille-pt te-noir texte-couleur-gris-claire">Terminal</p>
+        <p className="taille-pt te-noir couleur-gris-claire">Terminal</p>
 
-        <Bouton theme="sombre" taille="min" className={"ronde-1"} onClick={() => copieTexte(children)}>
+        <Bouton
+          theme="sombre"
+          taille="min"
+          className={"ronde-1"}
+          onClick={() => copieTexte(children)}
+        >
           <AnimatePresence mode="wait">
             {copie ? (
               <motion.span
