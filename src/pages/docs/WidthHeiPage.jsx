@@ -25,7 +25,7 @@ export default function WidthHeiPage() {
         titre={"Dimensions"}
       />
 
-      <Col className={"gap-4"}>
+      <Col className={"gap-4 p-1"}>
         <Bloc type={"myn"} nombre={11}>
           <p className="couleur-gris">
             Cette classe permet de déterminer ou de fixer la largeur{" "}
