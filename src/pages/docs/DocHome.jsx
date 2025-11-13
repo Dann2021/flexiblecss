@@ -34,10 +34,10 @@ export default function DocHome() {
           <Outlet />
         </div>
 
-        <div class="bloc-myn-3 bg-gris-clair ronde-1 aff-none aff-myn-block h-4 over-auto p-2 sticky haut-0">
+        <div className="bloc-myn-3 bg-gris-clair ronde-1 aff-none aff-myn-block h-4 over-auto p-2 sticky haut-0">
           <h3>Sur cette page</h3>
           <hr className="mh-1 couleur-gris-claire" />
-          <ul class="mh-3 taille-p mg-5">
+          <ul className="mh-3 taille-p mg-5">
            <li>Introduction</li>
            <li>Qu'est ce que flexible</li>
            <li>Démarrage rapide</li>
