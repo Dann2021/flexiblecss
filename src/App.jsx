@@ -3,6 +3,7 @@ import Routeur from "./routes/Routeur";
 import Navigateur from "./composants/ui/Navigateur";
 import { Bouton } from "./composants";
 import Footer from "./composants/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 //  <Router basename="/flexiblecss">
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Navigateur texte={"Flexible✨"} />
 
         <Routeur />
+        <SpeedInsights />
       </div>
       <Footer />
     </Router>
