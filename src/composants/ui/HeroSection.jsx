@@ -68,6 +68,7 @@ export default function HeroSection({
         </div>
 
         <Image
+        alt={"image dans hero section"}
           source={sourceImage}
           className={"ronde"}
           height={600}
