@@ -111,11 +111,11 @@ const adnElement = [
 export default function Home() {
   return (
     <Conteneur className={"py-4"}>
-      <Ligne className={"jc-sb gap-8 ai-mil my-18"}>
+      <Ligne className={"jc-sb gap-8 ai-mil my-15"}>
         <Bloc type={"myn"} nombre={5}>
           <div className="bg-bleu-glacial p-1 w-4 aff-flex ai-mil gap-2 ronde my-3">
             <span className="md-1">🔥</span>
-            <p className="couleur-bleu-ciel te-noir fira">
+            <p className="couleur-bleu-ciel te-noir fira taille-pt">
               FlexibleCSS V.1.0.1
             </p>
           </div>
@@ -430,7 +430,10 @@ export default function Home() {
         </Ligne>
       </Col>
 
-      <Col className={"my-15"}>
+      <Col className={"my-15 ronde p-2"}  style={{
+          backgroundImage: "radial-gradient(#d9d9d9 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+        }}>
         <Bloc type={"myn"} nombre={4}>
           <h1 className="inter texte-6 ls-2 lh-2">
             Pourquoi{" "}
