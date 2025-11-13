@@ -41,7 +41,6 @@ import {
 
 import { Archive, File, Share } from "lucide-react";
 import { Link } from "react-router-dom";
-import Kpp14Image from "../../assets/background/kpp14.jpg";
 import ChaussureWebp from "../../assets/images/shoes-1.webp";
 
 import { FaRocket } from "react-icons/fa";
@@ -115,7 +114,7 @@ export default function Home() {
       <Ligne className={"jc-sb gap-8 ai-mil my-18"}>
         <Bloc type={"myn"} nombre={5}>
           <div className="bg-bleu-glacial p-1 w-4 aff-flex ai-mil gap-2 ronde my-3">
-            <span class="md-1">🔥</span>
+            <span className="md-1">🔥</span>
             <p className="couleur-bleu-ciel te-noir fira">
               FlexibleCSS V.1.0.1
             </p>
@@ -146,6 +145,7 @@ export default function Home() {
         </Bloc>
         <Bloc type={"myn"} nombre={6}>
           <Image
+          alt={"image component"}
             source={ImageHero}
             className={"ronde"}
             //width={600}
