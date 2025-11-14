@@ -5,10 +5,16 @@ import clsx from "../classe";
  * Composant principal à integrer dans une page web
  *
  */
-export default function Conteneur({ children, className, ...props }) {
+export default function Conteneur({
+  children,
+  // eslint-disable-next-line no-unused-vars
+  as: Element = "div",
+  className,
+  ...props
+}) {
   return (
-    <div className={clsx("conteneur py-5", className)} {...props} >
+    <Element className={clsx("conteneur py-5", className)} {...props}>
       {children}
-    </div>
+    </Element>
   );
 }
