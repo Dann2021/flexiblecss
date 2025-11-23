@@ -197,21 +197,21 @@ export default function BoutonPage() {
             pour renforcer le sens des actions.
           </p>
           <div className="aff-flex gap-3 bloc-12 overx-auto mb-2 mh-2 bord-4 bord-gris-claire bord-solid p-2 ronde">
-            <Bouton taille={"me"} className={"bouton-icone"}>
+            <Bouton taille={"min"} className={"bouton-icone"}>
               <Send size={16} />
               Send
             </Bouton>
-            <Bouton taille={"me"} theme="prime" className={"bouton-icone"}>
+            <Bouton taille={"min"} theme="prime" className={"bouton-icone"}>
               <LogIn size={16} />
               Log out
             </Bouton>
-            <Bouton taille={"me"} theme="claire" className={"bouton-icone"}>
+            <Bouton taille={"min"} theme="claire" className={"bouton-icone"}>
               <FaGithub size={16} />
             </Bouton>
           </div>
 
           <Codebloc langage={"jsx"} className={"p-1 mh-4"}>
-            {` <Bouton taille={"me"} className={"bouton-icone"}><Send size={16} /> Send</Bouton>`}{" "}
+            {` <Bouton taille={"min"} className={"bouton-icone"}><Send size={16} /> Send</Bouton>`}{" "}
             {/** ici */}
           </Codebloc>
         </Bloc>
