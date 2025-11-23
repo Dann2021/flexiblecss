@@ -16,6 +16,7 @@
     "@mdx-js/react": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
     "@vercel/speed-insights": "^1.2.0",
+    "axios": "^1.13.2",
     "code-highlighter-react": "^0.3.0",
     "lucide-react": "^0.540.0",
     "motion": "^12.23.12",

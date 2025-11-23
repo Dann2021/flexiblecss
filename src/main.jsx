@@ -1,16 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 //import "./styles/flexible.css"
 //import "./styles/polices.css"
 //import "./styles/navigateur.css";
-import "./index.js"
+import "./index.js";
 
+import App from "./App.jsx";
+import SideContexteProvider from "./contexte/SideContexte.jsx";
 
-
-import App from './App.jsx'
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <SideContexteProvider>
+      <App />
+    </SideContexteProvider>
+  </StrictMode>
+);

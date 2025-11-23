@@ -111,7 +111,7 @@ const adnElement = [
 export default function Home() {
   return (
     <Conteneur className={"py-4"}>
-      <Ligne className={"jc-sb gap-8 ai-mil my-15"}>
+      <Ligne className={"jc-sb gap-8 ai-mil my-myn-15"}>
         <Bloc type={"myn"} nombre={5}>
           <div className="bg-bleu-glacial p-1 w-4 aff-flex ai-mil gap-2 ronde my-3">
             <span className="md-1">🔥</span>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
 
           <h1 className="inter texte-6 lh-2 te-noir">
-           Créez des interfaces modernes en clin d'oeil.
+           Créez des interfaces modernes en un clin d'oeil.
           </h1>
         
 

@@ -4,12 +4,34 @@ import { Bloc, Col, Ligne } from "../../composants";
 import Codebloc from "../../utilitaire/Codebloc";
 import Tableau from "../../utilitaire/Tableau";
 import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
+import { useSideContexte } from "../../contexte/SideContexte.jsx";
+import { useEffect } from "react";
 
 const dataTable = [
   { id: 1, classe: ".ligne", style: "display : flex" },
   { id: 2, classe: ".col", style: "flex-direction : coloumn" },
 ];
+
+const dataSide = [
+  {id:1, label: "Ligne & Col"},
+  {id:2, label: "👉  ligne"},
+  {id:3, label: "👉  col"},
+
+]
 export default function LigneColPage() {
+    // update du contexte
+    const {setData} = useSideContexte()
+    useEffect(()=>{
+  
+      // composant monté
+      setData(dataSide)
+  
+      // on vide le contexte
+      return () => {
+        setData(null)
+      }
+    }, [])
+  
   const ligneCode = `
     <div className="ligne jc-sb">
         <div className="bloc-12 bloc-pt-2 bg-gris-claire ronde p-3 ">
@@ -27,14 +49,7 @@ export default function LigneColPage() {
     `;
   return (
     <>
-      {/** haut de pages */}
-      {/*<div className="aff-flex ai-mil gap-2 mb-3">
-        <div className="aff-flex jc-mil ai-mil gap-2">
-          <Rows size={30} className="couleur-bleu-ciel" />
-          <Columns size={30} className="couleur-bleu-ciel" />
-        </div>
-        <h1 className="couleur-bleu-ciel texte-5 fira">Ligne & Col </h1>
-      </div>*/}
+  
       <TitreDoc
         icone={<Columns size={30} className="couleur-bleu-ciel" />}
         titre={"Ligne & Col"}
@@ -87,7 +102,7 @@ export default function LigneColPage() {
             en colonne sur des petits écrans (principe du responsive).
           </p>
 
-          <Ligne className={"jc-sb  p-2"}>
+          <Ligne className={"jc-sb  p-2 my-5"}>
             <div className="bloc-12 bloc-pt-2 bg-gris-claire ronde p-3 ">
               <h1 className="ta-mil">1</h1>
             </div>
@@ -99,7 +114,11 @@ export default function LigneColPage() {
             </div>
           </Ligne>
 
+        
+
           {/*<CodeEditeur code={ligneCode} />*/}
+
+            <p>La particularité de la classe <span className="couleur-bleu-ciel">.ligne</span> est que celle-ci admet un comportement <span className="couleur-bleu-ciel te-noir">responsive</span> qui changera la disposition des blocs en fonction de la taille d'écran de l'appareil.</p> 
         </Bloc>
         <Codebloc
           langage={"jsx"}
@@ -114,11 +133,22 @@ export default function LigneColPage() {
           </h3>
 
           <p>
-            L'utilisation de cette classe permet juste de faire une disposition
-            inverse à celle de{" "}
-            <span className="couleur-bleu-ciel te-noir">.ligne</span>, c'est à
-            dire une disposition en colonne.
+            L'utilisation de cette classe permet de mettre en place une disposition
+             verticale des éléments contrairement à  la classe {" "}
+            <span className="couleur-bleu-ciel te-noir">.ligne</span>.
           </p>
+
+           <Col className={"jc-sb  p-2 gap-3 ai-mil"}>
+            <div className="bloc-12 bloc-pt-2 box-3 bg-gris-claire ronde p-3 ">
+              <h1 className="ta-mil">1</h1>
+            </div>
+            <div className="bloc-12 bloc-pt-2 box-3 bg-gris-claire ronde p-3">
+              <h1 className="ta-mil">2</h1>
+            </div>
+            <div className="bloc-12 bloc-pt-2 box-3 bg-gris-claire ronde p-3">
+              <h1 className="ta-mil">3</h1>
+            </div>
+          </Col>
         </Bloc>
       </Col>
     </>

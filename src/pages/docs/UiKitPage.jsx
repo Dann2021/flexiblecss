@@ -3,8 +3,32 @@ import UiKitImageFlexible from "../../assets/images/flex3.png";
 import Icons from "../../constantes/Icone.js";
 import { Heart, Shapes, User2 } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
+import { useSideContexte } from "../../contexte/SideContexte.jsx";
+import { useEffect } from "react";
 
+
+const dataSide = [
+  {id: 1, label : "Ui Kit"},
+  {id: 2, label : "Flexible Design Kit"},
+  {id: 3, label : "Flexible Design"},
+
+]
 export default function UiKitPage() {
+
+      // update du contexte
+      const {setData} = useSideContexte()
+      useEffect(()=>{
+    
+        // composant monté
+        setData(dataSide)
+    
+        // on vide le contexte
+        return () => {
+          setData(null)
+        }
+      }, [])
+
+  
   return (
     <>
       <TitreDoc
@@ -19,7 +43,7 @@ export default function UiKitPage() {
               <Icons.Avatar height={40} width={40} />
               <p className={"couleur-gris taille-pt"}>Flexible Design</p>
             </div>
-            <h2>Flexible Design Kit</h2>
+            <h1>Flexible Design Kit</h1>
             <div className="aff-flex ai-mil gap-2 couleur-gris taille-pt mh-2 mb-3">
               <span>Design file</span>
               <span>.</span>
@@ -40,7 +64,7 @@ export default function UiKitPage() {
           </Bloc>
         </Ligne>
 
-        <h1>Flexible Design</h1>
+        <h2>Flexible Design</h2>
         <Bloc type={"myn"} nombre={11} className={"mh-3 couleur-gris"}>
           <p>
             Le développement initial de{" "}

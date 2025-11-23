@@ -2,6 +2,8 @@ import { Bloc, Col } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
 import { Layout } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
+import { useSideContexte } from "../../contexte/SideContexte";
+import { useEffect } from "react";
 
 const data = [
   { id: 1, classe: "aff-[prop]", style: "display : [prop]" },
@@ -15,7 +17,24 @@ const data = [
   { id: 9, classe: "aff-none", style: "display : none" },
 ];
 
+const dataSide = [
+  {id: 1, label: "Display"},
+
+]
 export default function DisplayPage() {
+
+        // update du contexte
+          const {setData} = useSideContexte()
+          useEffect(()=>{
+        
+            // composant monté
+            setData(dataSide)
+        
+            // on vide le contexte
+            return () => {
+              setData(null)
+            }
+          }, [])
   const classe = `aff-[propriete]`;
 
   return (

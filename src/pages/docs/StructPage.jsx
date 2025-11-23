@@ -1,8 +1,30 @@
+import { useEffect } from "react";
 import { Bloc, Card, Col, Ligne } from "../../composants";
+import { useSideContexte } from "../../contexte/SideContexte";
 import Codebloc from "../../utilitaire/Codebloc";
 import { SiHtml5, SiNextdotjs, SiNextui, SiReact } from "react-icons/si";
 
+const dataSide = [
+  {id:1, label: "Structure de flexible"},
+  {id:2, label: "Html"},
+  {id:3, label: "React Js"},
+]
 export default function StructPage() {
+
+
+     // update du contexte
+        const {setData} = useSideContexte()
+        useEffect(()=>{
+      
+          // composant monté
+          setData(dataSide)
+      
+          // on vide le contexte
+          return () => {
+            setData(null)
+          }
+        }, [])
+  
   const t = "├──";
   const e = "└──";
   const b = "│";
@@ -39,6 +61,8 @@ ${b}   ${b}   ${e} flexible.css
 ├── package.json
 └── README.md
   `;
+
+
   return (
     <div>
       <h1 className="texte-5 inter">

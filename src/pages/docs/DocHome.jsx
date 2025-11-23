@@ -4,6 +4,8 @@ import Sidebar2 from "../../composants/ui/Sidebar2";
 import { Outlet } from "react-router-dom";
 import { Bouton, Breadcrumbs, Conteneur } from "../../composants";
 import { Sidebar } from "lucide-react";
+import { useSideContexte } from "../../contexte/SideContexte";
+
 
 export default function DocHome() {
   const [sidebarOuverte, setSidebarOuverte] = useState(false);
@@ -11,6 +13,8 @@ export default function DocHome() {
 
  
 
+  // import du contexte 
+  const {data} = useSideContexte()
   return (
     <div className="py- conteneu">
       <div className="aff-flex jc-sb  gap-8 mh-5">
@@ -37,12 +41,13 @@ export default function DocHome() {
         <div className="bloc-myn-3 bg-gris-clair ronde-1 aff-none aff-myn-block h-4 over-auto p-2 sticky haut-0">
           <h3>Sur cette page</h3>
           <hr className="mh-1 couleur-gris-claire" />
-          <ul className="mh-3 taille-p mg-5">
-           <li>Introduction</li>
-           <li>Qu'est ce que flexible</li>
-           <li>Démarrage rapide</li>
-           <li>Installation avec npm</li>
+          {!data ? <h3>Rien pour l'instant</h3> :
+           <ul className="mh-3 taille-pt mg-5">
+
+           {data.map((element) => <li key={element.id} className="te-noir couleur-gris">{element.label}</li> )}
           </ul>
+           }
+         
         </div>
       </div>
     </div>

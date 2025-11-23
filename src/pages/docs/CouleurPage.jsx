@@ -12,6 +12,8 @@ import {
 } from "../../constantes/Color.js";
 import Tableau from "../../utilitaire/Tableau.jsx";
 import TitreDoc from "../../composants/docs_composant/TitreDoc.jsx";
+import { useSideContexte } from "../../contexte/SideContexte.jsx";
+import { useEffect } from "react";
 
 const couleurData = [
   { id: 1, classe: ".couleur-bleu-ciel", style: "color : #3095e0" },
@@ -19,7 +21,32 @@ const couleurData = [
   { id: 3, classe: ".bg-bleu-ciel", style: "background : #3095e0" },
 ];
 
+
+const dataSide = [
+  {id:1, label: "Couleurs"},
+  {id:2, label: "Utilisation"},
+  {id:3, label: "Couleurs Rouge"},
+  {id:4, label: "Couleurs Bleu"},
+  {id:5, label: "Couleurs Vert"},
+  {id:6, label: "Couleurs Gris"},
+  {id:7, label: "Couleurs Violet"},
+  {id:8, label: "Autres couleurs"},
+]
 export default function CouleurPage() {
+
+     // update du contexte
+          const {setData} = useSideContexte()
+          useEffect(()=>{
+        
+            // composant monté
+            setData(dataSide)
+        
+            // on vide le contexte
+            return () => {
+              setData(null)
+            }
+          }, [])
+
   return (
     <>
       <TitreDoc

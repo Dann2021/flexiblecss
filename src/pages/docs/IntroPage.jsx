@@ -1,10 +1,32 @@
+import { useEffect } from "react";
 import { Accordeon, Bloc, Col } from "../../composants";
+import { useSideContexte } from "../../contexte/SideContexte";
 
 import Codebloc from "../../utilitaire/Codebloc";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
+
+const dataSide = [
+  {id: 1, label: "Introduction"},
+  {id: 2, label: "Qu'est ce que FlexibleCss ?"},
+  {id: 3, label: "Installation avec npm"},
+
+]
 export default function IntroPage() {
+
+      // update du contexte
+        const {setData} = useSideContexte()
+        useEffect(()=>{
+      
+          // composant monté
+          setData(dataSide)
+      
+          // on vide le contexte
+          return () => {
+            setData(null)
+          }
+        }, [])
   const code = `
 <!DOCTYPE html>
 <html lang="en">

@@ -2,8 +2,25 @@ import { Bouton, Card, Col } from "../../composants";
 import TexteDegrade from "../../composants/ui/TexteDegrade";
 import Couleurs from "../../constantes/Couleurs";
 import { CheckCircle2Icon, User } from "lucide-react";
+import { useSideContexte } from "../../contexte/SideContexte";
+import { useEffect } from "react";
 
+
+const dataSide = [{id:1, label: "Page template"}]
 export default function TemplatePage() {
+     // update du contexte
+        const {setData} = useSideContexte()
+        useEffect(()=>{
+      
+          // composant monté
+          setData(dataSide)
+      
+          // on vide le contexte
+          return () => {
+            setData(null)
+          }
+        }, [])
+  
   return (
     <>
       <h1>Page template</h1>

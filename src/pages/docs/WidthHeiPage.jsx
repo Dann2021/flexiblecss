@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
 import { MdWidthFull } from "react-icons/md";
 
 import { Col, Bloc } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
+import { useSideContexte } from "../../contexte/SideContexte";
 
 const data = [
   { id: 1, classe: "w-[valeur]", style: "width : [valeur]rem" },
@@ -17,7 +18,30 @@ const data = [
   { id: 1, classe: "w-ecran", style: "width : 100vh" },
 ];
 
+
+const dataSide = [
+  {id: 1, label: "Dimensions"},
+  {id: 2, label: "Exemple"},
+  {id: 3, label: "Avec width"},
+  {id: 4, label: "Avec height"},
+
+]
 export default function WidthHeiPage() {
+
+
+  
+    // update du contexte
+    const {setData} = useSideContexte()
+    useEffect(()=>{
+  
+      // composant monté
+      setData(dataSide)
+  
+      // on vide le contexte
+      return () => {
+        setData(null)
+      }
+    }, [])
   return (
     <>
       <TitreDoc
@@ -78,12 +102,7 @@ export default function WidthHeiPage() {
           <div className="w-5 bloc-5 bg-gris-claire ronde p-1 mb-1">
             <span className="taille-pt  te-noir">.w-5</span>
           </div>
-          <div className="w-6 bloc-6 bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.w-6</span>
-          </div>
-          <div className="w-full bloc-12 bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.w-full</span>
-          </div>
+         
           
         </Bloc>
 
@@ -113,12 +132,7 @@ export default function WidthHeiPage() {
           <div className="h-5 bg-gris-claire ronde p-1 mb-1">
             <span className="taille-pt  te-noir">.h-5</span>
           </div>
-          <div className="h-6 bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.h-6</span>
-          </div>
-          <div className="h-full  bg-gris-claire ronde p-1 mb-1">
-            <span className="taille-pt  te-noir">.h-full</span>
-          </div>
+         
          
         </Bloc>
       </Col>

@@ -56,6 +56,7 @@ export default function Sidebar2({  onSelect, ouvert, onClose }) {
     { id: 5, label: "ligne & col", icone: null, lien: "ligne-col" },
     { id: 6, label: "z-index", icone: null, lien: "zindex" },
     { id: 7, label: "dimensions", icone: null, lien: "width-height" },
+    { id: 8, label: "marges", icone: null, lien: "marges" },
   ];
 
   const composants = [
@@ -89,7 +90,7 @@ export default function Sidebar2({  onSelect, ouvert, onClose }) {
           variants={itemVariants}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className={`ronde-1 curseur-pointeur mb-1`}
-          style={{ background: lienChoisit ? "#f1f3f5" : "transparent" }}
+          style={{ background: lienChoisit ? "#f1f3f5" : "#fff" }}
           onClick={() => {
             setLienActif(element.lien);
             onSelect?.(element.lien);

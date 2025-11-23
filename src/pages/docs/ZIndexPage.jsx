@@ -2,6 +2,8 @@ import { Bloc, Col } from "../../composants";
 import Tableau from "../../utilitaire/Tableau";
 import { Layers2 } from "lucide-react";
 import TitreDoc from "../../composants/docs_composant/TitreDoc";
+import { useSideContexte } from "../../contexte/SideContexte";
+import { useEffect } from "react";
 
 const data = [
   { id: 1, classe: ".z-n1", style: "z-index: -1" },
@@ -29,7 +31,25 @@ const code = `
 </div>
 `;
 
+const dataSide = [
+  {id: 1, label : "z-index"},
+  {id: 2, label : "Exemple"},
+]
+
 export default function ZIndexPage() {
+
+     // update du contexte
+      const {setData} = useSideContexte()
+      useEffect(()=>{
+    
+        // composant monté
+        setData(dataSide)
+    
+        // on vide le contexte
+        return () => {
+          setData(null)
+        }
+      }, [])
   return (
     <>
       <TitreDoc
@@ -78,16 +98,24 @@ export default function ZIndexPage() {
             Le premier a{" "}
             <span className="p-1 bg-bleu-claire taille-pt ronde">z-10</span>, le
             second a{" "}
-            <span className="p-1 bg-bleu-claire taille-pt ronde">z-max</span>. →
-            Le bloc avec <b>z-max</b> passe toujours devant.
+            <span className="p-1 bg-bleu-claire taille-pt ronde">z-20</span>. →
+            Le bloc avec <b>z-20</b> passe toujours devant.
           </p>
-          <div className="aff-flex relative gap-5">
-            <div className="bloc-7 box-2 bloc-myn-4 bg-vert-claire survol ronde p-5 absolue z-10">
-              <h1 className="ta-mil fira couleur-bleu-ciel">z-10</h1>
+
+          {/** revoir les blocs */}
+          <div className="aff-flex jc-mil ai-mil gap-5 my-6">
+            <div className="bloc-7 box-2 bloc-myn-4 bg-vert-claire survol ronde p-5 relative z-10">
+              <h1 className="ta-mil fira">z-10</h1>
             </div>
-            <div className="bloc-7 box-2 bloc-myn-4 bg-violet-lavande-clair survol ronde p-5 absolue haut-20 gauche-30 z-50">
-              <h1 className="ta-mil fira">z-max</h1>
+            <div className="bloc-7 box-2 bloc-myn-4 bg-violet-lavande-clair survol ronde p-5 relative droite-20 haut-8 z-20">
+              <h1 className="ta-mil fira">z-20</h1>
             </div>
+
+             <div className="bloc-12 box-2 bloc-myn-4 bg-bleu-lagon survol ronde p-5 relative droite-30 z-30">
+              <h1 className="ta-mil fira">z-30</h1>
+            </div>
+
+
           </div>
         </Bloc>
       </Col>

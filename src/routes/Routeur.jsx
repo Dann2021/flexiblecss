@@ -25,6 +25,7 @@ import DropdownPage from "../pages/docs/composants/DropdownPage";
 import TableauPage from "../pages/docs/composants/TableauPage";
 import WidthHeiPage from "../pages/docs/WidthHeiPage";
 import ModalPage from "../pages/docs/composants/ModalPage";
+import MargePage from "../pages/docs/MargePage";
 
 function Routeur() {
   return (
@@ -55,6 +56,7 @@ function Routeur() {
         <Route path="dropdown" element={<DropdownPage />} />
         <Route path="tableau" element={<TableauPage />} />
         <Route path="width-height" element={<WidthHeiPage />} />
+        <Route path="marges" element={<MargePage />} />
         {/*<Route path="modal" element={<ModalPage />} />*/}
 
         <Route path="card" element={<CardPage />} />
